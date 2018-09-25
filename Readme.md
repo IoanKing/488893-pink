@@ -1,7 +1,7 @@
 # Личный проект «Пинк» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Иван Суслов](https://up.htmlacademy.ru/adaptive/15/user/488893).
-* Наставник: `Неизвестно`.
+* Наставник: [Юлия Антонова](https://up.htmlacademy.ru/adaptive/15/user/39082).
 
 ---
 

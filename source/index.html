@@ -3,10 +3,192 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Пинк</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i&amp;subset=cyrillic,cyrillic-ext" rel="stylesheet">
+    <link rel="stylesheet" href="css/normalize.css">
+    <!-- <link rel="stylesheet" href="css/style.css"> -->
   </head>
-  <body>
 
-    <p>Репозиторий создан для обучения на интенсивном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/adaptive">Профессиональный HTML и CSS</a>», уровень 2.</p>
+  <body class="font-page">
+
+    <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+      <symbol id="icon-logo" viewBox="0 0 0 0">
+        <!--Здесь будет иконка логотипа-->
+      </symbol>
+    </svg>
+
+    <header class="page-header">
+
+      <div class="page-header__top">
+        <div class="wrapper">
+          <div class="page-header__logo logo">
+            <a href="#">
+              <svg class="logo__icon" width="17" height="17">
+                <use xlink:href="#icon-logo" x="0" y="0" />
+              </svg>PINK
+            </a>
+          </div>
+          <button class="page-header__hamburger icon-hamburger">
+            <span class="visually-hidden js-hamburger__text">Открыть меню</span>
+          </button>
+          <nav class="page-header__navigation main-nav">
+            <ul class="main-nav__list">
+              <li class="main-nav__item">
+                <a class="main-nav__link">Главная</a>
+              </li>
+              <li class="main-nav__item">
+                <a class="main-nav__link" href="photo.html">Фотографии</a>
+              </li>
+              <li class="main-nav__item">
+                <a class="main-nav__link" href="form.html">Конкурс</a>
+              </li>
+              <li class="main-nav__item">
+                <a class="main-nav__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
+              </li>
+            </ul>
+          </nav>
+        </div> <!-- wrapper -->
+      </div> <!-- page-header__top -->
+
+      <div classs="page-header__intro intro">
+        <div class="wrapper">
+          <h1 class="visually-hidden intro__title">Приложение PINK</h1>
+          <img class="intro__image" src="" alt="hand with phone" width="" height="">
+          <div class="intro__apps apps">
+            <a class="button apps__buttom" href="#">Скачать приложение</a>
+            <ul class="apps__list">
+              <li class="apps__item">
+                <a class="apps__link" href="#">
+                  <img class="apps__img" src="" alt="apple icon" width="" height="">
+                  <span class="visually-hidden">Скачать приложение для apple</span>
+                </a>
+              </li>
+              <li class="apps__item">
+                <a class="apps__link" href="#">
+                  <img class="apps__img" src="" alt="andriod icon" width="" height="">
+                  <span class="visually-hidden">Скачать приложение для android</span>
+                </a>
+              </li>
+              <li class="apps__item">
+                <a class="apps__link" href="#">
+                  <img class="apps__img" src="" alt="windows icon" width="" height="">
+                  <span class="visually-hidden">Скачать приложение для windows phone</span>
+                </a>
+              </li>
+            </ul>
+            <p class="apps__info">Доступно для iPhone, iPad, Android, Windows&nbsp;Phone, OS&nbsp;X, Windows&nbsp;8</p>
+          </div>
+        </div> <!-- wrapper -->
+      </div> <!-- page-header__intro -->
+
+    </header>
+
+    <main class="page-content">
+
+      <section class="page-content__features features">
+        <div class="wrapper">
+          <h2 class="page-content__title">Устали от серости мегаполиса?<br> Нам есть, что вам предложить!</h2>
+          <img class="features__image-main" src="" alt="Телефон c розовой фотографией" width="157" height="320">
+          <div class="features__item">
+            <h3 class="features__title">Поднимает настроение</h3>
+            <p class="features__info">Приложение позволит вам победить осеннюю хандру и деперессию буквально в несколько кликов!</p>
+          </div>
+          <div class="features__item">
+            <h3 class="features__title">Меняет мир вокруг</h3>
+            <p class="features__info">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект!</p>
+          </div>
+          <div class="features__item">
+            <h3 class="features__title">Заводит новых друзей</h3>
+            <p class="features__info">Ставьте лайки, комментируте, делитесь фотографиями с друзьями и заводите новых!</p>
+          </div>
+        </div> <!-- wrapper -->
+      </section> <!-- page-content__intro -->
+
+      <section class="page-content__reviews reviews reviews-slider">
+        <div class="wrapper">
+          <h2 class="visually-hidden page-content__title">Отзывы:</h2>
+          <div class="reviews__list slider__list">
+            <blockquote class="reviews__item slider__item" id="review-slider_1">
+              <cite class="reviews__author">Николай Петров</cite>
+              <p class="reviews__text"><!-- ::before «-->Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!<!-- ::after »--></p>
+            </blockquote>
+            <blockquote class="reviews__item slider__item" id="review-slider_2">
+              <cite class="reviews__author">Николай Петров</cite>
+              <p class="reviews__text"><!-- ::before «-->Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!<!-- ::after »--></p>
+            </blockquote>
+            <blockquote class="reviews__item slider__item" id="review-slider_3">
+              <cite class="reviews__author">Николай Петров</cite>
+              <p class="reviews__text"><!-- ::before «-->Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!<!-- ::after »--></p>
+            </blockquote>
+            <p class="reviews__toggles slider__toggles">
+              <button class="slider__toggle" type="button" id="review-toggle_1">1</button>
+              <button class="slider__toggle" type="button" id="review-toggle_2">2</button>
+              <button class="slider__toggle" type="button" id="review-toggle_3">3</button>
+            </p>
+          </div> <!-- reviews__list -->
+        </div> <!-- wrapper -->
+      </section> <!-- page-content__reviews -->
+
+      <section class="page-content__rates rates-slider">
+        <div class="wrapper">
+          <h2 class="visually-hidden page-content__title">Тарифы:</h2>
+          <div class="rates__list slider__list">
+            <div class="rates__item slider__item" id="rates-slider_base">
+              <p class="rates__header">База
+                <span class="rates__price">1,99 USD</span></p>
+              <p class="rates__options options-active">Розовый фильтр</p>
+              <p class="rates__options options-disable">Смайлики</p>
+              <p class="rates__options options-disable">Комментарии</p>
+            </div>
+            <div class="rates__item slider__item" id="rates-slider_standart">
+              <div class="rates__hits">Хит</div>
+              <p class="rates__header">Стандарт
+                <span class="rates__price">3,99 USD</span></p>
+              <p class="rates__options options-active">Розовый фильтр</p>
+              <p class="rates__options options-active">Смайлики</p>
+              <p class="rates__options options-disable">Комментарии</p>
+            </div>
+            <div class="rates__item slider__item" id="rates-slider_unlimited">
+              <p class="rates__header">Анлим
+                <span class="rates__price">9,99 USD</span></p>
+              <p class="rates__options options-active">Розовый фильтр</p>
+              <p class="rates__options options-active">Смайлики</p>
+              <p class="rates__options options-active">Комментарии</p>
+            </div>
+            <p class="rates__toggles slider__toggles">
+              <button class="slider__toggle" type="button" id="rates-toggle_base">1</button>
+              <button class="slider__toggle" type="button" id="rates-toggle_standart">2</button>
+              <button class="slider__toggle" type="button" id="rates-toggle_unlimited">3</button>
+            </p>
+          </div> <!-- rates__list -->
+        </div> <!-- wrapper -->
+      </section> <!-- page-content__rates -->
+
+      <section class="page-content__contacts contacts">
+        <div class="wrapper contacts__info">
+          <h2 class="contacts__title page-content__title">Остались вопросы? Свяжитесь с нами!</h2>
+          <div class="contacts__block">
+            <p class="contact__subheader">Звоните:</p>
+            <a class="contact__link" href="tel:78125556666">+7(812)555-66-66</a>
+          </div>
+          <div class="contacts__block">
+            <p class="contact__subheader">Пишите:</p>
+            <a class="contact__link" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
+          </div>
+          <div class="contacts__block">
+            <p class="contact__subheader">Приезжайте в гости:</p>
+            <p class="contact__link">ул. Большая Конюшенная, 19/8</p>
+          </div>
+        </div> <!-- wrapper -->
+        <div class="contacts__map">
+          <!--Здесь будет карта-->
+        </div> <!-- contacts__map -->
+      </section> <!--page-contacts-->
+
+    </main>
+
+    <footer class="page-footer">
+
+    </footer>
 
   </body>
 </html>

@@ -3,16 +3,202 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Пинк</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i&amp;subset=cyrillic,cyrillic-ext" rel="stylesheet">
+    <link rel="stylesheet" href="css/normalize.css">
+    <!-- <link rel="stylesheet" href="css/style.css"> -->
   </head>
-  <body>
+
+  <body class="inner-page">
+
+    <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+      <symbol id="icon-logo" viewBox="0 0 0 0">
+        <!--Здесь будет иконка логотипа-->
+        <!--Здесь будет иконка twitter-->
+        <!--Здесь будет иконка facebook-->
+        <!--Здесь будет иконка youtube-->
+        <!--Здесь будет иконка htmlacademy-->
+      </symbol>
+    </svg>
+
     <header class="page-header">
 
-    </header>
+        <div class="page-header__top">
+          <div class="wrapper">
+            <div class="page-header__logo logo">
+              <a href="index.html">
+                <svg class="logo__icon" width="60" height="45">
+                  <use xlink:href="#icon-logo" x="0" y="0" />
+                </svg>PINK
+              </a>
+            </div>
+            <button class="page-header__hamburger icon-hamburger">
+              <span class="visually-hidden js-hamburger__text">Открыть меню</span>
+            </button>
+            <nav class="page-header__navigation main-nav">
+              <ul class="main-nav__list">
+                <li class="main-nav__item">
+                  <a class="main-nav__link" href="index.html">Главная</a>
+                </li>
+                <li class="main-nav__item">
+                  <a class="main-nav__link" href="photo.html">Фотографии</a>
+                </li>
+                <li class="main-nav__item main-nav__active">
+                  <a class="main-nav__link">Конкурс</a>
+                </li>
+                <li class="main-nav__item">
+                  <a class="main-nav__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
+                </li>
+              </ul>
+            </nav>
+          </div> <!-- wrapper -->
+        </div> <!-- page-header__top -->
+
+        <div classs="page-header__intro intro">
+          <div class="wrapper">
+            <h1 class="intro__title">Конкурс на самое безбашенное путешествие с Пинк</h1>
+          </div> <!-- wrapper -->
+        </div> <!-- page-header__intro -->
+
+      </header>
+
     <main class="page-content">
 
-    </main>
-    <footer class="page-footer">
+      <section class="page-content__contest contest">
 
+        <div class="wrapper contest__header">
+          <h2 class="page-content__title contest__title">Взгляните на фотографии, которые выкладывают пользователи! Видите, как не хватает ваших?</h2>
+        </div> <!-- contest__header -->
+
+        <form class="contest__form" metod="get" action="https://echo.htmlacademy.ru">
+          <fieldset class="contest__fieldset contest__name">
+            <legend class="visually-hidden contest__legend">Ваше ФИО:</legend>
+            <div class="wrapper">
+              <label class="contest__label" for="first-name-field">Фамилия:</label>
+              <input class="contest__field" type="text" id="first-name-field" name="first-name" placeholder="Укажите фамилию *" required>
+              <label class="contest__label" for="last-name-field"">Имя:</label>
+              <input class="contest__field" type="text" id="last-name-field" name="last-name" placeholder="Введите ваше имя *" required>
+              <label class="contest__label" for="sur-name-field"">Отчество:</label>
+              <input class="contest__field" type="text" id="sur-name-field" name="sur-name" placeholder="Ну и отчество тоже">
+            </div>
+          </fieldset>
+          <fieldset class="contest__fieldset contest__achivments achivments">
+            <div class="wrapper">
+              <legend class="contest__legend">Ваши безбашинные достижения в путешевствии</legend>
+              <ul>
+                <li class="achivments__option">
+                  <input class="visually-hidden contest__field achivments__checkbox" type="checkbox" name="achivments-item-field-1" id="achivments__item-1" checked>
+                  <label for="achivments-item-field-1">Сделал селфи с акулой</label>
+                </li>
+                <li class="contest__option">
+                  <input class="visually-hidden contest__field achivments__checkbox" type="checkbox" name="achivments__item-2" id="achivments-item-field-2" checked>
+                  <label for="achivments-item-field-2">Обгорел на пляже</label>
+                </li>
+                <li class="contest__option">
+                  <input class="visually-hidden contest__field achivments__checkbox" type="checkbox" name="achivments__item-3" id="achivments-item-field-3">
+                  <label for="achivments-item-field-3">Видел Чака Норриса</label>
+                </li>
+                <li class="contest__option">
+                  <input class="visually-hidden contest__field achivments__checkbox" type="checkbox" name="achivments__item-4" id="achivments-item-field-4">
+                  <label for="achivments-item-field-4">Накупил сувениров</label>
+                </li>
+                <li class="contest__option">
+                  <input class="visually-hidden contest__field achivments__checkbox" type="checkbox" name="achivments__item-5" id="achivments-item-field-5" checked>
+                  <label for="achivments-item-field-6" >Удержал башню</label>
+                <li class="contest__option">
+                  <input class="visually-hidden contest__field achivments__checkbox" type="checkbox" name="achivments__item-6" id="achivments-item-field-6">
+                  <label for="achivments-item-field-6">Разгромил отель</label>
+                </li>
+              </ul>
+            </div>
+          </fieldset>
+          <fieldset class="contest__fieldset contest__contact">
+            <div class="wrapper">
+              <label class="contest__label" for="phone-number-field">Номер телефона</label>
+              <input class="contest__field" type="tel" name="phone" pattern="[0-9]{1}-[0-9]{3}-[0-9]{3}" placeholder="Номер пожалуйста" id="phone-number-field">
+              <label class="contest__label" for="email-field">Адрес почты</label>
+              <input class="contest__field" type="email" id="email-field" name="email" placeholder="Введите почту *" required>
+            </div>
+          </fieldset>
+          <fieldset class="contest__fieldset contest__apps apps-fields">
+            <div class="wrapper">
+              <legend class="contest__legend">С каким приложением путешевствовали?</legend>
+              <ul>
+                <li class="apps-fields__option">
+                  <input class="visually-hidden contest__field apps-fields__checkbox" type="radio" name="apps" id="apps-fields__item-1" checked>
+                  <label for="apps-item-field-1">Pink для iOS</label>
+                </li>
+                <li class="apps-fields__option">
+                  <input class="visually-hidden contest__field apps-fields__checkbox" type="radio" name="apps" id="apps-fields__item-2" checked>
+                  <label for="apps-item-field-2">Pink для Android</label>
+                </li>
+                <li class="apps-fields__option">
+                  <input class="visually-hidden contest__field apps-fields__checkbox" type="radio" name="apps" id="apps-fields__item-2" checked>
+                  <label for="apps-item-field-2">Windows Phone</label>
+                </li>
+              </ul>
+            </div>
+          </fieldset>
+          <fieldset class="contest__fieldset contest__comment">
+            <div class="wrapper">
+              <legend class="contest__legend">Опишите свои эмоции</legend>
+              <textarea class="contest__field contest__textarea" name="comment" rows="6" placeholder="Можно прям в красках, не стесняйтесь в выражениях" id="comment-field"> </textarea>
+            </div>
+          </fieldset>
+          <div class="wrapper">
+            <button class="button" type="submit">Отправить форму</button>
+            <p class=""><span class="">*</span> — обязательные поля</p>
+          </div>
+        </form>
+
+      </section> <!-- page-content__contest -->
+
+    </main>
+
+    <footer class="page-footer">
+      <div class="wrapper">
+        <div class="page-footer__logo logo">
+          <a href="index.html">
+            <svg class="logo__icon" width="60" height="45">
+              <use xlink:href="#icon-logo" x="0" y="0" />
+            </svg>PINK
+          </a>
+        </div>
+        <ul class="page-footer__social social">
+          <li>
+            <a class="button social__button social__twitter" href="#">
+              <svg class="social__icon" width="18" height="14">
+                <use xlink:href="#icon-twitter" x="0" y="0" />
+              </svg>
+              <span class="visually-hidden">Twitter</span>
+            </a>
+          </li>
+          <li>
+            <a class="button social__button-button social__facebook" href="#">
+              <svg class="social__icon" width="9" height="18">
+                <use xlink:href="#icon-facebook" x="0" y="0" />
+              </svg>
+              <span class="visually-hidden">Facebook</span>
+            </a>
+          </li>
+          <li>
+            <a class="button social__button-button social__youtube" href="#">
+              <svg class="social__icon" width="15" height="13">
+                <use xlink:href="#icon-youtube" x="0" y="0" />
+              </svg>
+              <span class="visually-hidden">YouTube</span>
+            </a>
+          </li>
+        </ul>
+        <p class="page-footer__developper">
+          Разработано
+          <a href="https://htmlacademy.ru/intensive/htmlcss">
+            <svg class="social__icon" width="15" height="13">
+              <use xlink:href="#icon-htmlacademy" x="0" y="0" />
+            </svg><span class="visually-hidden">htmlacademy.ru</span>
+          </a>
+        </p>
+      </div> <!-- wrapper -->
     </footer>
+
   </body>
 </html>

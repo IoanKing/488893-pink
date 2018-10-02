@@ -23,7 +23,7 @@
     <header class="page-header">
 
       <div class="page-header__top">
-        <div class="wrapper">
+        <div class="page-header__wrapper">
           <div class="page-header__logo logo">
             <a href="index.html">
               <svg class="logo__icon" width="60" height="45">
@@ -31,8 +31,8 @@
               </svg>PINK
             </a>
           </div>
-          <button class="page-header__hamburger icon-hamburger">
-            <span class="visually-hidden js-hamburger__text">Открыть меню</span>
+          <button class="page-header__hamburger page-header__hamburger--icon" type="button">
+            <span class="visually-hidden">Открыть меню</span>
           </button>
           <nav class="page-header__navigation main-nav">
             <ul class="main-nav__list">
@@ -53,8 +53,8 @@
         </div> <!-- wrapper -->
       </div> <!-- page-header__top -->
 
-      <div classs="page-header__intro intro">
-        <div class="wrapper">
+      <div class="page-header__intro intro">
+        <div class="intro__wrapper">
           <h1 class="intro__title">Фотографии пользователей</h1>
         </div> <!-- wrapper -->
       </div> <!-- page-header__intro -->
@@ -64,127 +64,127 @@
     <main class="page-content">
 
       <section class="page-content__photos photos">
-        <div class="wrapper photos__header">
-          <h2 class="page-content__title photos__header">Взгляните на фотографии, которые выкладывают пользователи! Видите, как не хватает ваших?</h2>
+        <div class="photos__wrapper photos__header">
+          <h2 class="photos__title">Взгляните на фотографии, которые выкладывают пользователи! Видите, как не хватает ваших?</h2>
         </div> <!-- photos__header -->
 
         <div class="photos__list">
 
-          <article class="photos__item photos__special">
-            <a class="photos__link-to-full photos__wrapper--full" href="#">
+          <article class="photo-blog photo-blog--special">
+            <a class="photo-blog__link photo-blog__wrapper" href="#">
               <div class="photos__of-day">Панорама дня</div>
-              <img class="photos__image" src="#img/panorama-mobile.jpg" alt="Фото дня" width="320" height="137">
+              <img class="photo-blog__image" src="#img/panorama-mobile.jpg" alt="Фото дня" width="320" height="137">
             </a>
-            <div class="photos__wrapper">
-              <header class="photos__info">
-                <p class="photos__author">Анна <time class="photos__publish-date" datetime="2018-09-29 20:55:00">(5 минут назад)</time></p>
+            <div class="photo-blog__wrapper">
+              <header class="photo-blog__info">
+                <p class="photo-blog__author">Анна <time class="photo-blog__date" datetime="2018-09-29 20:55:00">(5 минут назад)</time></p>
               </header>
-              <p class="photos__comment">Прыгать или нет? напишите свой совет и смотрите прямую трансляцию в перископе, задавайте свои вопросы!</p>
-              <footer class="photos__likes likes">
-                <button class="likes__button js-likes-button" id="photos-id_1">Лайк</button>
-                <p class="likes__counts">Нравиться: <span class="js-likes-count" id="js-photo-likes_1">215</span>
+              <p class="photo-blog__comment">Прыгать или нет? напишите свой совет и смотрите прямую трансляцию в перископе, задавайте свои вопросы!</p>
+              <footer class="photo-blog__likes likes">
+                <button class="likes__button js-likes-button" id="photos-id-1" type="button">Лайк</button>
+                <p class="likes__counts">Нравиться: <span class="js-likes-count" id="js-likes-1">215</span>
                 </p>
               </footer>
             </div>
           </article>
 
-          <article class="photos__item">
-            <a class="photos__link-to-full photos__wrapper" href="#">
-              <img class="photos__image" src="#img/photo-1-mobile.jpg" alt="Фото дня" width="280" height="180">
+          <article class="photo-blog">
+            <a class="photo-blog__link photo-blog__wrapper" href="#">
+              <img class="photo-blog__image" src="#img/photo-1-mobile.jpg" alt="Фото дня" width="280" height="180">
             </a>
-            <div class="photos__wrapper">
-              <header class="photos__info">
-                <p class="photos__author">Левон <time class="photos__publish-date" datetime="2018-09-29 15:55:00">(5 часов назад)</time></p>
+            <div class="photo-blog__wrapper">
+              <header class="photo-blog__info">
+                <p class="photo-blog__author">Левон <time class="photo-blog__date" datetime="2018-09-29 15:55:00">(5 часов назад)</time></p>
               </header>
-              <p class="photos__comment">Вчера он на луну летал, сегодня в руки к нам попал.</p>
-              <footer class="photos__likes likes">
-                <button class="likes__button js-likes-button" id="photos-id_2">Лайк</button>
-                <p class="likes__counts">Нравиться: <span class="js-likes-count" id="js-photo-likes_2">356</span>
+              <p class="photo-blog__comment">Вчера он на луну летал, сегодня в руки к нам попал.</p>
+              <footer class="photo-blog__likes likes">
+                <button class="likes__button js-likes-button" id="photos-id-2" type="button">Лайк</button>
+                <p class="likes__counts">Нравиться: <span class="js-likes-count" id="js-likes-2">356</span>
                 </p>
               </footer>
             </div>
           </article>
 
-          <article class="photos__item">
-            <a class="photos__link-to-full photos__wrapper" href="#">
-              <img class="photos__image" src="#img/photo-2-mobile.jpg" alt="Фото дня"  width="280" height="180">
+          <article class="photo-blog">
+            <a class="photo-blog__link photo-blog__wrapper" href="#">
+              <img class="photo-blog__image" src="#img/photo-2-mobile.jpg" alt="Фото дня"  width="280" height="180">
             </a>
-            <div class="photos__wrapper">
-              <header class="photos__info">
-                <p class="photos__author">Антон <time class="photos__publish-data" datetime="2018-09-29 08:55:00">(12 часов назад)</time></p>
+            <div class="photo-blog__wrapper">
+              <header class="photo-blog__info">
+                <p class="photo-blog__author">Антон <time class="photos__publish-data" datetime="2018-09-29 08:55:00">(12 часов назад)</time></p>
               </header>
-              <p class="photos__comment">Соседи будут рады!</p>
-              <footer class="photos__likes likes">
-                <button class="likes__button js-likes-button" id="photos-id_3">Лайк</button>
-                <p class="likes__counts">Нравиться: <span class="js-likes-count" id="js-photo-likes_3">666</span>
+              <p class="photo-blog__comment">Соседи будут рады!</p>
+              <footer class="photo-blog__likes likes">
+                <button class="likes__button js-likes-button" id="photos-id-3" type="button">Лайк</button>
+                <p class="likes__counts">Нравиться: <span class="js-likes-count" id="js-likes-3">666</span>
                 </p>
               </footer>
             </div>
           </article>
 
-          <article class="photos__item">
-            <a class="photos__link-to-full photos__wrapper" href="#">
-              <img class="photos__image" src="#img/photo-3-mobile.jpg" alt="Фото дня"  width="280" height="180">
+          <article class="photo-blog">
+            <a class="photo-blog__link photo-blog__wrapper" href="#">
+              <img class="photo-blog__image" src="#img/photo-3-mobile.jpg" alt="Фото дня"  width="280" height="180">
             </a>
-            <div class="photos__wrapper">
-              <header class="photos__info">
-                <p class="photos__author">Борис <time class="photos__publish-data" datetime="2018-09-29 00:55:00">(20 часов назад)</time></p>
+            <div class="photo-blog__wrapper">
+              <header class="photo-blog__info">
+                <p class="photo-blog__author">Борис <time class="photos__publish-data" datetime="2018-09-29 00:55:00">(20 часов назад)</time></p>
               </header>
-              <p class="photos__comment">Здесь могла быть ваша цитата о высоком и вечном.</p>
-              <footer class="photos__likes likes">
-                <button class="likes__button js-likes-button" id="photos-id_4">Лайк</button>
-                <p class="likes__counts">Нравиться: <span class="js-likes-count" id="js-photo-likes_4">215</span>
+              <p class="photo-blog__comment">Здесь могла быть ваша цитата о высоком и вечном.</p>
+              <footer class="photo-blog__likes likes">
+                <button class="likes__button js-likes-button" id="photos-id-4" type="button">Лайк</button>
+                <p class="likes__counts">Нравиться: <span class="js-likes-count" id="js-likes-4">215</span>
                 </p>
               </footer>
             </div>
           </article>
 
-          <article class="photos__item">
-            <a class="photos__link-to-full photos__wrapper" href="#">
-              <img class="photos__image" src="#img/photo-4-mobile.jpg" alt="Фото дня"  width="280" height="180">
+          <article class="photo-blog">
+            <a class="photo-blog__link photo-blog__wrapper" href="#">
+              <img class="photo-blog__image" src="#img/photo-4-mobile.jpg" alt="Фото дня"  width="280" height="180">
             </a>
-            <div class="photos__wrapper">
-              <header class="photos__info">
-                <p class="photos__author">Сергей <time class="photos__publish-data" datetime="2018-09-28 19:55:00">(25 часов назад)</time></p>
+            <div class="photo-blog__wrapper">
+              <header class="photo-blog__info">
+                <p class="photo-blog__author">Сергей <time class="photos__publish-data" datetime="2018-09-28 19:55:00">(25 часов назад)</time></p>
               </header>
-              <p class="photos__comment">Самая кубанская в мире!</p>
-              <footer class="photos__likes likes">
-                <button class="likes__button js-likes-button" id="photos-id_5">Лайк</button>
-                <p class="likes__counts">Нравиться: <span class="js-likes-count" id="js-photo-likes_5">4</span>
+              <p class="photo-blog__comment">Самая кубанская в мире!</p>
+              <footer class="photo-blog__likes likes">
+                <button class="likes__button js-likes-button" id="photos-id-5" type="button">Лайк</button>
+                <p class="likes__counts">Нравиться: <span class="js-likes-count" id="js-likes-5">4</span>
                 </p>
               </footer>
             </div>
           </article>
 
-          <article class="photos__item">
-            <a class="photos__link-to-full photos__wrapper" href="#">
-              <img class="photos__image" src="#img/photo-5-mobile.jpg" alt="Фото дня"  width="280" height="180">
+          <article class="photo-blog">
+            <a class="photo-blog__link photo-blog__wrapper" href="#">
+              <img class="photo-blog__image" src="#img/photo-5-mobile.jpg" alt="Фото дня"  width="280" height="180">
             </a>
-            <div class="photos__wrapper">
-              <header class="photos__info">
-                <p class="photos__author">Максим <time class="photos__publish-data" datetime="2018-09-28 08:55:00">(40 часов назад)</time></p>
+            <div class="photo-blog__wrapper">
+              <header class="photo-blog__info">
+                <p class="photo-blog__author">Максим <time class="photos__publish-data" datetime="2018-09-28 08:55:00">(40 часов назад)</time></p>
               </header>
-              <p class="photos__comment">Где снег-то?</p>
-              <footer class="photos__likes likes">
-                <button class="likes__button js-likes-button" id="photos-id_6">Лайк</button>
-                <p class="likes__counts">Нравиться: <span class="js-likes-count" id="js-photo-likes_6">150</span>
+              <p class="photo-blog__comment">Где снег-то?</p>
+              <footer class="photo-blog__likes likes">
+                <button class="likes__button js-likes-button" id="photos-id-6" type="button">Лайк</button>
+                <p class="likes__counts">Нравиться: <span class="js-likes-count" id="js-likes-6">150</span>
                 </p>
               </footer>
             </div>
           </article>
 
-          <article class="photos__item">
-            <a class="photos__link-to-full photos__wrapper" href="#">
-              <img class="photos__image" src="#img/photo-6-mobile.jpg" alt="Фото дня"  width="280" height="180">
+          <article class="photo-blog">
+            <a class="photo-blog__link photo-blog__wrapper" href="#">
+              <img class="photo-blog__image" src="#img/photo-6-mobile.jpg" alt="Фото дня"  width="280" height="180">
             </a>
-            <div class="photos__wrapper">
-              <header class="photos__info">
-                <p class="photos__author">Надежда <time class="photos__publish-data" datetime="2018-09-28 03:55:00">(45 часов назад)</time></p>
+            <div class="photo-blog__wrapper">
+              <header class="photo-blog__info">
+                <p class="photo-blog__author">Надежда <time class="photos__publish-data" datetime="2018-09-28 03:55:00">(45 часов назад)</time></p>
               </header>
-              <p class="photos__comment">Где снег-то?</p>
-              <footer class="photos__likes likes">
-                <button class="likes__button js-likes-button" id="photos-id_7">Лайк</button>
-                <p class="likes__counts">Нравиться: <span class="js-likes-count" id="js-photo-likes_7">2560</span>
+              <p class="photo-blog__comment">Где снег-то?</p>
+              <footer class="photo-blog__likes likes">
+                <button class="likes__button js-likes-button" id="photos-id-7" type="button">Лайк</button>
+                <p class="likes__counts">Нравиться: <span class="js-likes-count" id="js-likes-7">2560</span>
                 </p>
               </footer>
             </div>
@@ -195,37 +195,35 @@
 
       <section class="page-content__photo-uploads photo-uploads">
         <h2 class="page-content__title photo-uploads__title">Затмите их всех! Выкладывайте все, что накопилось в телефоне!</h2>
-        <form class="photo-uploads__form" metod="get" action="https://echo.htmlacademy.ru" id="uploads__form">
-          <fieldset class="photo-uploads__picture picture">
-            <img class="picture__downloaded js-downloaded-picture" src="#photo-7-mobile.jpg" alt="Загружаемая фотография" width="280" height="374">
-            <input class="picture__file" type="file" name="picture">
+        <form class="photo-uploads__form form" method="get" action="https://echo.htmlacademy.ru" id="uploads-form">
+          <fieldset class="form__picture">
+            <img class="form__downloaded" src="#img/photo-7-mobile.jpg" alt="Загружаемая фотография" width="280" height="374">
           </fieldset>
-          <fieldset class="photo-uploads__pic-filters pic-filters">
-            <div class="pic-filters__toggles">
-              <button class="pic-filters__toggle--active pic-filters__crop" form="uploads__form">
+          <fieldset class="photo-uploads__filters">
+            <div class="photo-uploads__toggles">
+              <button class="photo-uploads__toggle photo-uploads__toggle--active form__toggle--crop" form="uploads-form">
                 <span class="visually-hidden">Фильтр обрезание</span>
               </button>
-              <button class="pic-filters__toggle pic-filters__fill" form="uploads__form">
+              <button class="photo-uploads__toggle photo-uploads__toggle--fill" form="uploads-form">
                 <span class="visually-hidden">Фильтр заливка</span>
               </button>
-              <button class="pic-filters__toggle pic-filters__contrast" form="uploads__form">
+              <button class="photo-uploads__toggle photo-uploads__toggle--contrast" form="uploads-form">
                 <span class="visually-hidden">Фильтр контрастность</span>
               </button>
             </div>
-            <div class="pic-filters__list filters-slider">
-              <div class="pic-filters__item filters-slider__item">
+            <div class="form__list form-slider">
+              <div class="form__item form-slider__item">
                 <label class="visually-hidden" for="filter-crop-value">Настройка обрезания</label>
-                <input class="pic-filters__setting--active pic-filters__corp js-filter-display" type="range" id="filter-crop-value" name="filter-crop" min="0" max="10">
+                <input class="form__setting form__setting--active form__setting--corp" type="range" id="filter-crop-value" name="filter-crop" min="0" max="10">
               </div>
-              <div class="pic-filters__item filters-slider__item"></div>
+              <div class="form__item filters-slider__item"></div>
                 <label class="visually-hidden" for="filter-fill-value">Настройка заливки</label>
-                <input class="pic-filters__setting pic-filters__fill js-filter-display" type="range" id="filter-fill-value" name="filter-fill" min="0" max="10">
+                <input class="form__setting form__setting--fill" type="range" id="filter-fill-value" name="filter-fill" min="0" max="10">
               </div>
-              <div class="pic-filters__item filters-slider__item">
+              <div class="form__item filters-slider__item">
                 <label class="visually-hidden" for="filter-contrast-value">Настройка контрастности</label>
-                <input class="pic-filters__setting pic-filters__contrast js-filter-contrast" type="range" id="filter-contrast-value" name="filter-contrast" min="0" max="10">
+                <input class="form__setting form__setting--contrast" type="range" id="filter-contrast-value" name="filter-contrast" min="0" max="10">
               </div>
-            </div>
           </fieldset>
           <button class="button photo-uploads__post" type="submit">Запостить</button>
           <button class="button photo-uploads__undo" type="Reset">Отмена</button>
@@ -245,7 +243,7 @@
         </div>
         <ul class="page-footer__social social">
           <li>
-            <a class="button social__button social__twitter" href="#">
+            <a class="social-button social-button--twitter" href="#">
               <svg class="social__icon" width="18" height="14">
                 <use xlink:href="#icon-twitter" x="0" y="0" />
               </svg>
@@ -253,7 +251,7 @@
             </a>
           </li>
           <li>
-            <a class="button social__button-button social__facebook" href="#">
+            <a class="social-button social-button--facebook" href="#">
               <svg class="social__icon" width="9" height="18">
                 <use xlink:href="#icon-facebook" x="0" y="0" />
               </svg>
@@ -261,7 +259,7 @@
             </a>
           </li>
           <li>
-            <a class="button social__button-button social__youtube" href="#">
+            <a class="social-button social-button--youtube" href="#">
               <svg class="social__icon" width="15" height="13">
                 <use xlink:href="#icon-youtube" x="0" y="0" />
               </svg>

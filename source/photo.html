@@ -193,15 +193,15 @@
         </div> <!-- photos__list -->
       </section> <!-- page-content__photos -->
 
-      <section class="page-content__photo-uploads photo-uploads">
-        <h2 class="photo-uploads__title">Затмите их всех! Выкладывайте все, что накопилось в телефоне!</h2>
-        <form class="photo-uploads__form form uploads" method="get" action="https://echo.htmlacademy.ru" id="uploads-form">
+      <section class="page-content__photo-uploads uploads">
+        <h2 class="uploads__title">Затмите их всех! Выкладывайте все, что накопилось в телефоне!</h2>
+        <form class="uploads__form" method="get" action="https://echo.htmlacademy.ru" id="uploads">
           <fieldset class="uploads__picture">
             <img class="uploads__downloaded" src="#img/photo-7-mobile.jpg" alt="Загружаемая фотография" width="280" height="374">
           </fieldset>
-          <fieldset class="uploads__filters">
-            <div class="filters">
-              <button class="filters__toggle filters__toggle--active form__toggle--crop">
+          <fieldset class="uploads__filters filters">
+            <div class="filters__toggles">
+              <button class="filters__toggle filters__toggle--active filters__toggle--crop">
                 <span class="visually-hidden">Фильтр кадрирования</span>
               </button>
               <button class="filters__toggle filters__toggle--fill">
@@ -211,31 +211,31 @@
                 <span class="visually-hidden">Фильтр контрастность</span>
               </button>
             </div>
-            <div class="uploads__list">
-              <div class="uploads__item">
+            <div class="filters__list">
+              <div class="filters__item">
                 <label class="visually-hidden" for="filter-crop-value">Настройка кадрирования</label>
                 <input class="visually-hidden" type="range" id="filter-crop-value" name="filter-fill" min="0" max="10">
-                <div class="form__range range">
+                <div class="filters__range range">
                   <div class="range__controls">
                     <div class="range__scale"></div>
                     <div class="range__runner"></div>
                   </div>
                 </div>
               </div>
-              <div class="uploads__item"></div>
+              <div class="filters__item"></div>
                 <label class="visually-hidden" for="filter-fill-value">Настройка заливки</label>
                 <input class="visually-hidden" type="range" id="filter-fill-value" name="filter-fill" min="0" max="10">
-                <div class="form__range range">
+                <div class="filters__range range">
                   <div class="range__controls">
                     <div class="range__scale"></div>
                     <div class="range__runner"></div>
                   </div>
                 </div>
               </div>
-              <div class="uploads__item">
+              <div class="filters__item">
                 <label class="visually-hidden" for="filter-contrast-value">Настройка контрастности</label>
                 <input class="visually-hidden" type="range" id="filter-contrast-value" name="filter-contrast" min="0" max="10">
-                <div class="form__range range">
+                <div class="filters__range range">
                   <div class="range__controls">
                     <div class="range__scale"></div>
                     <div class="range__runner"></div>

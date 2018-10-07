@@ -1,0 +1,33 @@
+.contacts {
+
+  &__title {
+    margin: 38px 0;
+
+    font-size: @body-font-size + 10px;
+    font-weight: lighter;
+    line-height: 30px;
+    text-align: center;
+    color: @bg-darkblue;
+  }
+
+  &__map {
+    position: relative;
+    height: 215px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+
+      width: 100%;
+      height: 100%;
+
+      background-image: url('../img/bg-triangle-white-footer.svg');
+      .background(50%, 0%, auto);
+    }
+  }
+
+  &__wrapper {
+    .wrapper(@mobile-width);
+  }
+}

@@ -1,0 +1,23 @@
+.main-nav {
+  font-size: 18px;
+  font-weight: bold;
+  text-transform: uppercase;
+
+  &__list {
+    .list-reset();
+  }
+
+  &__item {
+    // background-color: @bg-darkblue;
+    box-shadow: inset 0 1px 0 0 fade(@white, 15%), 0 1px 0 0 @black;
+    margin-bottom: 2px;
+  }
+
+  &__link {
+    padding: 16px;
+    color: @white;
+    .block-reset();
+
+  }
+
+}

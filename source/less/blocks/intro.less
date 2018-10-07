@@ -1,0 +1,27 @@
+.intro {
+  box-sizing: border-box;
+
+  &__apps {
+    background-color: @bg-darkestblue;
+  }
+
+  &__image {
+    margin-top: 110px;
+  }
+
+  &__title {
+    width: 100%;
+    margin-top: 36px;
+    padding-bottom: 85px;
+
+    font-size: @body-font-size + 10px;
+    font-weight: lighter;
+    line-height: 30px;
+    color: @white;
+    text-align: center;
+  }
+
+  &__wrapper {
+    .wrapper(@mobile-width);
+  }
+}

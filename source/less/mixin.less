@@ -1,0 +1,35 @@
+.list-reset() {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.link-reset() {
+  display: inline-block;
+}
+
+.block-reset() {
+  display: block;
+}
+
+.margin-reset() {
+  margin: 0;
+}
+
+.wrapper(@min-width: 100%) {
+  position: relative;
+  max-width: @min-width;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.background(@position-x: 50%, @position-y: 50%, @size: cover) {
+  background-repeat: no-repeat;
+  background-position: @position-x @position-y;
+  background-size: @size;
+}
+
+.button-reset() {
+  border: none;
+  background: none;
+}

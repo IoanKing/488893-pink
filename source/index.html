@@ -2,6 +2,7 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>HTML Academy: Пинк</title>
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i&amp;subset=cyrillic,cyrillic-ext" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
@@ -9,23 +10,24 @@
   <body class="front-page">
 
     <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
-      <symbol id="icon-logo" viewBox="0 0 0 0">
-        <!--Здесь будет иконка логотипа-->
+      <symbol id="icon-logo" viewBox="0 0 74.426 22.859" enable-background="new 0 0 74.426 22.859">
+        <g>
+          <path fill="#FFFFFF" d="M0,1.449c0-0.708,0.58-1.288,1.256-1.288h7.18c5.087,0,8.436,2.704,8.436,7.147v0.064 c0,4.861-4.057,7.373-8.854,7.373H2.544v6.825c0,0.708-0.58,1.288-1.288,1.288C0.58,22.859,0,22.279,0,21.571V1.449z M8.114,12.428 c3.734,0,6.182-1.996,6.182-4.958V7.405c0-3.22-2.415-4.894-6.054-4.894H2.544v9.917H8.114z"/>
+          <path fill="#FFFFFF" d="M21.729,1.288C21.729,0.58,22.308,0,22.983,0c0.709,0,1.288,0.58,1.288,1.288v20.283 c0,0.708-0.579,1.288-1.288,1.288c-0.676,0-1.255-0.58-1.255-1.288V1.288z"/>
+          <path fill="#FFFFFF" d="M30.87,1.32c0-0.676,0.579-1.256,1.256-1.256h0.354c0.58,0,0.934,0.29,1.288,0.74l13.684,17.45V1.256 C47.451,0.58,47.998,0,48.707,0c0.676,0,1.223,0.58,1.223,1.256v20.348c0,0.676-0.482,1.191-1.158,1.191h-0.129 c-0.548,0-0.934-0.322-1.32-0.772L33.349,4.153v17.45c0,0.676-0.547,1.256-1.255,1.256c-0.677,0-1.224-0.58-1.224-1.256V1.32z"/>
+          <path fill="#FFFFFF" d="M56.3,1.288C56.3,0.58,56.879,0,57.556,0c0.708,0,1.287,0.58,1.287,1.288v12.331L71.689,0.451 C71.979,0.193,72.269,0,72.688,0c0.676,0,1.224,0.612,1.224,1.256c0,0.354-0.161,0.644-0.419,0.901l-7.984,7.92l8.564,10.561 c0.225,0.29,0.354,0.547,0.354,0.934c0,0.676-0.579,1.288-1.287,1.288c-0.483,0-0.806-0.258-1.03-0.58l-8.403-10.463l-4.862,4.861 v4.894c0,0.708-0.579,1.288-1.287,1.288c-0.677,0-1.256-0.58-1.256-1.288V1.288z"/>
+        </g>
       </symbol>
     </svg>
 
     <header class="page-header">
 
-      <div class="page-header__top">
+      <div class="page-header__top page-header__top--open">
         <div class="page-header__wrapper">
-          <div class="page-header__logo logo">
-            <a href="#">
-              <svg class="logo__icon" width="60" height="45">
-                <use xlink:href="#icon-logo" x="0" y="0" />
-              </svg>PINK
-            </a>
-          </div>
-          <button class="page-header__hamburger" type="button">
+          <a class="page-header__logo" href="#">
+            <img src="img/logo-pink-white-mobile.svg" width="74" height="22" alt="PINK">
+          </a>
+          <button class="page-header__hamburger page-header__hamburger--open" type="button">
             <span class="visually-hidden">Открыть меню</span>
           </button>
           <nav class="page-header__navigation main-nav">
@@ -49,26 +51,28 @@
 
       <div class="page-header__intro intro">
         <div class="intro__wrapper">
-          <h1 class="visually-hidden">Приложение PINK</h1>
-          <img class="intro__image" src="#img/iphone-5-in-hand-png" alt="hand with phone">
-          <div class="intro__apps apps">
-            <a class="button apps__buttom" href="https://itunes.apple.com/ru/store">Скачать приложение</a>
+          <img class="intro__image" src="img/iphone-hand-mobile@1x.png" alt="hand with phone">
+          <h1 class="visually-hidden">Взгляните на жизнь иначе!</h1>
+        </div>
+        <div class="intro__apps apps">
+          <div class="intro__wrapper">
+            <a class="button apps__button" href="https://itunes.apple.com/ru/store">Скачать приложение</a>
             <ul class="apps__list">
               <li class="apps__item">
                 <a class="apps__link" href="https://itunes.apple.com/ru/store">
-                  <img class="apps__img" src="#img/apple-logo.svg" alt="apple icon">
+                  <img class="apps__img" src="img/logo-apple.svg" alt="apple icon" width="47" height="56">
                   <span class="visually-hidden">Скачать приложение для apple</span>
                 </a>
               </li>
               <li class="apps__item">
                 <a class="apps__link" href="https://play.google.com/store/apps/">
-                  <img class="apps__img" src="#img/android-logo.svg" alt="andriod icon">
+                  <img class="apps__img" src="img/logo-android.svg" alt="andriod icon" width="43" height="47">
                   <span class="visually-hidden">Скачать приложение для android</span>
                 </a>
               </li>
               <li class="apps__item">
                 <a class="apps__link" href="https://www.microsoft.com/ru-ru/store/top-free/apps/pc">
-                  <img class="apps__img" src="#img/microsoft-logo.svg" alt="windows icon">
+                  <img class="apps__img" src="img/logo-microsoft.svg" alt="windows icon" width="44" height="41">
                   <span class="visually-hidden">Скачать приложение для windows phone</span>
                 </a>
               </li>
@@ -84,21 +88,26 @@
 
       <section class="page-content__features features">
         <div class="features__wrapper">
-          <h2 class="features__title">Устали от серости мегаполиса?<br> Нам есть, что вам предложить!</h2>
-          <img class="features__image" src="#img/screen_pink.png" alt="Телефон c розовой фотографией" width="157" height="320">
-          <div class="features__item feature">
-            <h3 class="feature__title">Поднимает настроение</h3>
-            <p class="feature__info">Приложение позволит вам победить осеннюю хандру и деперессию буквально в несколько кликов!</p>
+          <h2 class="features__title">Устали от серости мегаполиса?</h2>
+          <h2 class="features__title">Нам есть, что вам предложить!</h2>
+        </div>
+        <div class="features__list feature">
+          <div class="features__wrapper">
+            <div class="features__item">
+              <h3 class="feature__title">Поднимает настроение</h3>
+              <p class="feature__info">Приложение позволит вам победить осеннюю хандру и деперессию буквально в несколько кликов!</p>
+            </div>
+            <div class="features__item">
+              <h3 class="feature__title">Меняет мир вокруг</h3>
+              <p class="feature__info">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект!</p>
+            </div>
+            <div class="features__item">
+              <h3 class="feature__title">Заводит новых друзей</h3>
+              <p class="feature__info">Ставьте лайки, комментируте, делитесь фотографиями с друзьями и заводите новых!</p>
+            </div>
           </div>
-          <div class="features__item feature">
-            <h3 class="feature__title">Меняет мир вокруг</h3>
-            <p class="feature__info">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект!</p>
-          </div>
-          <div class="features__item feature">
-            <h3 class="feature__title">Заводит новых друзей</h3>
-            <p class="feature__info">Ставьте лайки, комментируте, делитесь фотографиями с друзьями и заводите новых!</p>
-          </div>
-        </div> <!-- wrapper -->
+          <img class="features__image" src="img/iphone-screen-mobile@1x.png" alt="Телефон c розовой фотографией" width="157" height="320">
+        </div>
       </section> <!-- page-content__intro -->
 
       <section class="page-content__reviews reviews reviews-slider">
@@ -138,7 +147,7 @@
                 </th>
                 <th class="rate__header">
                   <span class="rate__hit">Хит</span>
-                  Стандартный
+                  Стандарт
                   <span class="rate__price">3,99 USD</span>
                 </th>
                 <th class="rate__header">
@@ -150,50 +159,59 @@
                 <td class="rate__cell">
                   Розовый фильтр
                   <!-- Здесь будет галочка/крестик ::before -->
-                  <span class="rate__option rate__option--yes visually-hidden"> - Да</span>
+                  <span class="rate__option rate__option--yes"></span>
+                  <span class="visually-hidden"> - Да</span>
                 </td>
                 <td class="rate__cell">
                   Розовый фильтр
                   <!-- Здесь будет галочка/крестик ::before -->
-                  <span class="rate__option rate__option--yes visually-hidden"> - Да</span>
+                  <span class="rate__option rate__option--yes"></span>
+                  <span class="visually-hidden"> - Да</span>
                 </td>
                 <td class="rate__cell">
                   Розовый фильтр
                   <!-- Здесь будет галочка/крестик ::before -->
-                  <span class="rate__option rate__option--yes visually-hidden"> - Да</span>
+                  <span class="rate__option rate__option--yes"></span>
+                  <span class="visually-hidden"> - Да</span>
                 </td>
               <tr>
                 <td class="rate__cell">
                   Смайлики
                   <!-- Здесь будет галочка/крестик ::before -->
-                  <span class="rate__option rate__option--no visually-hidden"> - Нет</span>
+                  <span class="rate__option rate__option--no"></span>
+                  <span class="visually-hidden"> - Нет</span>
                 </td>
                 <td class="rate__cell">
                   Смайлики
                   <!-- Здесь будет галочка/крестик ::before -->
-                  <span class="rate__option rate__option--yes visually-hidden"> - Да</span>
+                  <span class="rate__option rate__option--yes"></span>
+                  <span class="visually-hidden"> - Да</span>
                 </td>
                 <td class="rate__cell">
                   Смайлики
                   <!-- Здесь будет галочка/крестик ::before -->
-                  <span class="rate__option rate__option--yes visually-hidden"> - Да</span>
+                  <span class="rate__option rate__option--yes"></span>
+                  <span class="visually-hidden"> - Да</span>
                 </td>
               </tr>
               <tr>
                 <td class="rate__cell">
                   Комментарии
                   <!-- Здесь будет галочка/крестик ::before -->
-                  <span class="rate__option rate__option--no visually-hidden"> - Нет</span>
+                  <span class="rate__option rate__option--no"></span>
+                  <span class="visually-hidden"> - Нет</span>
                 </td>
                 <td class="rate__cell">
                   Комментарии
                   <!-- Здесь будет галочка/крестик ::before -->
-                  <span class="rate__option rate__option--no visually-hidden"> - Нет</span>
+                  <span class="rate__option rate__option--no"></span>
+                  <span class="visually-hidden"> - Нет</span>
                 </td>
                 <td class="rate__cell">
                   Комментарии
                   <!-- Здесь будет галочка/крестик ::before -->
-                  <span class="rate__option rate__option--yes visually-hidden"> - Да</span>
+                  <span class="rate__option rate__option--yes"></span>
+                  <span class="visually-hidden"> - Да</span>
                 </td>
               </tr>
             </tbody>
@@ -222,22 +240,20 @@
             <p class="contact__link">ул. Большая Конюшенная, 19/8</p>
           </div>
         </div> <!-- wrapper -->
-        <div class="contacts__map">
+        <div class="contacts__map map">
+          <div class="map__img"></div>
+          <div class="map__marker"></div>
           <!--Здесь будет карта-->
         </div> <!-- contacts__map -->
       </section> <!--page-contacts-->
 
     </main>
 
-    <footer class="page-footer footer">
+    <footer class="page-footer footer page-footer--hide">
       <div class="footer__wrapper">
-        <div class="footer__logo logo">
-          <a href="index.html">
-            <svg class="logo__icon" width="60" height="45">
-              <use xlink:href="#icon-logo" x="0" y="0" />
-            </svg>PINK
-          </a>
-        </div>
+        <a class="footer__logo" href="index.html">
+          <img src="img/logo-pink-blue-mobile.svg" width="147" height="40" alt="PINK">
+        </a>
         <ul class="footer__social social">
           <li>
             <a class="social__button social__button--twitter" href="#">

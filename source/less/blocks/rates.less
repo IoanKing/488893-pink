@@ -1,0 +1,30 @@
+.rates {
+  overflow: hidden;
+
+  padding: 100px 0 110px 0;
+  background-color: @bg-gray;
+  background-image: url('../img/bg-triangle-white.svg');
+  .background(50%, 0%, auto);
+
+  &__table {
+    position: relative;
+    left: calc(50% - @table-width/2);
+    border-spacing: 0;
+    min-width: @table-width;
+
+    margin: 0 auto;
+    padding-top: 20px;
+
+    border-collapse: separate;
+    border-spacing: 1px;
+  }
+
+  &__wrapper {
+    .wrapper(@mobile-width);
+  }
+
+  &__toggles {
+    text-align: center;
+  }
+
+}

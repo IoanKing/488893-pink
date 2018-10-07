@@ -1,0 +1,24 @@
+.review {
+  text-align: center;
+
+  &__author {
+    font-size: @body-font-size + 4px;
+    line-height: 30px;
+    font-weight: bold;
+  }
+
+  &__text {
+    font-size: @body-font-size;
+    line-height: 30px;
+
+    &::before {
+      content: "«";
+    }
+
+    &::after {
+      content: "»";
+    }
+
+  }
+
+}

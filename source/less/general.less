@@ -1,0 +1,47 @@
+html {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: inherit;
+  box-sizing: inherit;
+}
+
+body {
+  min-width: @mobile-width;
+  margin: 0;
+  padding: 0;
+
+  font-size: @body-font-size + 4;
+  line-height: @body-font-size + 10;
+  font-family: "Open Sans", Arial, sans-serif;
+  color: @black;
+
+  background-color: @white;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+.visually-hidden {
+  position: absolute;
+  clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+  clip: rect(1px, 1px, 1px, 1px);
+
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  padding: 0;
+
+  border: 0;
+
+  overflow: hidden;
+}

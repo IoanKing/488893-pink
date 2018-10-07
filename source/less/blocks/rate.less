@@ -1,0 +1,99 @@
+.rate {
+
+  &__header {
+    position: relative;
+
+    width: 280px;
+    padding: 23px 10px;
+
+    font-size: @body-font-size + 4px;
+    line-height: 30px;
+    font-weight: bold;
+    color: @white;
+
+    background-color: @bg-darkblue;
+
+    box-sizing: border-box;
+  }
+
+  &__price {
+    .block-reset();
+    font-weight: lighter;
+    font-size: @body-font-size + 6px;
+    line-height: 30px;
+  }
+
+  &__hit {
+    position: absolute;
+    display: block;
+    top: 0;
+    left: -1px;
+
+    width: 74px;
+    height: 73px;
+
+    font-weight: normal;
+    text-transform: uppercase;
+
+    transform: rotate(-45deg);
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 74px;
+      height: 73px;
+
+      background-image: url('../img/bg-hit.svg');
+      .background();
+
+      transform: rotate(45deg);
+    }
+
+    &::after {
+      content: "Хит";
+      position: absolute;
+      top: 0;
+      left: 0;
+
+      display: inline-block;
+      width: 74px;
+      height: 73px;
+
+      transform: rotate(45deg);
+    }
+  }
+
+  &__cell {
+    position: relative;
+    padding: 22px 33px;
+    width: 280px;
+
+    background-color: @white;
+
+  }
+
+  &__option {
+    position: absolute;
+    display: block;
+    top: 23px;
+    right: 20px;
+
+    .background(100%, 100%);
+
+    &--yes {
+      background-image: url('../img/icon-yes.svg');
+      width: 31px;
+      height: 22px;
+    }
+
+    &--no {
+      background-image: url('../img/icon-no.svg');
+      width: 27px;
+      height: 27px;
+    }
+  }
+
+
+}

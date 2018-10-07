@@ -1,12 +1,10 @@
 html {
-  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
 *,
 *::before,
 *::after {
-  -webkit-box-sizing: inherit;
   box-sizing: inherit;
 }
 
@@ -17,7 +15,7 @@ body {
 
   font-size: @body-font-size + 4;
   line-height: @body-font-size + 10;
-  font-family: "Open Sans", Arial, sans-serif;
+  font-family: "Open Sans", Tahoma, sans-serif;
   color: @black;
 
   background-color: @white;
@@ -33,7 +31,6 @@ img {
 
 .visually-hidden {
   position: absolute;
-  clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
   clip: rect(1px, 1px, 1px, 1px);
 
   height: 1px;

@@ -1,0 +1,37 @@
+.social {
+  text-align: center;
+  .list-reset();
+}
+
+.social__item {
+  display: inline-block;
+  padding: 5px;
+}
+
+.social__button {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+
+  text-align: center;
+
+  border-radius: 50%;
+  border-style: solid;
+  border-width: 3px;
+  border-color: fade(@bg-darkblue, 10%);
+  background-color: transparent;
+
+  .background(50%, 50%, auto);
+
+  &--twitter {
+    background-image: url("../img/icon-twitter.svg");
+  }
+
+  &--facebook {
+    background-image: url("../img/icon-facebook.svg");
+  }
+
+  &--youtube {
+    background-image: url("../img/icon-youtube.svg");
+  }
+}

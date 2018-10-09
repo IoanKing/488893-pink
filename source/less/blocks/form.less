@@ -1,0 +1,159 @@
+.form__list {
+  .list-reset();
+  padding-top: 20px;
+}
+
+.form__legend {
+  padding-left: 20px;
+  padding-right: 20px;
+
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18px;
+  text-align: center;
+  text-transform: uppercase;
+  color: @text-blood;
+}
+
+.form__label {
+  display: inline-block;
+  padding: 10px 20px 10px 20px;
+
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 30px;
+  text-transform: uppercase;
+  color: @text-blood;
+}
+
+.form__label-in-list {
+  position: relative;
+
+  display: inline-block;
+  padding: 10px 0 10px 10px;
+
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 30px;
+  color: @bg-darkblue;
+}
+
+.form__checkbox {
+  padding-left: 70px;
+  margin-bottom: 22px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: calc(50% - 16px);
+    left: 0;
+
+    width: 36px;
+    height: 36px;
+
+    border: 2px solid @bg-gray-dark;
+    background-color: @white;
+  }
+}
+
+.form__check:checked + .form__checkbox::after {
+  content: "";
+  position: absolute;
+  top: calc(50% - 6px);
+  left: 8px;
+
+  width: 20px;
+  height: 10px;
+
+  border-left: 2px solid @text-blood;
+  border-bottom: 2px solid @text-blood;
+
+  transform: rotate(-45deg);
+}
+
+.form__radio {
+  padding-left: 70px;
+  margin-bottom: 22px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: calc(50% - 18px);
+    left: 0;
+
+    width: 36px;
+    height: 36px;
+
+    border: 2px solid @bg-gray-dark;
+    background-color: @white;
+
+    border-radius: 50%;
+  }
+}
+
+.form__check:checked + .form__radio::after {
+  content: "";
+  position: absolute;
+  top: calc(50% - 6.5px);
+  left: 11.5px;
+
+  width: 13px;
+  height: 13px;
+
+  background-color: @text-blood;
+  border-radius: 50%;
+}
+
+.form__text-field {
+  display: inline-block;
+  padding: 10px 20px;
+
+  font-size: 18px;
+  line-height: 30px;
+  color: @bg-darkblue;
+
+  border: 1px solid @bg-gray-dark;
+}
+
+.form__textarea {
+  display: inline-block;
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 20px 20px 20px 20px;
+
+  font-size: 18px;
+  line-height: 30px;
+  color: @bg-darkblue;
+
+  border: 2px solid @bg-gray-dark;
+}
+
+.form__submit {
+  width: 100%;
+  padding: 16px;
+
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+  color: @white;
+
+  border-radius: 3px;
+  border-style: solid;
+  border-width: 2px;
+  border-color: @wood-green;
+  background-color: @wood-green;
+}
+
+.form__submit-text {
+  margin-top: 40px;
+
+  font-size: 14px;
+  line-height: 30px;
+  text-align: center;
+  text-transform: uppercase;
+  color: @bg-darkblue;
+
+  &--red {
+    color: @text-blood;
+  }
+}

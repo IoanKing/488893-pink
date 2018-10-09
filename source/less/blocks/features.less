@@ -1,0 +1,35 @@
+.features {
+  padding-top: 47px;
+  overflow: hidden;
+}
+
+.features__item {
+  padding: 0 10px 8px 10px;
+}
+
+.features__list {
+  .list-reset();
+  padding-top: 118px;
+
+  background-color: @bg-gray;
+  background-image: url("../img/bg-triangle-white.svg");
+  .background(50%, 0%, auto);
+}
+
+.features__image {
+  position: relative;
+  bottom: -35px;
+  margin: 0 auto;
+  display: block;
+}
+
+.features__title {
+  font-size: 24px;
+  font-weight: lighter;
+  text-align: center;
+  color: @bg-darkblue;
+}
+
+.features__wrapper {
+  .wrapper(@mobile-width);
+}

@@ -1,0 +1,26 @@
+.likes {
+  position: relative;
+
+  font-size: 12px;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: @text-blood;
+}
+
+.likes__button {
+  position: absolute;
+  top: calc(50% - 1.5em / 2);
+  left: 0;
+
+  width: 1.5em;
+  height: 1.5em;
+  .button-reset();
+
+  background-image: url("../img/icon-heart.svg");
+  .background(50%, 50%, 1.2em);
+}
+
+.likes__counts {
+  margin: 0;
+  padding-left: 30px;
+}

@@ -1,0 +1,32 @@
+.range__controls {
+  position: relative;
+  height: 41px;
+
+  padding-top: 26px;
+  padding-left: 20px;
+  padding-right: 20px;
+
+  border-radius: 5px;
+
+  box-sizing: content-box;
+}
+
+.range__scale {
+  height: 2px;
+  background-color: @black;
+}
+
+.range__runner {
+  position: absolute;
+  top: calc(50% - 15px);
+  left: 75%;
+
+  width: 14px;
+  height: 14px;
+  padding: 0;
+
+  border: 2px solid @text-blood;
+  background-color: @white;
+  border-radius: 50%;
+  cursor: pointer;
+}

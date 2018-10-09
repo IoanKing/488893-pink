@@ -1,3 +1,27 @@
+@font-face {
+  font-family: "Open Sans";
+  src: url("../fonts/opensans.woff") format("woff"),
+    url("../fonts/opensans.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Open Sans";
+  src: url("../fonts/opensansbold.woff") format("woff"),
+      url("../fonts/opensansbold.woff2") format("woff2");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Open Sans";
+  src: url("../fonts/opensanslight.woff") format("woff"),
+    url("../fonts/opensanslight.woff2") format("woff2");
+  font-weight: lighter;
+  font-style: normal;
+}
+
 html {
   box-sizing: border-box;
 }
@@ -13,8 +37,8 @@ body {
   margin: 0;
   padding: 0;
 
-  font-size: @body-font-size + 4;
-  line-height: @body-font-size + 10;
+  font-size: 18px;
+  line-height: 24px;
   font-family: "Open Sans", Tahoma, sans-serif;
   color: @black;
 
@@ -29,16 +53,18 @@ img {
   max-width: 100%;
 }
 
-.visually-hidden {
+.visually-hidden:not(:focus):not(:active) {
   position: absolute;
-  clip: rect(1px, 1px, 1px, 1px);
 
-  height: 1px;
   width: 1px;
+  height: 1px;
   margin: -1px;
+  border: 0;
   padding: 0;
 
-  border: 0;
+  white-space: nowrap;
 
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
   overflow: hidden;
 }

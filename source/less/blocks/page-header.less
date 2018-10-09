@@ -2,38 +2,38 @@
   box-sizing: border-box;
   background-image: url("../img/bg-back-mobile@1x.jpg");
   .background();
+}
 
-  &__top {
-    min-height: 66px;
-    background-color: fade(@black, 30%);
+.page-header__top {
+  min-height: 66px;
+  background-color: fade(@black, 30%);
 
-    &--open {
-      background-color: @bg-darkblue;
-    }
+  &--open {
+    background-color: @bg-darkblue;
   }
+}
 
-  &__wrapper {
-    .wrapper(@mobile-width);
+.page-header__wrapper {
+  .wrapper(@mobile-width);
+}
+
+.page-header__hamburger {
+  position: absolute;
+  top: 23px;
+  right: 20px;
+  width: 50px;
+  height: 24px;
+  .button-reset();
+  background-image: url("../img/icon-menu-burger.svg");
+  .background();
+
+  &--open {
+    width: 23px;
+    background-image: url("../img/icon-menu-cross.svg");
   }
+}
 
-  &__hamburger {
-    position: absolute;
-    top: 23px;
-    right: 20px;
-    width: 50px;
-    height: 24px;
-    .button-reset();
-    background-image: url("../img/icon-menu-burger.svg");
-    .background();
-
-    &--open {
-      width: 23px;
-      background-image: url("../img/icon-menu-cross.svg");
-    }
-  }
-
-  &__logo {
-    padding: 23px 20px;
-    .link-reset();
-  }
+.page-header__logo {
+  padding: 23px 20px;
+  .link-reset();
 }

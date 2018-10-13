@@ -22,7 +22,7 @@
 
     <header class="page-header">
 
-      <div class="page-header__top">
+      <div class="page-header__top page-header__top--open">
         <div class="page-header__main-wrapper">
           <div class="page-header__wrapper page-header__wrapper--desktop">
             <a class="page-header__logo" href="#">
@@ -32,11 +32,11 @@
                 <img src="img/logo-pink-white-mobile.svg" alt="PINK">
               </picture>
             </a>
-            <button class="page-header__hamburger" type="button">
+            <button class="page-header__hamburger page-header__hamburger--open" type="button">
               <span class="visually-hidden">Меню</span>
             </button>
           </div>
-          <nav class="page-header__navigation main-nav">
+          <nav class="page-header__navigation page-header__navigation--open main-nav">
             <ul class="main-nav__list">
               <li class="main-nav__item main-nav__item--active">
                 <a class="main-nav__link main-nav__wrapper main-nav__wrapper--desktop">Главная</a>
@@ -98,26 +98,31 @@
           <h2 class="features__title">Устали от серости мегаполиса?</h2>
           <h2 class="features__title">Нам есть, что вам предложить!</h2>
         </div>
-        <div class="features__list feature">
-          <div class="features__wrapper">
-            <div class="features__item">
-              <h3 class="feature__title">Поднимает настроение</h3>
-              <p class="feature__info">Приложение позволит вам победить осеннюю хандру и деперессию буквально в несколько кликов!</p>
+        <div class="features__content">
+          <div class="features__wrapper-tablet">
+            <div class="features__list feature">
+              <div class="feature__item feature__wrapper feature__item--screen-1">
+                <h3 class="feature__title">Поднимает настроение</h3>
+                <p class="feature__info">Приложение позволит вам победить осеннюю хандру и деперессию буквально в несколько кликов!</p>
+              </div>
+              <div class="feature__item feature__wrapper feature__item--screen-2">
+                <h3 class="feature__title">Меняет мир вокруг</h3>
+                <p class="feature__info">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект!</p>
+              </div>
+              <div class="feature__item feature__wrapper feature__item--screen-3">
+                <h3 class="feature__title">Заводит новых друзей</h3>
+                <p class="feature__info">Ставьте лайки, комментируте, делитесь фотографиями с друзьями и заводите новых!</p>
+              </div>
             </div>
-            <div class="features__item">
-              <h3 class="feature__title">Меняет мир вокруг</h3>
-              <p class="feature__info">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект!</p>
-            </div>
-            <div class="features__item">
-              <h3 class="feature__title">Заводит новых друзей</h3>
-              <p class="feature__info">Ставьте лайки, комментируте, делитесь фотографиями с друзьями и заводите новых!</p>
-            </div>
+            <picture class="features__main-picture">
+              <source media="(min-width: 660px)" srcset="img/iphone-screen-3-tablet@1x.png">
+              <img class="features__image" src="img/iphone-screen-mobile@1x.png" alt="Телефон c розовой фотографией">
+            </picture>
           </div>
-          <img class="features__image" src="img/iphone-screen-mobile@1x.png" alt="Телефон c розовой фотографией" width="157" height="320">
         </div>
       </section>
 
-      <section class="page-content__reviews reviews reviews-slider">
+      <!-- <section class="page-content__reviews reviews reviews-slider">
         <div class="reviews__wrapper">
           <h2 class="visually-hidden">Отзывы:</h2>
           <ul class="reviews__list reviews-slider__list">
@@ -242,10 +247,10 @@
           <div class="map__img"></div>
           <div class="map__marker"></div>
         </div>
-      </section>
+      </section> -->
 
     </main>
-
+<!--
     <footer class="page-footer footer page-footer--hide">
       <div class="footer__wrapper">
         <a class="footer__logo" href="index.html">
@@ -286,7 +291,7 @@
           </a>
         </p>
       </div>
-    </footer>
+    </footer> -->
 
     <script src="js/scripts.js"></script>
   </body>

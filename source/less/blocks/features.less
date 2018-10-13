@@ -1,35 +1,123 @@
 .features {
-  padding-top: 47px;
+  padding-top: 27px;
   overflow: hidden;
 }
 
-.features__item {
-  padding: 0 10px 8px 10px;
+.features__wrapper {
+  .wrapper(@mobile-width);
 }
 
-.features__list {
+.features__content {
   .list-reset();
-  padding-top: 118px;
+  padding-top: 73px;
 
   background-color: @bg-gray;
   background-image: url("../img/bg-triangle-white.svg");
-  .background(50%, 0%, auto);
+  .background(0%, 0%, contain);
+}
+
+.features__list {
+  margin-bottom: 15px;
+}
+
+.features__main-picture {
+  position: relative;
 }
 
 .features__image {
-  position: relative;
-  bottom: -35px;
-  margin: 0 auto;
   display: block;
+  margin-bottom: -35px;
+  margin: 0 auto;
 }
 
 .features__title {
+  margin-bottom: 30px;
+  margin-left: auto;
+  margin-right: auto;
+
   font-size: 24px;
+  line-height: 28px;
   font-weight: lighter;
   text-align: center;
   color: @bg-darkblue;
 }
 
-.features__wrapper {
-  .wrapper(@mobile-width);
+@media (min-width: @tablet-width) {
+  .features {
+    padding-top: 50px;
+  }
+
+  .features__wrapper {
+    .wrapper(@tablet-width);
+  }
+
+  .features__wrapper-tablet {
+    .wrapper(@tablet-width);
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .features__content {
+    margin-top: 35px;
+    padding-top: 0;
+  }
+
+  .features__title {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 40px;
+    line-height: 48px;
+
+    & + & {
+      width: 80%;
+    }
+  }
+
+  .features__main-picture {
+    flex-basis: 50%;
+    order: 0;
+    margin: 0;
+  }
+
+  .features__image {
+    margin: 15px 0 -15px 0;
+  }
+
+  .features__list {
+    flex-basis: 50%;
+    padding-top: 75px;
+    order: 2;
+    margin: 0;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .features {
+    padding-top: 70px;
+  }
+
+  .features__wrapper {
+    .wrapper(@desktop-width);
+  }
+
+  .features__wrapper-tablet {
+    .wrapper(@desktop-width);
+  }
+
+  .features__main-picture {
+    display: none;
+  }
+
+  .features__title {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 50px;
+    line-height: 60px;
+
+    & + & {
+      width: 60%;
+    }
+  }
 }

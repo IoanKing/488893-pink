@@ -1,15 +1,19 @@
 .page-header {
   box-sizing: border-box;
+
   background-image: url("../img/bg-back-mobile@1x.jpg");
-  .background();
+  .background(50%, 50%, cover);
 }
 
 .page-header__top {
-  min-height: 66px;
+  min-height: 64px;
+  margin-bottom: 1px;
   background-color: fade(@black, 30%);
+  border-bottom: 1px solid transparent;
 
   &--open {
     background-color: @bg-darkblue;
+    border-color: @black;
   }
 }
 
@@ -19,7 +23,7 @@
 
 .page-header__hamburger {
   position: absolute;
-  top: 23px;
+  top: 20px;
   right: 20px;
   width: 50px;
   height: 24px;
@@ -34,6 +38,14 @@
 }
 
 .page-header__logo {
-  padding: 23px 20px;
+  padding: 20px 20px 21px 0px;
   .link-reset();
+}
+
+.page-header__navigation {
+  display: none;
+
+  &--open {
+    display: block;
+  }
 }

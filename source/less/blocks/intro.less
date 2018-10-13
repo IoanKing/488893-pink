@@ -2,12 +2,23 @@
   box-sizing: border-box;
 }
 
+.intro__wrapper {
+  .wrapper(@mobile-width);
+}
+
+.intro__header {
+  margin: 0;
+  padding: 0;
+}
+
 .intro__apps {
   background-color: @bg-darkestblue;
 }
 
 .intro__image {
-  margin-top: 110px;
+  display: block;
+  margin: 0;
+  padding: 105px 0 0 0;
 }
 
 .intro__title {
@@ -20,8 +31,4 @@
   line-height: 30px;
   color: @white;
   text-align: center;
-}
-
-.intro__wrapper {
-  .wrapper(@mobile-width);
 }

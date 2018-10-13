@@ -22,35 +22,33 @@
 
     <header class="page-header">
 
-      <div class="page-header__top page-header__top--open">
-        <div class="page-header__wrapper">
-          <a class="page-header__logo" href="#">
-            <img src="img/logo-pink-white-mobile.svg" width="74" height="22" alt="PINK">
-          </a>
-          <button class="page-header__hamburger page-header__hamburger--open" type="button">
-            <span class="visually-hidden">Открыть меню</span>
-          </button>
-          <nav class="page-header__navigation main-nav">
-            <ul class="main-nav__list">
-              <li class="main-nav__item main-nav__item--active">
-                <a class="main-nav__link">Главная</a>
-              </li>
-              <li class="main-nav__item">
-                <a class="main-nav__link" href="photo.html">Фотографии</a>
-              </li>
-              <li class="main-nav__item">
-                <a class="main-nav__link" href="form.html">Конкурс</a>
-              </li>
-              <li class="main-nav__item">
-                <a class="main-nav__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
-              </li>
-            </ul>
-          </nav>
-        </div> <!-- wrapper -->
-      </div> <!-- page-header__top -->
+      <div class="page-header__wrapper page-header__top">
+        <a class="page-header__logo" href="#">
+          <img src="img/logo-pink-white-mobile.svg" width="74" height="22" alt="PINK">
+        </a>
+        <button class="page-header__hamburger" type="button">
+          <span class="visually-hidden">Меню</span>
+        </button>
+      </div>
+      <nav class="page-header__navigation main-nav">
+        <ul class="main-nav__list">
+          <li class="main-nav__item main-nav__item--active">
+            <a class="main-nav__link page-header__wrapper">Главная</a>
+          </li>
+          <li class="main-nav__item">
+            <a class="main-nav__link page-header__wrapper" href="photo.html">Фотографии</a>
+          </li>
+          <li class="main-nav__item">
+            <a class="main-nav__link page-header__wrapper" href="form.html">Конкурс</a>
+          </li>
+          <li class="main-nav__item">
+            <a class="main-nav__link page-header__wrapper" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
+          </li>
+        </ul>
+      </nav>
 
       <div class="page-header__intro intro">
-        <div class="intro__wrapper">
+        <div class="intro__wrapper intro__header">
           <img class="intro__image" src="img/iphone-hand-mobile@1x.png" alt="hand with phone">
           <h1 class="visually-hidden">Взгляните на жизнь иначе!</h1>
         </div>
@@ -79,12 +77,12 @@
             </ul>
             <p class="apps__info">Доступно для iPhone, iPad, Android, Windows&nbsp;Phone, OS&nbsp;X, Windows&nbsp;8</p>
           </div>
-        </div> <!-- wrapper -->
-      </div> <!-- page-header__intro -->
+        </div>
+      </div>
 
     </header>
 
-    <main class="page-content">
+    <!-- <main class="page-content">
 
       <section class="page-content__features features">
         <div class="features__wrapper">
@@ -108,7 +106,7 @@
           </div>
           <img class="features__image" src="img/iphone-screen-mobile@1x.png" alt="Телефон c розовой фотографией" width="157" height="320">
         </div>
-      </section> <!-- page-content__intro -->
+      </section>
 
       <section class="page-content__reviews reviews reviews-slider">
         <div class="reviews__wrapper">
@@ -116,24 +114,24 @@
           <ul class="reviews__list reviews-slider__list">
             <li class="reviews__item review reviews-slider__item" id="review-slider-1">
               <p class="review__author">Николай Петров</p>
-              <p class="review__text"><!-- ::before «-->Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!<!-- ::after »--></p>
+              <p class="review__text">Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!</p>
             </li>
             <li class="reviews__item review reviews-slider__item" id="review-slider-2">
               <p class="review__author">Николай Петров</p>
-              <p class="review__text"><!-- ::before «-->Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!<!-- ::after »--></p>
+              <p class="review__text">Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!</p>
             </li>
             <li class="reviews__item review reviews-slider__item" id="review-slider-3">
               <p class="review__author">Николай Петров</p>
-              <p class="review__text"><!-- ::before «-->Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!<!-- ::after »--></p>
+              <p class="review__text">Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!</p>
             </li>
-          </ul> <!-- reviews__list -->
+          </ul>
           <div class="reviews__toggles reviews-slider__toggles">
             <button class="reviews-slider__toggle" type="button" id="review-toggle-1">1</button>
             <button class="reviews-slider__toggle" type="button" id="review-toggle-2">2</button>
             <button class="reviews-slider__toggle" type="button" id="review-toggle-3">3</button>
           </div>
-        </div> <!-- wrapper -->
-      </section> <!-- page-content__reviews -->
+        </div>
+      </section>
 
       <section class="page-content__rates rates">
         <div class="rates__wrapper">
@@ -158,38 +156,32 @@
               <tr>
                 <td class="rate__cell">
                   Розовый фильтр
-                  <!-- Здесь будет галочка/крестик ::before -->
                   <span class="rate__option rate__option--yes"></span>
                   <span class="visually-hidden"> - Да</span>
                 </td>
                 <td class="rate__cell">
                   Розовый фильтр
-                  <!-- Здесь будет галочка/крестик ::before -->
                   <span class="rate__option rate__option--yes"></span>
                   <span class="visually-hidden"> - Да</span>
                 </td>
                 <td class="rate__cell">
                   Розовый фильтр
-                  <!-- Здесь будет галочка/крестик ::before -->
                   <span class="rate__option rate__option--yes"></span>
                   <span class="visually-hidden"> - Да</span>
                 </td>
               <tr>
                 <td class="rate__cell">
                   Смайлики
-                  <!-- Здесь будет галочка/крестик ::before -->
                   <span class="rate__option rate__option--no"></span>
                   <span class="visually-hidden"> - Нет</span>
                 </td>
                 <td class="rate__cell">
                   Смайлики
-                  <!-- Здесь будет галочка/крестик ::before -->
                   <span class="rate__option rate__option--yes"></span>
                   <span class="visually-hidden"> - Да</span>
                 </td>
                 <td class="rate__cell">
                   Смайлики
-                  <!-- Здесь будет галочка/крестик ::before -->
                   <span class="rate__option rate__option--yes"></span>
                   <span class="visually-hidden"> - Да</span>
                 </td>
@@ -197,32 +189,29 @@
               <tr>
                 <td class="rate__cell">
                   Комментарии
-                  <!-- Здесь будет галочка/крестик ::before -->
                   <span class="rate__option rate__option--no"></span>
                   <span class="visually-hidden"> - Нет</span>
                 </td>
                 <td class="rate__cell">
                   Комментарии
-                  <!-- Здесь будет галочка/крестик ::before -->
                   <span class="rate__option rate__option--no"></span>
                   <span class="visually-hidden"> - Нет</span>
                 </td>
                 <td class="rate__cell">
                   Комментарии
-                  <!-- Здесь будет галочка/крестик ::before -->
                   <span class="rate__option rate__option--yes"></span>
                   <span class="visually-hidden"> - Да</span>
                 </td>
               </tr>
             </tbody>
-          </table> <!-- rates -->
+          </table>
           <div class="rates__toggles">
             <button class="rates__toggle" type="button" id="rates-toggle-base">1</button>
             <button class="rates__toggle" type="button" id="rates-toggle-standart">2</button>
             <button class="rates__toggle" type="button" id="rates-toggle-unlimited">3</button>
           </div>
-        </div> <!-- wrapper -->
-      </section> <!-- page-content__rates -->
+        </div>
+      </section>
 
       <section class="page-content__contacts contacts">
         <div class="contacts__wrapper contacts__info">
@@ -239,13 +228,12 @@
             <p class="contact__title">Приезжайте в гости:</p>
             <p class="contact__link">ул. Большая Конюшенная, 19/8</p>
           </div>
-        </div> <!-- wrapper -->
+        </div>
         <div class="contacts__map map">
           <div class="map__img"></div>
           <div class="map__marker"></div>
-          <!--Здесь будет карта-->
-        </div> <!-- contacts__map -->
-      </section> <!--page-contacts-->
+        </div>
+      </section>
 
     </main>
 
@@ -288,8 +276,9 @@
             </svg><span class="visually-hidden">htmlacademy.ru</span>
           </a>
         </p>
-      </div> <!-- wrapper -->
-    </footer>
+      </div>
+    </footer> -->
 
+    <script src="js/scripts.js"></script>
   </body>
 </html>

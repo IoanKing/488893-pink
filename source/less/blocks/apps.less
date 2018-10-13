@@ -1,9 +1,18 @@
 .apps {
-  padding: 28px 0;
+  padding: 28px 0 16px 0;
+}
+
+.apps__wrapper {
+  .wrapper(@mobile-width);
 }
 
 .apps__list {
   .list-reset();
+
+  display: flex;
+  justify-content: center;
+
+  margin: 32px 0 22px 0;
 }
 
 .apps__info {
@@ -13,14 +22,28 @@
   line-height: 24px;
 }
 
+.apps__item {
+  display: flex;
+  align-items: flex-end;
+
+  padding: 0 18px;
+}
+
+.apps__link {
+  display: flex;
+}
+
+.apps__info {
+  font-weight: lighter;
+  font-size: 14px;
+  line-height: 24px;
+}
+
+
 .apps__button {
   width: 100%;
   color: @white;
   font-weight: bold;
   border-color: @white;
   display: block;
-}
-
-.apps__wrapper {
-  .wrapper(@mobile-width);
 }

@@ -22,67 +22,76 @@
 
     <header class="page-header">
 
-      <div class="page-header__wrapper page-header__top">
-        <a class="page-header__logo" href="#">
-          <img src="img/logo-pink-white-mobile.svg" width="74" height="22" alt="PINK">
-        </a>
-        <button class="page-header__hamburger" type="button">
-          <span class="visually-hidden">Меню</span>
-        </button>
-      </div>
-      <nav class="page-header__navigation main-nav">
-        <ul class="main-nav__list">
-          <li class="main-nav__item main-nav__item--active">
-            <a class="main-nav__link page-header__wrapper">Главная</a>
-          </li>
-          <li class="main-nav__item">
-            <a class="main-nav__link page-header__wrapper" href="photo.html">Фотографии</a>
-          </li>
-          <li class="main-nav__item">
-            <a class="main-nav__link page-header__wrapper" href="form.html">Конкурс</a>
-          </li>
-          <li class="main-nav__item">
-            <a class="main-nav__link page-header__wrapper" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
-          </li>
-        </ul>
-      </nav>
-
-      <div class="page-header__intro intro">
-        <div class="intro__wrapper intro__header">
-          <img class="intro__image" src="img/iphone-hand-mobile@1x.png" alt="hand with phone">
-          <h1 class="visually-hidden">Взгляните на жизнь иначе!</h1>
-        </div>
-        <div class="intro__apps apps">
-          <div class="intro__wrapper">
-            <a class="button apps__button" href="https://itunes.apple.com/ru/store">Скачать приложение</a>
-            <ul class="apps__list">
-              <li class="apps__item">
-                <a class="apps__link" href="https://itunes.apple.com/ru/store">
-                  <img class="apps__img" src="img/logo-apple.svg" alt="apple icon" width="47" height="56">
-                  <span class="visually-hidden">Скачать приложение для apple</span>
-                </a>
+      <div class="page-header__top">
+        <div class="page-header__main-wrapper">
+          <div class="page-header__wrapper page-header__wrapper--desktop">
+            <a class="page-header__logo" href="#">
+              <picture>
+                <source media="(min-width: 960px)" srcset="img/logo-pink-white-desktop.svg">
+                <source media="(min-width: 660px)" srcset="img/logo-pink-white-tablet.svg">
+                <img src="img/logo-pink-white-mobile.svg" alt="PINK">
+              </picture>
+            </a>
+            <button class="page-header__hamburger" type="button">
+              <span class="visually-hidden">Меню</span>
+            </button>
+          </div>
+          <nav class="page-header__navigation main-nav">
+            <ul class="main-nav__list">
+              <li class="main-nav__item main-nav__item--active">
+                <a class="main-nav__link main-nav__wrapper main-nav__wrapper--desktop">Главная</a>
               </li>
-              <li class="apps__item">
-                <a class="apps__link" href="https://play.google.com/store/apps/">
-                  <img class="apps__img" src="img/logo-android.svg" alt="andriod icon" width="43" height="47">
-                  <span class="visually-hidden">Скачать приложение для android</span>
-                </a>
+              <li class="main-nav__item">
+                <a class="main-nav__link main-nav__wrapper main-nav__wrapper--desktop" href="photo.html">Фотографии</a>
               </li>
-              <li class="apps__item">
-                <a class="apps__link" href="https://www.microsoft.com/ru-ru/store/top-free/apps/pc">
-                  <img class="apps__img" src="img/logo-microsoft.svg" alt="windows icon" width="44" height="41">
-                  <span class="visually-hidden">Скачать приложение для windows phone</span>
-                </a>
+              <li class="main-nav__item">
+                <a class="main-nav__link main-nav__wrapper main-nav__wrapper--desktop" href="form.html">Конкурс</a>
+              </li>
+              <li class="main-nav__item">
+                <a class="main-nav__link main-nav__wrapper main-nav__wrapper--desktop" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
               </li>
             </ul>
-            <p class="apps__info">Доступно для iPhone, iPad, Android, Windows&nbsp;Phone, OS&nbsp;X, Windows&nbsp;8</p>
+          </nav>
+        </div>
+      </div>
+
+      <div class="page-header__intro intro">
+        <div class="intro__wrapper intro__wrapper--front-page">
+          <h1 class="intro__title intro__title--front-page">Взгляните на жизнь иначе!</h1>
+        </div>
+        <div class="intro__apps">
+          <div class="intro__wrapper">
+            <div class="apps">
+              <a class="button apps__button" href="https://itunes.apple.com/ru/store">Скачать приложение</a>
+              <ul class="apps__list">
+                <li class="apps__item">
+                  <a class="apps__link" href="https://itunes.apple.com/ru/store">
+                    <img class="apps__img" src="img/logo-apple.svg" alt="apple icon" width="47" height="56">
+                    <span class="visually-hidden">Скачать приложение для apple</span>
+                  </a>
+                </li>
+                <li class="apps__item">
+                  <a class="apps__link" href="https://play.google.com/store/apps/">
+                    <img class="apps__img" src="img/logo-android.svg" alt="andriod icon" width="43" height="47">
+                    <span class="visually-hidden">Скачать приложение для android</span>
+                  </a>
+                </li>
+                <li class="apps__item">
+                  <a class="apps__link" href="https://www.microsoft.com/ru-ru/store/top-free/apps/pc">
+                    <img class="apps__img" src="img/logo-microsoft.svg" alt="windows icon" width="44" height="41">
+                    <span class="visually-hidden">Скачать приложение для windows phone</span>
+                  </a>
+                </li>
+              </ul>
+              <p class="apps__info">Доступно для iPhone, iPad, Android, Windows&nbsp;Phone, OS&nbsp;X, Windows&nbsp;8</p>
+            </div>
           </div>
         </div>
       </div>
 
     </header>
 
-    <!-- <main class="page-content">
+    <main class="page-content">
 
       <section class="page-content__features features">
         <div class="features__wrapper">
@@ -277,7 +286,7 @@
           </a>
         </p>
       </div>
-    </footer> -->
+    </footer>
 
     <script src="js/scripts.js"></script>
   </body>

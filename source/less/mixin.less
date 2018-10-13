@@ -8,11 +8,18 @@
   display: inline-block;
 }
 
-.wrapper(@min-width: 100%) {
+.wrapper(@min-width: 100%, @padding: 20px) {
   position: relative;
-  max-width: @min-width;
+  width: @min-width;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 @padding;
+}
+
+.wrapper-reset() {
+  position: relative;
+  width: auto;
+  margin: 0;
+  padding: 0;
 }
 
 .background(@position-x: 50%, @position-y: 50%, @size: cover) {

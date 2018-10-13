@@ -1,34 +1,129 @@
 .intro {
+  position: relative;
   box-sizing: border-box;
 }
 
 .intro__wrapper {
   .wrapper(@mobile-width);
-}
 
-.intro__header {
-  margin: 0;
-  padding: 0;
+  &--front-page {
+  padding-top: 394px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 108px;
+      left: 0;
+      width: 258px;
+      height: 286px;
+      background-image: url('../img/iphone-hand-mobile@1x.png');
+      .background(100%, 0%, 258px 286px);
+    }
+  }
 }
 
 .intro__apps {
   background-color: @bg-darkestblue;
-}
-
-.intro__image {
-  display: block;
-  margin: 0;
-  padding: 105px 0 0 0;
+  padding: 27px 0px 16px 0px;
 }
 
 .intro__title {
   width: 100%;
-  margin-top: 36px;
-  padding-bottom: 85px;
+  margin: 0;
+  padding: 5px;
 
   font-size: 24px;
   font-weight: lighter;
   line-height: 30px;
   color: @white;
   text-align: center;
+
+  &--front-page {
+    display: none;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .intro {
+    display: flex;
+    flex-direction: column;
+    min-height: calc(72px + 545px);
+  }
+
+  .intro__wrapper {
+    .wrapper(@tablet-width);
+
+    &--front-page {
+      padding-top: 85px;
+
+        &::before {
+          top: 72px;
+          left: -20px;
+          z-index: 1;
+
+          width: 700px;
+          height: 545px;
+          background-image: url('../img/iphone-hand-tablet@1x.png');
+          .background(100%, 0%, 700px 545px);
+        }
+      }
+  }
+
+  .intro__title {
+    position: relative;
+    z-index: 2;
+
+    &--front-page {
+      display: block;
+      width: 300px;
+      margin-right: auto;
+      padding-left: 30px;
+      padding-right: 30px;
+      font-size: 40px;
+      font-weight: lighter;
+      line-height: 48px;
+    }
+  }
+
+  .intro__apps {
+    z-index: 2;
+    background-color: transparent;
+  }
+
+}
+
+@media (min-width: @desktop-width) {
+  .intro {
+    display: flex;
+    flex-direction: column;
+    min-height: 745px;
+  }
+
+  .intro__wrapper {
+    .wrapper(@desktop-width, 10px);
+
+    &--front-page {
+      padding-top: 106px;
+
+      &::before {
+        top: 100px;
+        left: 26px;
+        z-index: 1;
+
+        width: 1050px;
+        height: 645px;
+        background-image: url('../../img/iphone-hand-desktop@1x.png');
+        .background(100%, 0%, 1050px 645px);
+      }
+    }
+  }
+
+  .intro__title--front-page {
+    font-size: 50px;
+    line-height: 60px;
+  }
+
+  .intro__apps {
+    padding: 50px 0px 16px 0px;
+  }
 }

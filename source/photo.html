@@ -12,38 +12,43 @@
 
     <header class="page-header">
 
-      <div class="page-header__top page-header__top--open">
-        <div class="page-header__wrapper">
-          <a class="page-header__logo" href="index.html">
-            <img src="img/logo-pink-white-mobile.svg" width="74" height="22">
-          </a>
-          <button class="page-header__hamburger page-header__hamburger--open" type="button">
-            <span class="visually-hidden">Открыть меню</span>
-          </button>
+      <div class="page-header__top">
+        <div class="page-header__main-wrapper">
+          <div class="page-header__wrapper page-header__wrapper--desktop">
+            <a class="page-header__logo" href="#">
+              <picture>
+                  <source media="(min-width: 660px)" srcset="img/logo-pink-white-tablet.svg">
+                  <img src="img/logo-pink-white-mobile.svg"  alt="PINK">
+                </picture>
+            </a>
+            <button class="page-header__hamburger" type="button">
+              <span class="visually-hidden">Меню</span>
+            </button>
+          </div>
           <nav class="page-header__navigation main-nav">
             <ul class="main-nav__list">
+              <li class="main-nav__item">
+                <a class="main-nav__link main-nav__wrapper main-nav__wrapper--desktop" href="index.html">Главная</a>
+              </li>
               <li class="main-nav__item main-nav__item--active">
-                <a class="main-nav__link" href="index.html">Главная</a>
+                <a class="main-nav__link main-nav__wrapper main-nav__wrapper--desktop">Фотографии</a>
               </li>
               <li class="main-nav__item">
-                <a class="main-nav__link">Фотографии</a>
+                <a class="main-nav__link main-nav__wrapper main-nav__wrapper--desktop" href="form.html">Конкурс</a>
               </li>
               <li class="main-nav__item">
-                <a class="main-nav__link" href="form.html">Конкурс</a>
-              </li>
-              <li class="main-nav__item">
-                <a class="main-nav__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
+                <a class="main-nav__link main-nav__wrapper main-nav__wrapper--desktop" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
               </li>
             </ul>
           </nav>
-        </div> <!-- wrapper -->
-      </div> <!-- page-header__top -->
+        </div>
+      </div>
 
       <div class="page-header__intro intro">
         <div class="intro__wrapper">
-          <h1 class="intro__title">Фотографии пользователей</h1>
-        </div> <!-- wrapper -->
-      </div> <!-- page-header__intro -->
+          <h1 class="intro__title">Взгляните на жизнь иначе!</h1>
+        </div>
+      </div>
 
     </header>
 

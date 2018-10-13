@@ -1,3 +1,24 @@
 .page-content__reviews {
   background-color: @white;
 }
+
+.page-content__effect {
+  display: none;
+
+  margin: 60px 0 60px 0;
+
+  background-color: @white;
+}
+
+@media (min-width: @tablet-width) {
+  .page-content__effect {
+    display: flex;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .page-content__effect {
+    background-color: @bg-gray;
+    margin-top: 0;
+  }
+}

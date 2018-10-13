@@ -1,0 +1,150 @@
+.effect {
+  .wrapper(@mobile-width);
+  display: flex;
+  justify-content: space-between;
+
+  min-height: 420px;
+}
+
+.effect__timer {
+  position: relative;
+  flex-basis: 50%;
+
+  width: 238px;
+  height: 276px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 238px;
+    height: 276px;
+
+    background-image: url('../img/icon-timer.svg');
+    .background();
+  }
+}
+
+.effect__time {
+  position: relative;
+  z-index: 1;
+
+  display: flex;
+  // align-items: center;
+  justify-content: center;
+  width: 203px;
+  height: 203px;
+  margin-top: 53px;
+  margin-left: 18px;
+  padding: 10px;
+
+  font-weight: bold;
+  font-size: 96px;
+  line-height: 144px;
+  color: @text-blood;
+
+  border: 14px solid @text-blood;
+  border-radius: 50%;
+}
+
+.effect__content {
+  flex-basis: 50%;
+}
+
+.effect__title {
+  width: 200px;
+  margin: 35px 0 0 0;
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 36px;
+  color: @black;
+}
+
+.effect__description,
+.effect__link {
+  font-size: 14px;
+  margin: 10px 0 10px 0;
+  padding-right: 10px;
+}
+
+.effect__description {
+  color: @bg-darkblue;
+}
+
+.effect__link {
+  color: @text-blood;
+  text-decoration: underline;
+}
+
+@media (min-width: @tablet-width) {
+  .effect {
+    .wrapper(@tablet-width);
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .effect {
+    .wrapper(@desktop-width);
+  }
+
+  .effect__timer {
+    position: relative;
+    flex-basis: 38%;
+
+    top: 5px;
+    left: -10px;
+
+    width: 238px;
+    height: 276px;
+
+    &::before {
+      width: 298px;
+      height: 345px;
+    }
+  }
+
+  .effect__time {
+    position: relative;
+    z-index: 1;
+
+    display: flex;
+    // align-items: center;
+    justify-content: center;
+    width: 253px;
+    height: 253px;
+    margin-top: 70px;
+    margin-left: 23px;
+    padding: 10px;
+
+    font-weight: bold;
+    font-size: 120px;
+    line-height: 186px;
+    color: @text-blood;
+
+    border: 17px solid @text-blood;
+    border-radius: 50%;
+  }
+
+  .effect__content {
+    flex-basis: 61.5%;
+
+    margin-top: 60px;
+  }
+
+  .effect__title {
+    width: 100%;
+    margin-bottom: 25px;
+  }
+
+  .effect__description,
+  .effect__link {
+
+    margin-bottom: 30px;
+
+    font-size: 18px;
+    line-height: 30px;
+    letter-spacing: @letter-spacing;
+  }
+}

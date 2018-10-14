@@ -1,21 +1,27 @@
 .rate__header {
   position: relative;
 
-  width: 280px;
-  padding: 23px 10px;
+  width: calc(@mobile-width - 50px);
+  padding: 20px 10px;
 
   font-size: 18px;
   line-height: 30px;
   font-weight: bold;
+  text-transform: uppercase;
   color: @white;
 
   background-color: @bg-darkblue;
+
+  &--first {
+    display: none;
+    background: none;
+  }
 }
 
 .rate__price {
   display: block;
   font-weight: lighter;
-  font-size: 20px;
+  font-size: 24px;
   line-height: 30px;
 }
 
@@ -50,29 +56,31 @@
   &::after {
     content: "Хит";
     position: absolute;
-    top: 0;
+    top: 6px;
     left: 0;
 
     display: inline-block;
     width: 74px;
     height: 73px;
-
-    transform: rotate(45deg);
   }
 }
 
 .rate__cell {
+  width: calc(@mobile-width - 50px);
   position: relative;
-  padding: 22px 33px;
-  width: 280px;
+  padding: 18px 22px;
 
   background-color: @white;
+
+  &--first {
+    display: none;
+  }
 }
 
 .rate__option {
   position: absolute;
   display: block;
-  top: 23px;
+  top: 20px;
   right: 20px;
 
   .background(100%, 100%);
@@ -87,5 +95,114 @@
     background-image: url("../img/icon-no.svg");
     width: 27px;
     height: 27px;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .rate__header {
+    width: 25%;
+    padding: 12px 0 8px 0px;
+
+    font-size: 16px;
+
+    &--first {
+      display: table-cell;
+    }
+  }
+
+  .rate__price {
+    font-size: 18px;
+  }
+
+  .rate__cell {
+  width: 25%;
+  padding: 8px 0 8px 0;
+
+  font-size: 14px;
+  line-height: 30px;
+
+    &--first {
+      display: table-cell;
+      padding: 8px 0 8px 15px;
+
+      letter-spacing: 0.4px;
+    }
+  }
+
+  .rate__text {
+    display: none;
+  }
+
+  .rate__option {
+    position: static;
+    margin: 0 auto;
+  }
+
+  .rate__hit {
+    top: -1px;
+    left: 1px;
+
+    width: 61px;
+    height: 61px;
+
+    &::before {
+      width: 58px;
+      height: 58px;
+    }
+
+    &::after {
+      top: 2px;
+      width: 60px;
+      height: 60px;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .rate__header {
+    width: 25%;
+    padding: 16px 0 24px 0px;
+
+    font-size: 18px;
+  }
+
+  .rate__price {
+    font-size: 24px;
+  }
+
+  .rate__cell {
+    width: 25%;
+    padding: 15px 0 16px 0;
+
+    font-size: 18px;
+    line-height: 30px;
+
+    &--first {
+      display: table-cell;
+      padding: 15px 0 16px 20px;
+
+      letter-spacing: 0.7px;
+    }
+  }
+
+  .rate__hit {
+    top: 0;
+    left: 0;
+
+    width: 74px;
+    height: 73px;
+
+    &::before {
+      width: 73px;
+      height: 73px;
+    }
+
+    &::after {
+      top: 5px;
+      width: 73px;
+      height: 73px;
+
+      font-size: 14px;
+    }
   }
 }

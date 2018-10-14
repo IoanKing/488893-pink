@@ -12,7 +12,7 @@
 
     <header class="page-header">
 
-      <div class="page-header__top">
+      <div class="page-header__top page-header__top--open">
         <div class="page-header__main-wrapper">
           <div class="page-header__wrapper page-header__wrapper--desktop">
             <a class="page-header__logo" href="#">
@@ -21,11 +21,11 @@
                   <img src="img/logo-pink-white-mobile.svg"  alt="PINK">
                 </picture>
             </a>
-            <button class="page-header__hamburger" type="button">
+            <button class="page-header__hamburger page-header__hamburger--open" type="button">
               <span class="visually-hidden">Меню</span>
             </button>
           </div>
-          <nav class="page-header__navigation main-nav">
+          <nav class="page-header__navigation page-header__navigation--open main-nav">
             <ul class="main-nav__list">
               <li class="main-nav__item">
                 <a class="main-nav__link main-nav__wrapper main-nav__wrapper--desktop" href="index.html">Главная</a>
@@ -46,7 +46,7 @@
 
       <div class="page-header__intro intro">
         <div class="intro__wrapper">
-          <h1 class="intro__title">Взгляните на жизнь иначе!</h1>
+          <h1 class="intro__title">Фотографии пользователей</h1>
         </div>
       </div>
 
@@ -56,19 +56,22 @@
 
       <section class="page-content__photos photos">
         <div class="photos__wrapper photos__header">
-          <h2 class="photos__title">Взгляните на фотографии, которые выкладывают пользователи!<br> Видите, как не хватает ваших?</h2>
+          <h2 class="photos__title">Взгляните на фотографии, которые выкладывают пользователи! Видите, как не хватает ваших?</h2>
         </div> <!-- photos__header -->
 
         <div class="photos__list">
 
-          <article class="photo-blog">
+          <article class="photo-blog photo-blog--special">
             <a class="photo-blog__link photo-blog__link--special" href="#">
-              <div class="photo-blog__wrapper">
+              <div class="photo-blog__wrapper2">
                 <div class="photo-blog__of-day">Панорама дня</div>
               </div>
-              <img class="photo-blog__image" src="img/panorama-mobile@1x.jpg" alt="Фото дня">
+              <picture>
+                <source media="(min-width: 660px)" srcset="img/panorama-tablet@1x.jpg">
+                <img class="photo-blog__image" src="img/panorama-mobile@1x.jpg" alt="Фото дня">
+              </picture>
             </a>
-            <div class="photo-blog__wrapper">
+            <div class="photo-blog__wrapper2">
               <div class="photo-blog__content">
                 <header class="photo-blog__info">
                   <p class="photo-blog__author">Анна <time class="photo-blog__date" datetime="2018-09-29 20:55:00">(5 минут назад)</time></p>
@@ -84,10 +87,10 @@
           </article>
 
           <article class="photo-blog">
-            <a class="photo-blog__link photo-blog__wrapper" href="#">
+            <a class="photo-blog__link photo-blog__wrapper2" href="#">
               <img class="photo-blog__image" src="img/photo-car-mobile@1x.jpg" alt="Фото дня" width="280" height="180">
             </a>
-            <div class="photo-blog__wrapper">
+            <div class="photo-blog__wrapper2">
               <div class="photo-blog__content">
                 <header class="photo-blog__info">
                   <p class="photo-blog__author">Левон <time class="photo-blog__date" datetime="2018-09-29 15:55:00">(5 часов назад)</time></p>
@@ -103,10 +106,10 @@
           </article>
 
           <article class="photo-blog">
-            <a class="photo-blog__link photo-blog__wrapper" href="#">
+            <a class="photo-blog__link photo-blog__wrapper2" href="#">
               <img class="photo-blog__image" src="img/photo-drumset-mobile@1x.jpg" alt="Фото дня"  width="280" height="180">
             </a>
-            <div class="photo-blog__wrapper">
+            <div class="photo-blog__wrapper2">
               <div class="photo-blog__content">
                 <header class="photo-blog__info">
                   <p class="photo-blog__author">Антон <time class="photo-blog__date" datetime="2018-09-29 08:55:00">(12 часов назад)</time></p>
@@ -122,10 +125,10 @@
           </article>
 
           <article class="photo-blog">
-            <a class="photo-blog__link photo-blog__wrapper" href="#">
+            <a class="photo-blog__link photo-blog__wrapper2" href="#">
               <img class="photo-blog__image" src="img/photo-window-mobile@1x.jpg" alt="Фото дня"  width="280" height="180">
             </a>
-            <div class="photo-blog__wrapper">
+            <div class="photo-blog__wrapper2">
               <div class="photo-blog__content">
                 <header class="photo-blog__info">
                   <p class="photo-blog__author">Борис <time class="photo-blog__date" datetime="2018-09-29 00:55:00">(20 часов назад)</time></p>
@@ -141,10 +144,10 @@
           </article>
 
           <article class="photo-blog">
-            <a class="photo-blog__link photo-blog__wrapper" href="#">
+            <a class="photo-blog__link photo-blog__wrapper2" href="#">
               <img class="photo-blog__image" src="img/photo-fair-mobile@1x.jpg" alt="Фото дня"  width="280" height="180">
             </a>
-            <div class="photo-blog__wrapper">
+            <div class="photo-blog__wrapper2">
               <div class="photo-blog__content">
                 <header class="photo-blog__info">
                   <p class="photo-blog__author">Сергей <time class="photo-blog__date" datetime="2018-09-28 19:55:00">(25 часов назад)</time></p>
@@ -160,10 +163,10 @@
           </article>
 
           <article class="photo-blog">
-            <a class="photo-blog__link photo-blog__wrapper" href="#">
+            <a class="photo-blog__link photo-blog__wrapper2" href="#">
               <img class="photo-blog__image" src="img/photo-pov-mobile@1x.jpg" alt="Фото дня"  width="280" height="180">
             </a>
-            <div class="photo-blog__wrapper">
+            <div class="photo-blog__wrapper2">
               <div class="photo-blog__content">
                 <header class="photo-blog__info">
                   <p class="photo-blog__author">Максим <time class="photo-blog__date" datetime="2018-09-28 08:55:00">(40 часов назад)</time></p>
@@ -179,10 +182,10 @@
           </article>
 
           <article class="photo-blog">
-            <a class="photo-blog__link photo-blog__wrapper" href="#">
+            <a class="photo-blog__link photo-blog__wrapper2" href="#">
               <img class="photo-blog__image" src="img/photo-wing-mobile@1x.jpg" alt="Фото дня"  width="280" height="180">
             </a>
-            <div class="photo-blog__wrapper">
+            <div class="photo-blog__wrapper2">
               <div class="photo-blog__content">
                 <header class="photo-blog__info">
                   <p class="photo-blog__author">Надежда <time class="photo-blog__date" datetime="2018-09-28 03:55:00">(45 часов назад)</time></p>
@@ -298,5 +301,6 @@
       </div> <!-- wrapper -->
     </footer>
 
+    <script src="js/scripts.js"></script>
   </body>
 </html>

@@ -7,6 +7,9 @@
 
 .intro__wrapper {
   .wrapper(@mobile-width);
+  padding-top: 25px;
+
+  min-height: 172px;
 
   &--front-page {
   padding-top: 394px;
@@ -49,14 +52,21 @@
   .intro {
     display: flex;
     flex-direction: column;
+    min-height: 327px;
+  }
+
+  .front-page .intro {
     min-height: calc(72px + 545px);
   }
 
   .intro__wrapper {
     .wrapper(@tablet-width);
 
+    margin-top: 60px;
+
     &--front-page {
       padding-top: 85px;
+      margin-top: 0;
 
         &::before {
           top: 72px;
@@ -74,6 +84,9 @@
   .intro__title {
     position: relative;
     z-index: 2;
+
+    font-size: 50px;
+    line-height: 60px;
 
     &--front-page {
       display: block;
@@ -98,6 +111,9 @@
   .intro {
     display: flex;
     flex-direction: column;
+  }
+
+  .front-page .intro {
     min-height: 745px;
   }
 

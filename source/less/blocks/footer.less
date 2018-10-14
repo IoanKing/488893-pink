@@ -20,6 +20,8 @@
   margin-top: 40px;
   margin-bottom: 40px;
 
+  color: @bg-darkblue;
+
   text-align: center;
 }
 
@@ -30,4 +32,49 @@
   font-weight: 400;
   line-height: 18px;
   color: @bg-darkblue;
+}
+
+@media (min-width: @tablet-width) {
+  .footer__wrapper {
+    .wrapper(@tablet-width);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .footer__logo {
+    width: auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+
+  .footer__social {
+    width: auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+
+  .footer__developper {
+    width: auto;
+    padding-right: 26px;
+
+    font-size: 14px;
+    line-height: 18px;
+
+    text-align: left;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .footer__wrapper {
+    .wrapper(@desktop-width, 10px);
+
+    margin-top: 40px;
+    margin-bottom: 50px;
+  }
+
+  .footer__developper {
+    font-size: 18px;
+  }
 }

@@ -68,7 +68,9 @@
 .rate__cell {
   width: calc(@mobile-width - 50px);
   position: relative;
-  padding: 18px 22px;
+  padding: 15px 23px 16px 23px;
+
+  letter-spacing: 0.3px;
 
   background-color: @white;
 
@@ -80,7 +82,7 @@
 .rate__option {
   position: absolute;
   display: block;
-  top: 20px;
+  top: 18px;
   right: 20px;
 
   .background(100%, 100%);
@@ -96,6 +98,13 @@
     width: 27px;
     height: 27px;
   }
+}
+
+.rate__text {
+  font-size: 14px;
+  line-height: 30px;
+
+  text-transform: uppercase;
 }
 
 @media (min-width: @tablet-width) {

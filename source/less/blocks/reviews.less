@@ -1,5 +1,10 @@
 .reviews {
-  padding-top: 50px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.reviews__wrapper {
+  .wrapper(@mobile-width);
 }
 
 .reviews__list {
@@ -10,6 +15,14 @@
   text-align: center;
 }
 
-.reviews__wrapper {
-  .wrapper(@mobile-width);
+@media (min-width: @tablet-width) {
+  .reviews__wrapper {
+    .wrapper(@tablet-width);
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .reviews__wrapper {
+    .wrapper(@desktop-width, 0px);
+  }
 }

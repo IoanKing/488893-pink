@@ -1,0 +1,120 @@
+.reviews-slider {
+  position: relative;
+
+  margin-bottom: 20px;
+
+  overflow: hidden;
+}
+
+.reviews-slider__list {
+  display: flex;
+}
+
+.reviews-slider__item {
+  flex-basis: 100%;
+  flex-shrink: 0;
+
+  margin-bottom: 20px;
+}
+
+.reviews-slider__radio {
+  display: none;
+}
+
+.reviews-slider__tab-1:checked ~ .reviews-slider__list {
+  transform: translateX(0);
+}
+
+.reviews-slider__tab-2:checked ~ .reviews-slider__list {
+  transform: translateX(-100%);
+}
+
+.reviews-slider__tab-3:checked ~ .reviews-slider__list {
+  transform: translateX(-200%);
+}
+
+.reviews-slider__toggles {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.reviews-slider__toggle {
+  position: relative;
+  display: block;
+
+  width: 12px;
+  height: 12px;
+  margin: 0 7px;
+
+  background-color: @bg-gray-dark;
+  border: 3px solid @white;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.reviews-slider__tab-1:checked ~ .reviews-slider__toggles > .reviews-slider__toggle[for="review-tab-1"],
+.reviews-slider__tab-2:checked ~ .reviews-slider__toggles > .reviews-slider__toggle[for="review-tab-2"],
+.reviews-slider__tab-3:checked ~ .reviews-slider__toggles > .reviews-slider__toggle[for="review-tab-3"] {
+  background-color: @white;
+  border-color: @black;
+}
+
+.reviews-slider__back,
+.reviews-slider__next {
+  display: none;
+}
+
+@media (min-width: @desktop-width) {
+  .reviews-slider__list {
+    position: relative;
+    padding-top: 150px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 55px;
+      left: calc(50% - 38px);
+
+      width: 79px;
+      height: 63px;
+
+      background-image: url('../img/icon-quotes.svg');
+      .background();
+    }
+  }
+
+  .reviews-slider__toggles {
+    display: none;
+  }
+
+  .reviews-slider__back {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    display: block;
+    width: 50px;
+    height: 100%;
+
+    .button-reset();
+
+    background-image: url('../img/icon-review-arrow-left.svg');
+    .background(35%, calc(50% + 15px), auto);
+  }
+
+  .reviews-slider__next {
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    display: block;
+    width: 50px;
+    height: 100%;
+
+    .button-reset();
+
+    background-image: url('../img/icon-review-arrow-right.svg');
+    .background(65%, calc(50% + 15px), auto);
+  }
+}

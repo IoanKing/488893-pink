@@ -1,5 +1,5 @@
 .photos__wrapper {
-  .wrapper(@mobile-width, 32px);
+  .wrapper(@mobile-width);
 }
 
 .photos__header {
@@ -19,6 +19,10 @@
 @media (min-width: @tablet-width) {
   .photos__wrapper {
     .wrapper(@tablet-width);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    justify-content: space-between;
   }
 
   .photos__header {

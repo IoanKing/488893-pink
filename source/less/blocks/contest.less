@@ -3,8 +3,9 @@
 }
 
 .contest__header {
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding-top: 35px;
+  padding-bottom: 0;
+  letter-spacing: 0.3px;
 }
 
 .contest__title {
@@ -15,27 +16,50 @@
   color: @bg-darkblue;
 }
 
+.contest__contestant,
+.contest__achievement,
+.contest__contact,
+.contest__apps,
+.contest__comment {
+  min-width: 0px;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 .contest__contestant {
-  display: block;
-  padding-bottom: 40px;
+  display: flex;
+  flex-direction: column;
+  .wrapper(@mobile-width);
+
+  padding-top: 12px;
+  padding-bottom: 35px;
 
   background-color: @white;
   border: none;
 }
 
+.contest__background {
+  background-color: @bg-gray;
+}
+
 .contest__achievement {
   display: block;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  .wrapper(@mobile-width);
+  padding-bottom: 8px;
 
-  background-color: @bg-gray;
   border: none;
 }
 
 .contest__contact {
-  display: block;
+  display: flex;
+  align-items: stretch;
+  justify-content: flex-start;
+  flex-direction: column;
+  .wrapper(@mobile-width);
+
   padding-top: 20px;
-  padding-bottom: 40px;
+  padding-bottom: 38px;
 
   background-color: @white;
   border: none;
@@ -43,18 +67,16 @@
 
 .contest__apps {
   display: block;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  .wrapper(@mobile-width);
 
-  background-color: @bg-gray;
+  padding-bottom: 18px;
+
   border: none;
 }
 
 .contest__comment {
   display: block;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  .wrapper(@mobile-width);
 
-  background-color: @white;
   border: none;
 }

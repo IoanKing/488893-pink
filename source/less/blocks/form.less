@@ -1,11 +1,14 @@
+.form {
+  letter-spacing: 0.4px;
+}
+
 .form__list {
   .list-reset();
   padding-top: 20px;
 }
 
 .form__legend {
-  padding-left: 20px;
-  padding-right: 20px;
+  padding: 38px 20px 15px 20px;
 
   font-size: 14px;
   font-weight: 400;
@@ -17,7 +20,7 @@
 
 .form__label {
   display: inline-block;
-  padding: 10px 20px 10px 20px;
+  padding: 10px 20px 5px 22px;
 
   font-size: 14px;
   font-weight: 400;
@@ -40,7 +43,7 @@
 
 .form__checkbox {
   padding-left: 70px;
-  margin-bottom: 22px;
+  margin-bottom: 32px;
 
   &::before {
     content: "";
@@ -105,11 +108,14 @@
 }
 
 .form__text-field {
-  display: inline-block;
-  padding: 10px 20px;
+  display: block;
+  width: 100%;
+  padding: 15px 20px;
+  margin-bottom: 8px;
 
   font-size: 18px;
   line-height: 30px;
+  letter-spacing: 0.4px;
   color: @bg-darkblue;
 
   border: 1px solid @bg-gray-dark;
@@ -118,11 +124,12 @@
 .form__textarea {
   display: inline-block;
   width: 100%;
-  margin-bottom: 20px;
-  padding: 20px 20px 20px 20px;
+  margin-bottom: 42px;
+  padding: 15px 20px 35px 20px;
 
   font-size: 18px;
   line-height: 30px;
+  letter-spacing: 0.3px;
   color: @bg-darkblue;
 
   border: 2px solid @bg-gray-dark;
@@ -130,7 +137,7 @@
 
 .form__submit {
   width: 100%;
-  padding: 16px;
+  padding: 20px;
 
   font-weight: bold;
   text-align: center;
@@ -145,7 +152,7 @@
 }
 
 .form__submit-text {
-  margin-top: 40px;
+  margin-top: 35px;
 
   font-size: 14px;
   line-height: 30px;

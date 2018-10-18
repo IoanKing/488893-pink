@@ -22,7 +22,7 @@
 
     <header class="page-header">
 
-      <div class="page-header__top">
+      <div class="page-header__top page-header__top--open">
         <div class="page-header__main-wrapper">
           <div class="page-header__wrapper">
             <a class="page-header__logo" href="#">
@@ -31,11 +31,11 @@
                   <img src="img/logo-pink-white-mobile.svg"  alt="PINK">
                 </picture>
             </a>
-            <button class="page-header__hamburger" type="button">
+            <button class="page-header__hamburger page-header__hamburger--open" type="button">
               <span class="visually-hidden">Меню</span>
             </button>
           </div>
-          <nav class="page-header__navigation main-nav">
+          <nav class="page-header__navigation page-header__navigation--open main-nav">
             <ul class="main-nav__list">
               <li class="main-nav__item">
                 <a class="main-nav__link main-nav__wrapper main-nav__wrapper--desktop" href="index.html">Главная</a>
@@ -43,7 +43,7 @@
               <li class="main-nav__item main-nav__item--active">
                 <a class="main-nav__link main-nav__wrapper main-nav__wrapper--desktop" href="photo.html">Фотографии</a>
               </li>
-              <li class="main-nav__item main-nav__item--active">
+              <li class="main-nav__item">
                 <a class="main-nav__link main-nav__wrapper main-nav__wrapper--desktop">Конкурс</a>
               </li>
               <li class="main-nav__item">
@@ -56,7 +56,7 @@
 
       <div class="page-header__intro intro">
         <div class="intro__wrapper">
-          <h1 class="intro__title">Взгляните на жизнь иначе!</h1>
+          <h1 class="intro__title">Конкурс на самое безбашенное путешествие с Пинк</h1>
         </div>
       </div>
 
@@ -66,28 +66,27 @@
 
       <section class="page-content__contest contest">
 
-        <div class="contest__wrapper contest__header">
-          <h2 class="contest__title">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту! </h2>
+        <div class="contest__header">
+          <div class="contest__wrapper">
+            <h2 class="contest__title">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту! </h2>
+          </div>
         </div> <!-- contest__header -->
 
         <form class="contest__form form" method="get" action="https://echo.htmlacademy.ru">
 
           <fieldset class="contest__contestant">
             <legend class="visually-hidden">Ваше ФИО:</legend>
-            <div class="contest__wrapper">
-              <label class="form__label" for="first-name-field">Фамилия:</label>
-              <input class="form__text-field" type="text" id="first-name-field" name="first-name" placeholder="Укажите фамилию *" required>
-              <label class="form__label" for="last-name-field">Имя:</label>
-              <input class="form__text-field" type="text" id="last-name-field" name="last-name" placeholder="Введите ваше имя *" required>
-              <label class="form__label" for="sur-name-field">Отчество:</label>
-              <input class="form__text-field" type="text" id="sur-name-field" name="sur-name" placeholder="Ну и отчество тоже">
-            </div>
+            <label class="form__label" for="first-name-field">Фамилия:</label>
+            <input class="form__text-field" type="text" id="first-name-field" name="first-name" placeholder="Укажите фамилию *" required>
+            <label class="form__label" for="last-name-field">Имя:</label>
+            <input class="form__text-field" type="text" id="last-name-field" name="last-name" placeholder="Введите ваше имя *" required>
+            <label class="form__label" for="sur-name-field">Отчество:</label>
+            <input class="form__text-field" type="text" id="sur-name-field" name="sur-name" placeholder="Ну и отчество тоже">
           </fieldset>
 
-          <fieldset class="contest__achievement">
-            <legend class="visually-hidden">Контактные сведения</legend>
-            <div class="contest__wrapper">
-              <h3 class="form__legend">Ваши безбашинные достижения в путешествии</h3>
+          <div class="contest__background">
+            <fieldset class="contest__achievement">
+              <legend class="form__legend">Ваши безбашинные достижения в путешествии</legend>
               <ul class="form__list">
                 <li class="form__option">
                   <input class="visually-hidden form__check" type="checkbox" name="achievement-item-1" id="achievement-item-field-1" checked>
@@ -113,23 +112,20 @@
                   <label class="form__label-in-list form__checkbox" for="achievement-item-field-6">Разгромил отель</label>
                 </li>
               </ul>
-            </div>
-          </fieldset>
+            </fieldset>
+          </div>
 
           <fieldset class="contest__contact">
             <legend class="visually-hidden">Контактные сведения</legend>
-            <div class="contest__wrapper">
               <label class="form__label" for="phone-number-field">Номер телефона</label>
               <input class="form__text-field" type="tel" name="phone" pattern="[0-9]{1}-[0-9]{3}-[0-9]{3}" placeholder="Номер пожалуйста" id="phone-number-field">
               <label class="form__label" for="email-field">Адрес почты</label>
               <input class="form__text-field" type="email" id="email-field" name="email" placeholder="Введите почту *" required>
-            </div>
           </fieldset>
 
-          <fieldset class="contest__apps">
-            <legend class="visually-hidden">Выбор приложения</legend>
-            <div class="contest__wrapper">
-              <h3 class="form__legend">С каким приложением путешествовали?</h3>
+          <div class="contest__background">
+            <fieldset class="contest__apps">
+              <legend class="form__legend">С каким приложением путешествовали?</legend>
               <ul class="form__list">
                 <li class="form__option">
                   <input class="visually-hidden form__check" type="radio" name="apps" id="apps-item-field-1" checked>
@@ -144,14 +140,12 @@
                   <label class="form__label-in-list form__radio" for="apps-item-field-3">Windows Phone</label>
                 </li>
               </ul>
-            </div>
-          </fieldset>
+            </fieldset>
+          </div>
 
           <fieldset class="contest__comment">
-            <legend class="visually-hidden">Выбор приложения</legend>
-            <div class="contest__wrapper">
-              <h3 class="form__legend">Опишите свои эмоции</h3>
-              <textarea class="form__textarea" name="comment" rows="5" placeholder="Можно прям в красках, не стесняйтесь в выражениях" id="comment-field"></textarea>
+            <legend class="form__legend">Опишите свои эмоции</legend>
+            <textarea class="form__textarea" name="comment" rows="5" placeholder="Можно прям в красках, не стесняйтесь в выражениях" id="comment-field"></textarea>
             </div>
           </fieldset>
 
@@ -195,7 +189,7 @@
             <span class="visually-hidden">htmlacademy.ru</span>
           </a>
         </p>
-      </div> <!-- wrapper -->
+      </div>
     </footer>
 
   </body>

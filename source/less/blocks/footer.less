@@ -6,7 +6,7 @@
   display: inline-block;
   width: 100%;
   margin-top: 40px;
-  margin-bottom: 40px;
+  margin-bottom: 30px;
 
   text-align: center;
 }
@@ -17,7 +17,7 @@
 
 .footer__developper {
   width: 100%;
-  margin-top: 40px;
+  margin-top: 15px;
   margin-bottom: 40px;
 
   color: @bg-darkblue;
@@ -68,13 +68,16 @@
 
 @media (min-width: @desktop-width) {
   .footer__wrapper {
-    .wrapper(@desktop-width, 10px);
+    .wrapper(@desktop-width, 0);
 
-    padding-top: 40px;
-    padding-bottom: 50px;
+    padding: 65px 0 50px 10px;
   }
 
   .footer__developper {
+    padding-right: 24px;
+  }
+
+  .footer__copyright {
     font-size: 18px;
   }
 }

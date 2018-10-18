@@ -8,6 +8,7 @@
 }
 
 .photos__title {
+  padding: 0 12px;
   font-size: 14px;
   font-weight: 400;
   line-height: 30px;
@@ -27,11 +28,12 @@
 
   .photos__header {
     width: calc(@tablet-width - 80px);
-    margin-top: 92px;
-    margin-bottom: 78px;
+    margin-top: 80px;
+    margin-bottom: 60px;
   }
 
   .photos__title {
+    padding: 0;
     font-size: 18px;
   }
 
@@ -45,6 +47,12 @@
 
 @media (min-width: @desktop-width) {
   .photos__wrapper {
-    .wrapper(@desktop-width);
+    .wrapper(@desktop-width, 10px);
+  }
+
+  .photos__header {
+    width: calc(@tablet-width - 30px);
+    margin-top: 80px;
+    margin-bottom: 70px;
   }
 }

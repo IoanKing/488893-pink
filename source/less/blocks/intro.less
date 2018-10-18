@@ -82,6 +82,8 @@
     position: relative;
     z-index: 2;
 
+    padding-top: 68px;
+
     font-size: 50px;
     line-height: 60px;
 
@@ -107,6 +109,7 @@
   .intro {
     display: flex;
     flex-direction: column;
+    min-height: 287px;
   }
 
   .front-page .intro {
@@ -130,6 +133,11 @@
         .background(100%, 0%, 1050px 645px);
       }
     }
+  }
+
+  .intro__title:not(.intro__title--front-page) {
+    width: 600px;
+    margin: 0 auto;
   }
 
   .intro__title--front-page {

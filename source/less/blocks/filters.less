@@ -1,11 +1,23 @@
 .filters {
   width: 100%;
+  margin: 0;
+  padding: 35px 0 0 0;
+
   box-sizing: border-box;
+}
+
+.filters__toggles {
+  position: relative;
+  display: flex;
+  justify-content: center;
 }
 
 .filters__toggle {
   width: 50px;
   height: 50px;
+
+  padding: 0 20px;
+  margin: 0 15px;
 
   .button-reset();
   .background(50%, 50%, auto);
@@ -20,5 +32,114 @@
 
   &--contrast {
     background-image: url("../img/icon-editor-contrast.svg");
+  }
+}
+
+.filters__range {
+  display: none;
+}
+
+.filters__item {
+  padding-bottom: 70px;
+}
+
+.filters__item::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: calc(50% - 50vw);
+
+  width: 100vw;
+  max-width: @desktop-width;
+
+  border-bottom: 1px solid @uploads-border;
+}
+
+.filters__item--active .filters__range {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+
+  display: block;
+  width: 280px;
+}
+
+@media (min-width: @tablet-width) {
+  .filters {
+    padding: 0 0 0 25px;
+  }
+
+  .filters__item::after {
+    left: 0;
+    width: 100%;
+  }
+
+  .filters__toggles {
+    flex-direction: column;
+  }
+
+  .filters__item {
+    position: relative;
+    display: flex;
+    // align-items: center;
+    justify-content: flex-start;
+    padding: 0;
+    margin-bottom: 17px;
+  }
+
+  .filters__toggle {
+    width: 30px;
+    height: auto;
+    margin: 0;
+    padding: 0;
+
+    &--crop {
+      background-position: 2px 6px;
+      background-size: 27px;
+    }
+
+    &--fill {
+      background-position: 2px 8px;
+      background-size: 27px;
+    }
+
+    &--contrast {
+      background-position: 8px 9px;
+      background-size: 18px;
+    }
+  }
+
+  .filters__item .filters__range {
+    position: static;
+    display: block;
+    width: 100%;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .filters {
+    padding: 0;
+  }
+
+  .filters__toggle {
+    width: 50px;
+    height: auto;
+    margin: 0;
+    padding: 0 65px 0 0;
+
+    &--crop {
+      background-position: 0 0;
+      background-size: 50px;
+    }
+
+    &--fill {
+      background-position: 0 0;
+      background-size: 50px;
+    }
+
+    &--contrast {
+      background-position: 4px 4px;
+      background-size: 35px;
+    }
   }
 }

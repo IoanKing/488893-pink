@@ -3,7 +3,9 @@
 }
 
 .uploads__header {
-  padding: 22px 10px 46px 10px;
+  padding: 12px 5px 30px 5px;
+
+  letter-spacing: 0.4px;
 }
 
 .uploads__title {
@@ -12,12 +14,15 @@
   line-height: 30px;
   color: @bg-darkblue;
   text-align: center;
+
+  background-color: @white;
 }
 
 .uploads__form {
-  background-color: @bg-gray;
   padding-top: 20px;
-  padding-bottom: 20px;
+  padding-bottom: 25px;
+
+  background-color: @bg-gray;
 }
 
 .uploads__picture {
@@ -33,16 +38,15 @@
 }
 
 .uploads__downloaded {
-
-  width: 100%;
-  height: auto;
+  width: auto;
+  height: 100%;
   min-height: 280px;
   object-fit: cover;
 }
 
 .uploads__filters {
+  position: relative;
   border: none;
-  border-bottom: 1px solid @uploads-border;
 }
 
 .uploads__post {
@@ -62,6 +66,99 @@
 }
 
 .uploads__send-post {
-  padding-top: 38px;
+  padding-top: 35px;
   padding-bottom: 8px;
+}
+
+@media (min-width: @tablet-width) {
+  .uploads__form {
+    padding-top: 28px;
+    padding-bottom: 0;
+  }
+
+  .uploads__wrapper {
+    .wrapper(@tablet-width);
+    padding-top: 30px;
+    padding-bottom: 56px;
+
+    letter-spacing: 0.4px;
+  }
+
+  .uploads__title {
+    font-size: 18px;
+  }
+
+  .uploads__layout {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .uploads__picture,
+  .uploads__filters {
+    flex-basis: 300px;
+    width: 300px;
+  }
+
+  .uploads__send-post {
+    padding-top: 50px;
+    padding-bottom: 3px;
+  }
+
+  .uploads__send-post .button {
+    width: 260px;
+  }
+
+  .uploads__post {
+    margin-bottom: 28px;
+  }
+
+  .uploads__undo {
+    margin-bottom: 0;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .uploads__wrapper {
+    .wrapper(@desktop-width);
+    letter-spacing: 0.4px;
+  }
+
+  .uploads__header {
+    padding-top: 10px;
+    padding-bottom: 52px;
+  }
+
+  .uploads__form {
+    .wrapper(calc(@desktop-width - 20px), 0);
+    padding-top: 56px;
+    padding-bottom: 60px;
+  }
+
+  .uploads__layout {
+    padding-left: 80px;
+    padding-right: 80px;
+  }
+
+  .uploads__picture {
+    min-height: 400px;
+  }
+
+  .uploads__filters {
+    flex-basis: 410px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 410px;
+  }
+
+  .uploads__send-post {
+    margin-top: auto;
+    flex-grow: 1;
+    padding: 0;
+  }
+
+  .uploads__post {
+    margin: 0;
+  }
 }

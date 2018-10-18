@@ -1,10 +1,7 @@
 .range__controls {
   position: relative;
-  height: 41px;
 
-  padding-top: 26px;
-  padding-left: 20px;
-  padding-right: 20px;
+  padding: 35px 23px 40px 18px;
 
   border-radius: 5px;
 
@@ -18,15 +15,78 @@
 
 .range__runner {
   position: absolute;
-  top: calc(50% - 15px);
-  left: 75%;
+  top: calc(50% - 10px);
+  left: 0;
 
-  width: 14px;
-  height: 14px;
+  width: 12px;
+  height: 12px;
   padding: 0;
 
   border: 2px solid @text-blood;
   background-color: @white;
   border-radius: 50%;
   cursor: pointer;
+
+  &--crop {
+    left: 75%;
+  }
+
+  &--fill {
+    left: 23%;
+  }
+
+  &--contrast {
+    left: 53%;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .range__controls {
+    width: 205px;
+
+    padding: 18px 0 35px 28px;
+  }
+
+  .range__runner {
+    top: 11px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .range__controls {
+    width: 290px;
+
+    padding: 20px 0 33px 28px;
+  }
+
+  .range__runner {
+    position: absolute;
+    top: 14px;
+    left: 0;
+
+    width: 10px;
+    height: 10px;
+
+    &--crop {
+      left: 31%;
+    }
+
+    &--fill {
+      left: 86%;
+    }
+
+    &--contrast {
+      left: 59%;
+    }
+  }
+
+  .uploads__send-post {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .uploads__send-post .button {
+    width: 183px;
+  }
 }

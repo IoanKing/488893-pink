@@ -1,8 +1,6 @@
-.contest__wrapper {
-  .wrapper(@mobile-width);
-}
-
 .contest__header {
+  .wrapper(@mobile-width);
+
   padding-top: 35px;
   padding-bottom: 0;
   letter-spacing: 0.3px;
@@ -14,6 +12,10 @@
   line-height: 30px;
   text-align: center;
   color: @bg-darkblue;
+}
+
+.contest__title-note {
+  display: none;
 }
 
 .contest__contestant,
@@ -79,4 +81,97 @@
   .wrapper(@mobile-width);
 
   border: none;
+}
+
+.contest__send-form {
+  display: block;
+  .wrapper(@mobile-width);
+}
+
+@media (min-width: @tablet-width) {
+  .contest__wrapper-tablet {
+    .wrapper(@tablet-width);
+    display: flex;
+    flex-direction: column;
+  }
+
+  .contest__header {
+    .wrapper(@tablet-width);
+
+    padding: 80px 50px 10px 50px;
+  }
+
+  .contest__contestant,
+  .contest__achievement,
+  .contest__contact,
+  .contest__apps,
+  .contest__comment {
+    padding: 0;
+    margin: 0;
+    width: auto;
+  }
+
+  .contest__background {
+    background-color: @white;
+    box-sizing: border-box;
+  }
+
+  .contest__contestant {
+    margin: 0;
+    padding: 0 0 50px 0;
+    order: 0;
+
+    display: flex;
+  }
+
+  .contest__apps-layout {
+    order: 1;
+  }
+
+  .contest__apps {
+    padding: 20px 58px 20px 58px;
+    border: 2px solid @bg-gray-dark;
+  }
+
+  .contest__achievement-layout {
+    order: 3;
+  }
+
+  .contest__achievement {
+    margin-bottom: 55px;
+    padding: 20px 58px 12px 58px;
+    border: 2px solid @bg-gray-dark;
+  }
+
+  .contest__contact {
+    padding: 60px 60px 70px 60px;
+    order: 2;
+  }
+
+  .contest__comment {
+    padding: 40px 60px 10px 60px;
+    margin: 0;
+    order: 4;
+
+    border: 2px solid @bg-gray-dark;
+  }
+
+  .contest__send-form {
+    .wrapper(@tablet-width);
+    padding: 68px 20px 55px 20px;
+    order: 10;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+  }
+
+  .contest__title {
+    font-size: 18px;
+  }
+
+  .contest__title-note {
+    display: inline;
+  }
 }

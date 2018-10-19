@@ -16,6 +16,10 @@
   text-align: center;
   text-transform: uppercase;
   color: @text-blood;
+
+  &--mobile-hide {
+    display: none;
+  }
 }
 
 .form__label {
@@ -151,7 +155,7 @@
   background-color: @wood-green;
 }
 
-.form__submit-text {
+.form__submit-note {
   margin-top: 35px;
 
   font-size: 14px;
@@ -162,5 +166,125 @@
 
   &--red {
     color: @text-blood;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .form__wrapper-main {
+    .wrapper(@tablet-width);
+  }
+
+  .form__field-contestant {
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 45px;
+  }
+
+  .form__field-contact {
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+
+    margin-top: 12px;
+
+    &:first-of-type {
+      margin-top: 38px;
+    }
+
+    &--phone::after,
+    &--email::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+
+      width: 61px;
+      height: 61px;
+
+      background-color: @bg-gray-dark;
+      .background(50%, 50%, auto);
+    }
+
+    &--phone::after {
+      background-image: url('../img/icon-phone.svg');
+    }
+
+    &--email::after {
+      background-image: url('../img/icon-mail.svg');
+    }
+  }
+
+  .form__label {
+    padding: 16px 20px 16px 0;
+
+    &--contact {
+      padding: 3px 20px 16px 20px;
+      order: 1;
+      letter-spacing: 0.3px;
+    }
+  }
+
+  .form__text-field --contact {
+    letter-spacing: 0.7px;
+  }
+
+  .form__legend {
+    padding: 0px 20px 0px 20px;
+    margin: 0 auto;
+
+    background-color: white;
+
+    &--mobile-hide {
+      display: inline;
+    }
+  }
+
+  .form__radio {
+    padding-left: 60px;
+    margin-bottom: 26px;
+
+    &::before {
+      width: 38px;
+      height: 38px;
+    }
+  }
+
+  .form__list {
+
+  }
+
+  .form__checkbox {
+    padding-left: 60px;
+    margin-bottom: 32px;
+
+    &::before {
+      top: 6px;
+      left: 0;
+      width: 38px;
+      height: 38px;
+    }
+  }
+
+  .form__check:checked + .form__checkbox::after {
+    top: calc(50% - 8px);
+    left: 10px;
+  }
+
+  .form__textarea {
+    padding: 15px 0px 0px 15px;
+    margin-bottom: 35px;
+
+    min-height: 192px;
+
+    letter-spacing: 0.4px;
+  }
+
+  .form__submit {
+    width: 300px;
+  }
+
+  .form__submit-note {
+    margin: 0;
   }
 }

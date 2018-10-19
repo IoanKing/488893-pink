@@ -128,6 +128,7 @@
 .form__textarea {
   display: inline-block;
   width: 100%;
+  min-height: 200px;
   margin-bottom: 42px;
   padding: 15px 20px 35px 20px;
 
@@ -166,6 +167,10 @@
 
   &--red {
     color: @text-blood;
+  }
+
+  &--desktop {
+    display: none;
   }
 }
 
@@ -250,8 +255,9 @@
     }
   }
 
-  .form__list {
-
+  .form__check:checked + .form__radio::after {
+    width: 15px;
+    height: 15px;
   }
 
   .form__checkbox {
@@ -286,5 +292,54 @@
 
   .form__submit-note {
     margin: 0;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .form__legend {
+    width: auto;
+  }
+
+  .form__list--apps {
+    width: 280px;
+    margin: 0 auto;
+  }
+
+  .form__list--achievement {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+
+  .form__option-group {
+    flex-basis: 260px;
+
+    &:nth-child(3n-1) {
+      margin-left: 55px;
+      margin-right: 35px;
+    }
+  }
+
+  .form__field-contestant {
+    margin-top: 13px;
+    margin-bottom: 34px;
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+
+  .form__field-contact,
+  .form__field-contact:first-of-type {
+    width: 375px;
+    margin-top: 35px;
+  }
+
+  .form__textarea {
+    min-height: 130px;
+  }
+
+  .form__submit-note--desktop {
+    display: inline;
   }
 }

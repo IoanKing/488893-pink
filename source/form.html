@@ -93,36 +93,43 @@
             <div class="contest__background contest__achievement-layout">
               <fieldset class="contest__achievement">
                 <legend class="form__legend">Ваши безбашинные достижения в путешествии</legend>
-                <ul class="form__list">
-                  <li class="form__option">
-                    <input class="visually-hidden form__check" type="checkbox" name="achievement-item-1" id="achievement-item-field-1" checked>
-                    <label class="form__label-in-list form__checkbox" for="achievement-item-field-1">Сделал селфи с акулой</label>
-                  </li>
-                  <li class="form__option">
-                    <input class="visually-hidden form__check" type="checkbox" name="achievement-item-2" id="achievement-item-field-2" checked>
-                    <label class="form__label-in-list form__checkbox" for="achievement-item-field-2">Обгорел на пляже</label>
-                  </li>
-                  <li class="form__option">
-                    <input class="visually-hidden form__check" type="checkbox" name="achievement-item-3" id="achievement-item-field-3">
-                    <label class="form__label-in-list form__checkbox" for="achievement-item-field-3">Видел Чака Норриса</label>
-                  </li>
-                  <li class="form__option">
-                    <input class="visually-hidden form__check" type="checkbox" name="achievement-item-4" id="achievement-item-field-4">
-                    <label class="form__label-in-list form__checkbox" for="achievement-item-field-4">Накупил сувениров</label>
-                  </li>
-                  <li class="form__option">
-                    <input class="visually-hidden form__check" type="checkbox" name="achievement-item-5" id="achievement-item-field-5" checked>
-                    <label class="form__label-in-list form__checkbox" for="achievement-item-field-5" >Удержал башню</label>
-                  <li class="form__option">
-                    <input class="visually-hidden form__check" type="checkbox" name="achievement-item-6" id="achievement-item-field-6">
-                    <label class="form__label-in-list form__checkbox" for="achievement-item-field-6">Разгромил отель</label>
-                  </li>
-                </ul>
+                <div class="form__list form__list--achievement">
+                  <div class="form__option-group">
+                    <div class="form__option">
+                      <input class="visually-hidden form__check" type="checkbox" name="achievement-item-1" id="achievement-item-field-1" checked>
+                      <label class="form__label-in-list form__checkbox" for="achievement-item-field-1">Сделал селфи с акулой</label>
+                    </div>
+                    <div class="form__option">
+                      <input class="visually-hidden form__check" type="checkbox" name="achievement-item-2" id="achievement-item-field-2" checked>
+                      <label class="form__label-in-list form__checkbox" for="achievement-item-field-2">Обгорел на пляже</label>
+                    </div>
+                  </div>
+                  <div class="form__option-group">
+                    <div class="form__option">
+                      <input class="visually-hidden form__check" type="checkbox" name="achievement-item-3" id="achievement-item-field-3">
+                      <label class="form__label-in-list form__checkbox" for="achievement-item-field-3">Видел Чака Норриса</label>
+                    </div>
+                    <div class="form__option">
+                      <input class="visually-hidden form__check" type="checkbox" name="achievement-item-4" id="achievement-item-field-4">
+                      <label class="form__label-in-list form__checkbox" for="achievement-item-field-4">Накупил сувениров</label>
+                    </div>
+                  </div>
+                  <div class="form__option-group">
+                    <div class="form__option">
+                      <input class="visually-hidden form__check" type="checkbox" name="achievement-item-5" id="achievement-item-field-5" checked>
+                      <label class="form__label-in-list form__checkbox" for="achievement-item-field-5" >Удержал башню</label>
+                    <div class="form__option">
+                      <input class="visually-hidden form__check" type="checkbox" name="achievement-item-6" id="achievement-item-field-6">
+                      <label class="form__label-in-list form__checkbox" for="achievement-item-field-6">Разгромил отель</label>
+                    </div>
+                  </div>
+                </div>
               </fieldset>
             </div>
 
-            <div class="contest__contact">
+            <fieldset class="contest__contact">
               <legend class="form__legend form__legend--mobile-hide">Контактная информация</legend>
+              <div class="contest__contact-layout">
                 <div class="form__field-contact form__field-contact--phone">
                   <label class="form__label form__label--contact" for="phone-number-field">Номер телефона</label>
                   <input class="form__text-field form__text-field--contact" type="tel" name="phone" pattern="[0-9]{1}-[0-9]{3}-[0-9]{3}" placeholder="Номер пожалуйста" id="phone-number-field">
@@ -131,12 +138,13 @@
                   <label class="form__label form__label--contact" for="email-field">Адрес почты</label>
                   <input class="form__text-field form__text-field--contact" type="email" id="email-field" name="email" placeholder="Введите почту *" required>
                 </div>
-            </div>
+              </div>
+            </fieldset>
 
             <div class="contest__background contest__apps-layout">
               <fieldset class="contest__apps">
                 <legend class="form__legend form__legend--apps">С каким приложением путешествовали?</legend>
-                <ul class="form__list">
+                <ul class="form__list form__list--apps">
                   <li class="form__option">
                     <input class="visually-hidden form__check" type="radio" name="apps" id="apps-item-field-1" checked>
                     <label class="form__label-in-list form__radio" for="apps-item-field-1">Pink для iOS</label>
@@ -155,13 +163,13 @@
 
             <fieldset class="contest__comment">
               <legend class="form__legend">Опишите свои эмоции</legend>
-              <textarea class="form__textarea" name="comment" rows="5" placeholder="Можно прям в красках, не стесняясь в выражениях" id="comment-field"></textarea>
+              <textarea class="form__textarea" name="comment" rows="3" placeholder="Можно прям в красках, не стесняясь в выражениях" id="comment-field"></textarea>
               </div>
             </fieldset>
 
             <div class="contest__send-form">
               <button class="button form__submit" type="submit">Отправить форму</button>
-              <p class="form__submit-note"><span class="form__submit-note--red">*</span> — обязательные поля</p>
+              <p class="form__submit-note"><span class="form__submit-note--red">*</span> — обязательные <span class="form__submit-note--desktop">для заполнения</span> поля</p>
             </div>
 
           </div>

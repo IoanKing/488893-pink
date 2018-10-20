@@ -1,11 +1,15 @@
+.form {
+  letter-spacing: 0.4px;
+}
+
 .form__list {
   .list-reset();
-  padding-top: 20px;
+  padding-top: 18px;
 }
 
 .form__legend {
-  padding-left: 20px;
-  padding-right: 20px;
+  margin: 0;
+  padding: 38px 20px 15px 20px;
 
   font-size: 14px;
   font-weight: 400;
@@ -13,11 +17,15 @@
   text-align: center;
   text-transform: uppercase;
   color: @text-blood;
+
+  &--contact {
+    display: none;
+  }
 }
 
 .form__label {
   display: inline-block;
-  padding: 10px 20px 10px 20px;
+  padding: 10px 20px 5px 22px;
 
   font-size: 14px;
   font-weight: 400;
@@ -40,7 +48,7 @@
 
 .form__checkbox {
   padding-left: 70px;
-  margin-bottom: 22px;
+  margin-bottom: 32px;
 
   &::before {
     content: "";
@@ -59,7 +67,7 @@
 .form__check:checked + .form__checkbox::after {
   content: "";
   position: absolute;
-  top: calc(50% - 6px);
+  top: 20px;
   left: 8px;
 
   width: 20px;
@@ -73,7 +81,7 @@
 
 .form__radio {
   padding-left: 70px;
-  margin-bottom: 22px;
+  margin-bottom: 25px;
 
   &::before {
     content: "";
@@ -94,7 +102,7 @@
 .form__check:checked + .form__radio::after {
   content: "";
   position: absolute;
-  top: calc(50% - 6.5px);
+  top: 18px;
   left: 11.5px;
 
   width: 13px;
@@ -105,11 +113,14 @@
 }
 
 .form__text-field {
-  display: inline-block;
-  padding: 10px 20px;
+  display: block;
+  width: 100%;
+  padding: 15px 20px;
+  margin-bottom: 8px;
 
   font-size: 18px;
   line-height: 30px;
+  letter-spacing: 0.4px;
   color: @bg-darkblue;
 
   border: 1px solid @bg-gray-dark;
@@ -118,11 +129,13 @@
 .form__textarea {
   display: inline-block;
   width: 100%;
-  margin-bottom: 20px;
-  padding: 20px 20px 20px 20px;
+  min-height: 200px;
+  margin-bottom: 45px;
+  padding: 15px 20px 35px 20px;
 
   font-size: 18px;
   line-height: 30px;
+  letter-spacing: 0.3px;
   color: @bg-darkblue;
 
   border: 2px solid @bg-gray-dark;
@@ -130,7 +143,7 @@
 
 .form__submit {
   width: 100%;
-  padding: 16px;
+  padding: 20px;
 
   font-weight: bold;
   text-align: center;
@@ -144,8 +157,8 @@
   background-color: @wood-green;
 }
 
-.form__submit-text {
-  margin-top: 40px;
+.form__submit-note {
+  margin-top: 35px;
 
   font-size: 14px;
   line-height: 30px;
@@ -155,5 +168,231 @@
 
   &--red {
     color: @text-blood;
+  }
+
+  &--desktop {
+    display: none;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .form__wrapper-main {
+    .wrapper(@tablet-width);
+  }
+
+  .form__field-contestant {
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 45px;
+  }
+
+  .form__field-contact {
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+
+    margin-top: 12px;
+
+    &:first-of-type {
+      margin-top: 38px;
+    }
+
+    &--phone::after,
+    &--email::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+
+      width: 61px;
+      height: 61px;
+
+      background-color: @bg-gray-dark;
+      .background(50%, 50%, auto);
+    }
+
+    &--phone::after {
+      background-image: url("../img/icon-phone.svg");
+    }
+
+    &--email::after {
+      background-image: url("../img/icon-mail.svg");
+    }
+  }
+
+  .form__label {
+    padding: 16px 20px 16px 0;
+
+    &--contact {
+      padding: 3px 20px 16px 20px;
+      order: 1;
+      letter-spacing: 0.3px;
+    }
+  }
+
+  .form__text-field {
+    min-height: 61px;
+
+    &--contact {
+      letter-spacing: 0.7px;
+    }
+  }
+
+  .form__legend {
+    display: block;
+    padding: 0 20px 0 20px;
+    margin: 0 auto;
+
+    background-color: white;
+
+    &--apps {
+      margin-top: -30px;
+      margin-bottom: 20px;
+    }
+
+    &--contact {
+      margin-top: -12px;
+    }
+
+    &--achievement {
+      margin-top: -30px;
+      margin-bottom: 20px;
+    }
+
+    &--comment {
+      margin-top: -50px;
+      margin-bottom: 40px;
+    }
+  }
+
+  .form__radio {
+    padding-left: 60px;
+    margin-bottom: 26px;
+
+    &::before {
+      width: 38px;
+      height: 38px;
+    }
+  }
+
+  .form__check:checked + .form__radio::after {
+    width: 15px;
+    height: 15px;
+  }
+
+  .form__checkbox {
+    padding-left: 60px;
+    margin-bottom: 32px;
+
+    &::before {
+      top: 6px;
+      left: 0;
+      width: 38px;
+      height: 38px;
+    }
+  }
+
+  .form__check:checked + .form__checkbox::after {
+    top: 18px;
+    left: 10px;
+  }
+
+  .form__textarea {
+    padding: 15px 0 0 15px;
+    margin-bottom: 35px;
+
+    min-height: 192px;
+
+    letter-spacing: 0.4px;
+  }
+
+  .form__submit {
+    width: 300px;
+  }
+
+  .form__submit-note {
+    margin: 0;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .form__list--apps {
+    width: 280px;
+    margin: 0 auto;
+  }
+
+  .form__list--achievement {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+
+  .form__option-group {
+    flex-basis: 260px;
+
+    &:nth-child(1) {
+      flex-basis: 280px;
+    }
+
+    &:nth-child(3n-1) {
+      margin-left: 35px;
+      margin-right: 35px;
+    }
+  }
+
+  .form__field-contestant {
+    margin-top: 13px;
+    margin-bottom: 34px;
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+
+  .form__field-contact,
+  .form__field-contact:first-of-type {
+    width: 375px;
+    margin-top: 35px;
+  }
+
+  .form__textarea {
+    min-height: 130px;
+  }
+
+  .form__submit-note--desktop {
+    display: inline;
+  }
+
+  .form__legend {
+    display: block;
+
+    width: auto;
+    padding: 0 20px 0 20px;
+    margin: 0 auto;
+
+    background-color: white;
+
+    &--apps {
+      margin-top: -30px;
+      margin-bottom: 20px;
+    }
+
+    &--contact {
+      margin-top: -12px;
+    }
+
+    &--achievement {
+      margin-top: -30px;
+      margin-bottom: 20px;
+      margin-left: 190px;
+
+      letter-spacing: 0.3px;
+    }
+
+    &--comment {
+      margin-top: -45px;
+      margin-bottom: 35px;
+    }
   }
 }

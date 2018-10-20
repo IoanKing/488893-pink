@@ -1,3 +1,43 @@
 .page-content__reviews {
   background-color: @white;
 }
+
+.page-content__effect {
+  display: none;
+
+  padding: 60px 0 60px 0;
+
+  background-color: @white;
+}
+
+.page-content__rates {
+  padding: 70px 0 50px 0;
+}
+
+@media (min-width: @tablet-width) {
+  .page-content__effect {
+    display: flex;
+  }
+
+  .page-content__rates {
+    padding-top: 68px;
+    padding-bottom: 40px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .page-content__effect {
+    background-color: @bg-gray;
+    padding-top: 40px;
+    padding-bottom: 70px;
+  }
+
+  .page-content__rates {
+    padding-top: 132px;
+    padding-bottom: 70px;
+  }
+
+  .page-content__photo-uploads {
+    margin-bottom: 65px;
+  }
+}

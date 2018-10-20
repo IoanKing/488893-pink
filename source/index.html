@@ -23,64 +23,71 @@
     <header class="page-header">
 
       <div class="page-header__top page-header__top--open">
-        <div class="page-header__wrapper">
-          <a class="page-header__logo" href="#">
-            <img src="img/logo-pink-white-mobile.svg" width="74" height="22" alt="PINK">
-          </a>
-          <button class="page-header__hamburger page-header__hamburger--open" type="button">
-            <span class="visually-hidden">Открыть меню</span>
-          </button>
-          <nav class="page-header__navigation main-nav">
+        <div class="page-header__main-wrapper">
+          <div class="page-header__wrapper">
+            <a class="page-header__logo" href="#">
+              <picture>
+                <source media="(min-width: 960px)" srcset="img/logo-pink-white-desktop.svg">
+                <source media="(min-width: 660px)" srcset="img/logo-pink-white-tablet.svg">
+                <img src="img/logo-pink-white-mobile.svg" alt="PINK">
+              </picture>
+            </a>
+            <button class="page-header__hamburger page-header__hamburger--open" type="button">
+              <span class="visually-hidden">Меню</span>
+            </button>
+          </div>
+          <nav class="page-header__navigation page-header__navigation--open main-nav">
             <ul class="main-nav__list">
               <li class="main-nav__item main-nav__item--active">
-                <a class="main-nav__link">Главная</a>
+                <a class="main-nav__link main-nav__wrapper main-nav__wrapper--desktop">Главная</a>
               </li>
               <li class="main-nav__item">
-                <a class="main-nav__link" href="photo.html">Фотографии</a>
+                <a class="main-nav__link main-nav__wrapper main-nav__wrapper--desktop" href="photo.html">Фотографии</a>
               </li>
               <li class="main-nav__item">
-                <a class="main-nav__link" href="form.html">Конкурс</a>
+                <a class="main-nav__link main-nav__wrapper main-nav__wrapper--desktop" href="form.html">Конкурс</a>
               </li>
               <li class="main-nav__item">
-                <a class="main-nav__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
+                <a class="main-nav__link main-nav__wrapper main-nav__wrapper--desktop" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
               </li>
             </ul>
           </nav>
-        </div> <!-- wrapper -->
-      </div> <!-- page-header__top -->
+        </div>
+      </div>
 
       <div class="page-header__intro intro">
-        <div class="intro__wrapper">
-          <img class="intro__image" src="img/iphone-hand-mobile@1x.png" alt="hand with phone">
-          <h1 class="visually-hidden">Взгляните на жизнь иначе!</h1>
+        <div class="intro__wrapper intro__wrapper--front-page">
+          <h1 class="intro__title intro__title--front-page">Взгляните на жизнь иначе!</h1>
         </div>
-        <div class="intro__apps apps">
+        <div class="intro__apps">
           <div class="intro__wrapper">
-            <a class="button apps__button" href="https://itunes.apple.com/ru/store">Скачать приложение</a>
-            <ul class="apps__list">
-              <li class="apps__item">
-                <a class="apps__link" href="https://itunes.apple.com/ru/store">
-                  <img class="apps__img" src="img/logo-apple.svg" alt="apple icon" width="47" height="56">
-                  <span class="visually-hidden">Скачать приложение для apple</span>
-                </a>
-              </li>
-              <li class="apps__item">
-                <a class="apps__link" href="https://play.google.com/store/apps/">
-                  <img class="apps__img" src="img/logo-android.svg" alt="andriod icon" width="43" height="47">
-                  <span class="visually-hidden">Скачать приложение для android</span>
-                </a>
-              </li>
-              <li class="apps__item">
-                <a class="apps__link" href="https://www.microsoft.com/ru-ru/store/top-free/apps/pc">
-                  <img class="apps__img" src="img/logo-microsoft.svg" alt="windows icon" width="44" height="41">
-                  <span class="visually-hidden">Скачать приложение для windows phone</span>
-                </a>
-              </li>
-            </ul>
-            <p class="apps__info">Доступно для iPhone, iPad, Android, Windows&nbsp;Phone, OS&nbsp;X, Windows&nbsp;8</p>
+            <div class="apps">
+              <a class="button apps__button" href="https://itunes.apple.com/ru/store">Скачать приложение</a>
+              <ul class="apps__list">
+                <li class="apps__item">
+                  <a class="apps__link" href="https://itunes.apple.com/ru/store">
+                    <img class="apps__img" src="img/logo-apple.svg" alt="apple icon" width="47" height="56">
+                    <span class="visually-hidden">Скачать приложение для apple</span>
+                  </a>
+                </li>
+                <li class="apps__item">
+                  <a class="apps__link" href="https://play.google.com/store/apps/">
+                    <img class="apps__img" src="img/logo-android.svg" alt="andriod icon" width="43" height="47">
+                    <span class="visually-hidden">Скачать приложение для android</span>
+                  </a>
+                </li>
+                <li class="apps__item">
+                  <a class="apps__link" href="https://www.microsoft.com/ru-ru/store/top-free/apps/pc">
+                    <img class="apps__img" src="img/logo-microsoft.svg" alt="windows icon" width="44" height="41">
+                    <span class="visually-hidden">Скачать приложение для windows phone</span>
+                  </a>
+                </li>
+              </ul>
+              <p class="apps__info">Доступно для iPhone, iPad, Android, Windows&nbsp;Phone, OS&nbsp;X, Windows&nbsp;8</p>
+            </div>
           </div>
-        </div> <!-- wrapper -->
-      </div> <!-- page-header__intro -->
+        </div>
+      </div>
 
     </header>
 
@@ -91,49 +98,74 @@
           <h2 class="features__title">Устали от серости мегаполиса?</h2>
           <h2 class="features__title">Нам есть, что вам предложить!</h2>
         </div>
-        <div class="features__list feature">
-          <div class="features__wrapper">
-            <div class="features__item">
-              <h3 class="feature__title">Поднимает настроение</h3>
-              <p class="feature__info">Приложение позволит вам победить осеннюю хандру и деперессию буквально в несколько кликов!</p>
+        <div class="features__content">
+          <div class="features__wrapper-tablet">
+            <div class="features__list">
+              <div class="feature feature--screen-1">
+                <h3 class="feature__title">Поднимает настроение</h3>
+                <p class="feature__info">Приложение позволит вам победить осеннюю хандру и деперессию буквально в несколько кликов!</p>
+              </div>
+              <div class="feature feature--screen-2">
+                <h3 class="feature__title">Меняет мир вокруг</h3>
+                <p class="feature__info">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект!</p>
+              </div>
+              <div class="feature feature--screen-3">
+                <h3 class="feature__title">Заводит новых друзей</h3>
+                <p class="feature__info">Ставьте лайки, комментируте, делитесь фотографиями с друзьями и заводите новых!</p>
+              </div>
             </div>
-            <div class="features__item">
-              <h3 class="feature__title">Меняет мир вокруг</h3>
-              <p class="feature__info">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект!</p>
-            </div>
-            <div class="features__item">
-              <h3 class="feature__title">Заводит новых друзей</h3>
-              <p class="feature__info">Ставьте лайки, комментируте, делитесь фотографиями с друзьями и заводите новых!</p>
-            </div>
+            <!-- <picture class="features__main-picture">
+              <source media="(min-width: 660px)" srcset="img/iphone-screen-3-tablet@1x.png">
+              <img class="features__image" src="img/iphone-screen-mobile@1x.png" alt="Телефон c розовой фотографией">
+            </picture> -->
           </div>
-          <img class="features__image" src="img/iphone-screen-mobile@1x.png" alt="Телефон c розовой фотографией" width="157" height="320">
         </div>
-      </section> <!-- page-content__intro -->
+      </section>
 
-      <section class="page-content__reviews reviews reviews-slider">
+      <section class="page-content__effect">
+        <div class="effect">
+          <div class="effect__timer">
+            <span class="effect__time">24</span>
+          </div>
+          <div class="effect__content">
+            <h3 class="effect__title">Эффект на&nbsp;24 часа!</h3>
+            <p class="effect__description">Британские ученые провели исследования и доказали, что&nbsp;положительный эффект от использования приложения длится целые сутки!</p>
+            <a class="effect__link" href="#">Узнать больше об исследовании</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="page-content__reviews reviews">
         <div class="reviews__wrapper">
           <h2 class="visually-hidden">Отзывы:</h2>
-          <ul class="reviews__list reviews-slider__list">
-            <li class="reviews__item review reviews-slider__item" id="review-slider-1">
-              <p class="review__author">Николай Петров</p>
-              <p class="review__text"><!-- ::before «-->Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!<!-- ::after »--></p>
-            </li>
-            <li class="reviews__item review reviews-slider__item" id="review-slider-2">
-              <p class="review__author">Николай Петров</p>
-              <p class="review__text"><!-- ::before «-->Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!<!-- ::after »--></p>
-            </li>
-            <li class="reviews__item review reviews-slider__item" id="review-slider-3">
-              <p class="review__author">Николай Петров</p>
-              <p class="review__text"><!-- ::before «-->Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!<!-- ::after »--></p>
-            </li>
-          </ul> <!-- reviews__list -->
-          <div class="reviews__toggles reviews-slider__toggles">
-            <button class="reviews-slider__toggle" type="button" id="review-toggle-1">1</button>
-            <button class="reviews-slider__toggle" type="button" id="review-toggle-2">2</button>
-            <button class="reviews-slider__toggle" type="button" id="review-toggle-3">3</button>
+          <div class="reviews-slider">
+            <input class="reviews-slider__radio reviews-slider__tab-1" type="radio" id="review-tab-1" name="toggle" checked>
+            <input class="reviews-slider__radio reviews-slider__tab-2" type="radio" id="review-tab-2" name="toggle">
+            <input class="reviews-slider__radio reviews-slider__tab-3" type="radio" id="review-tab-3" name="toggle">
+            <ul class="reviews__list reviews-slider__list">
+              <li class="reviews__item review reviews-slider__item" id="review-slider-1">
+                <p class="review__author">Николай Петров <span class="review__post">25 лет, водитель трамвая</span></p>
+                <p class="review__text">Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!</p>
+              </li>
+              <li class="reviews__item review reviews-slider__item" id="review-slider-2">
+                <p class="review__author">Николай Петров 2 <span class="review__post">25 лет, водитель трамвая</span></p>
+                <p class="review__text">Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!</p>
+              </li>
+              <li class="reviews__item review reviews-slider__item" id="review-slider-3">
+                <p class="review__author">Николай Петров 3 <span class="review__post">25 лет, водитель трамвая</span></p>
+                <p class="review__text">Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!</p>
+              </li>
+            </ul>
+            <div class="reviews__toggles reviews-slider__toggles">
+              <label class="reviews-slider__toggle" for="review-tab-1"><span class="visually-hidden">1</span></label>
+              <label class="reviews-slider__toggle" for="review-tab-2"><span class="visually-hidden">2</span></label>
+              <label class="reviews-slider__toggle" for="review-tab-3"><span class="visually-hidden">3</span></label>
+            </div>
+            <button class="reviews-slider__back reviews-slider__back--disable" type="button"><span class="visually-hidden">Назад</span></button>
+            <button class="reviews-slider__next" type="button"><span class="visually-hidden">Вперед</span></button>
           </div>
-        </div> <!-- wrapper -->
-      </section> <!-- page-content__reviews -->
+        </div>
+      </section>
 
       <section class="page-content__rates rates">
         <div class="rates__wrapper">
@@ -141,6 +173,7 @@
           <table class="rates__table rate">
             <tbody>
               <tr>
+                <th class="rate__header rate__header--first"></th>
                 <th class="rate__header">
                   База
                   <span class="rate__price">1,99 USD</span>
@@ -156,82 +189,82 @@
                 </th>
               </tr>
               <tr>
-                <td class="rate__cell">
+                <td class="rate__cell rate__cell--first">
                   Розовый фильтр
-                  <!-- Здесь будет галочка/крестик ::before -->
+                </td>
+                <td class="rate__cell">
+                  <span class="rate__text">Розовый фильтр</span>
                   <span class="rate__option rate__option--yes"></span>
                   <span class="visually-hidden"> - Да</span>
                 </td>
                 <td class="rate__cell">
-                  Розовый фильтр
-                  <!-- Здесь будет галочка/крестик ::before -->
+                  <span class="rate__text">Розовый фильтр</span>
                   <span class="rate__option rate__option--yes"></span>
                   <span class="visually-hidden"> - Да</span>
                 </td>
                 <td class="rate__cell">
-                  Розовый фильтр
-                  <!-- Здесь будет галочка/крестик ::before -->
+                  <span class="rate__text">Розовый фильтр</span>
                   <span class="rate__option rate__option--yes"></span>
                   <span class="visually-hidden"> - Да</span>
                 </td>
               <tr>
-                <td class="rate__cell">
+                <td class="rate__cell rate__cell--first">
                   Смайлики
-                  <!-- Здесь будет галочка/крестик ::before -->
+                </td>
+                <td class="rate__cell">
+                  <span class="rate__text">Смайлики</span>
                   <span class="rate__option rate__option--no"></span>
                   <span class="visually-hidden"> - Нет</span>
                 </td>
                 <td class="rate__cell">
-                  Смайлики
-                  <!-- Здесь будет галочка/крестик ::before -->
+                  <span class="rate__text">Смайлики</span>
                   <span class="rate__option rate__option--yes"></span>
                   <span class="visually-hidden"> - Да</span>
                 </td>
                 <td class="rate__cell">
-                  Смайлики
-                  <!-- Здесь будет галочка/крестик ::before -->
+                  <span class="rate__text">Смайлики</span>
                   <span class="rate__option rate__option--yes"></span>
                   <span class="visually-hidden"> - Да</span>
                 </td>
               </tr>
               <tr>
-                <td class="rate__cell">
+                <td class="rate__cell rate__cell--first">
                   Комментарии
-                  <!-- Здесь будет галочка/крестик ::before -->
+                </td>
+                <td class="rate__cell">
+                  <span class="rate__text">Комментарии</span>
                   <span class="rate__option rate__option--no"></span>
                   <span class="visually-hidden"> - Нет</span>
                 </td>
                 <td class="rate__cell">
-                  Комментарии
-                  <!-- Здесь будет галочка/крестик ::before -->
+                  <span class="rate__text">Комментарии</span>
                   <span class="rate__option rate__option--no"></span>
                   <span class="visually-hidden"> - Нет</span>
                 </td>
                 <td class="rate__cell">
-                  Комментарии
-                  <!-- Здесь будет галочка/крестик ::before -->
+                  <span class="rate__text">Комментарии</span>
                   <span class="rate__option rate__option--yes"></span>
                   <span class="visually-hidden"> - Да</span>
                 </td>
               </tr>
             </tbody>
-          </table> <!-- rates -->
+          </table>
           <div class="rates__toggles">
-            <button class="rates__toggle" type="button" id="rates-toggle-base">1</button>
-            <button class="rates__toggle" type="button" id="rates-toggle-standart">2</button>
-            <button class="rates__toggle" type="button" id="rates-toggle-unlimited">3</button>
+            <button class="rates__toggle" type="button" id="rates-toggle-base"><span class="visually-hidden">1</span></button>
+            <button class="rates__toggle" type="button" id="rates-toggle-standart"><span class="visually-hidden">2</span></button>
+            <button class="rates__toggle" type="button" id="rates-toggle-unlimited"><span class="visually-hidden">3</span></button>
           </div>
-        </div> <!-- wrapper -->
-      </section> <!-- page-content__rates -->
+        </div>
+      </section>
 
       <section class="page-content__contacts contacts">
         <div class="contacts__wrapper contacts__info">
           <h2 class="contacts__title">Остались вопросы? Свяжитесь с нами!</h2>
           <div class="contact">
             <p class="contact__title">Звоните:</p>
-            <a class="contact__link" href="tel:78125556666">+7(812)555-66-66</a>
+            <a class="contact__link contact__link" href="tel:78125556666">+7 (812) 555-66-66</a>
           </div>
-          <div class="contact">
+          <div class="contact contact--email">
             <p class="contact__title">Пишите:</p>
             <a class="contact__link" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
           </div>
@@ -239,13 +272,12 @@
             <p class="contact__title">Приезжайте в гости:</p>
             <p class="contact__link">ул. Большая Конюшенная, 19/8</p>
           </div>
-        </div> <!-- wrapper -->
+        </div>
         <div class="contacts__map map">
           <div class="map__img"></div>
           <div class="map__marker"></div>
-          <!--Здесь будет карта-->
-        </div> <!-- contacts__map -->
-      </section> <!--page-contacts-->
+        </div>
+      </section>
 
     </main>
 
@@ -255,7 +287,7 @@
           <img src="img/logo-pink-blue-mobile.svg" width="147" height="40" alt="PINK">
         </a>
         <ul class="footer__social social">
-          <li>
+          <li class="social__item">
             <a class="social__button social__button--twitter" href="#">
               <svg class="social__icon" width="18" height="14">
                 <use xlink:href="#icon-twitter" x="0" y="0" />
@@ -263,7 +295,7 @@
               <span class="visually-hidden">Twitter</span>
             </a>
           </li>
-          <li>
+          <li class="social__item">
             <a class="social__button social__button--facebook" href="#">
               <svg class="social__icon" width="9" height="18">
                 <use xlink:href="#icon-facebook" x="0" y="0" />
@@ -271,7 +303,7 @@
               <span class="visually-hidden">Facebook</span>
             </a>
           </li>
-          <li>
+          <li class="social__item">
             <a class="social__button social__button--youtube" href="#">
               <svg class="social__icon" width="15" height="13">
                 <use xlink:href="#icon-youtube" x="0" y="0" />
@@ -288,8 +320,9 @@
             </svg><span class="visually-hidden">htmlacademy.ru</span>
           </a>
         </p>
-      </div> <!-- wrapper -->
+      </div>
     </footer>
 
+    <script src="js/scripts.js"></script>
   </body>
 </html>

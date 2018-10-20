@@ -4,10 +4,11 @@
 
 .form__list {
   .list-reset();
-  padding-top: 20px;
+  padding-top: 18px;
 }
 
 .form__legend {
+  margin: 0;
   padding: 38px 20px 15px 20px;
 
   font-size: 14px;
@@ -17,7 +18,7 @@
   text-transform: uppercase;
   color: @text-blood;
 
-  &--mobile-hide {
+  &--contact {
     display: none;
   }
 }
@@ -80,7 +81,7 @@
 
 .form__radio {
   padding-left: 70px;
-  margin-bottom: 22px;
+  margin-bottom: 25px;
 
   &::before {
     content: "";
@@ -129,7 +130,7 @@
   display: inline-block;
   width: 100%;
   min-height: 200px;
-  margin-bottom: 42px;
+  margin-bottom: 45px;
   padding: 15px 20px 35px 20px;
 
   font-size: 18px;
@@ -230,18 +231,42 @@
     }
   }
 
-  .form__text-field--contact {
-    letter-spacing: 0.7px;
+  .form__text-field {
+    min-height: 61px;
+
+    &--contact {
+      letter-spacing: 0.7px;
+    }
   }
 
   .form__legend {
+    display: block;
     padding: 0 20px 0 20px;
     margin: 0 auto;
 
     background-color: white;
 
-    &--mobile-hide {
-      display: inline;
+    &--apps {
+      margin-top: -30px;
+      margin-bottom: 20px;
+      width: 372px;
+    }
+
+    &--contact {
+      margin-top: -12px;
+      width: 260px;
+    }
+
+    &--achievement {
+      margin-top: -30px;
+      margin-bottom: 20px;
+      width: 440px;
+    }
+
+    &--comment {
+      margin-top: -50px;
+      margin-bottom: 40px;
+      width: 260px;
     }
   }
 
@@ -314,8 +339,12 @@
   .form__option-group {
     flex-basis: 260px;
 
+    &:nth-child(1) {
+      flex-basis: 280px;
+    }
+
     &:nth-child(3n-1) {
-      margin-left: 55px;
+      margin-left: 35px;
       margin-right: 35px;
     }
   }
@@ -341,5 +370,39 @@
 
   .form__submit-note--desktop {
     display: inline;
+  }
+
+  .form__legend {
+    display: block;
+    padding: 0 20px 0 20px;
+    margin: 0 auto;
+
+    background-color: white;
+
+    &--apps {
+      margin-top: -30px;
+      margin-bottom: 20px;
+      width: 372px;
+    }
+
+    &--contact {
+      margin-top: -12px;
+      width: 260px;
+    }
+
+    &--achievement {
+      margin-top: -30px;
+      margin-bottom: 20px;
+      margin-left: 190px;
+      width: 440px;
+
+      letter-spacing: 0.3px;
+    }
+
+    &--comment {
+      margin-top: -45px;
+      margin-bottom: 35px;
+      width: 260px;
+    }
   }
 }

@@ -75,7 +75,7 @@
           <div class="contest__wrapper-tablet">
 
             <div class="contest__contestant">
-              <legend class="visually-hidden">Ваше ФИО:</legend>
+              <h3 class="visually-hidden">Ваше ФИО:</h3>
               <div class="form__field-contestant">
                 <label class="form__label" for="first-name-field">Фамилия:</label>
                 <input class="form__text-field" type="text" id="first-name-field" name="first-name" placeholder="Укажите фамилию *" required>
@@ -91,8 +91,8 @@
             </div>
 
             <div class="contest__background contest__achievement-layout">
-              <fieldset class="contest__achievement">
-                <legend class="form__legend">Ваши безбашинные достижения в путешествии</legend>
+              <div class="contest__achievement">
+                <h3 class="form__legend form__legend--achievement">Ваши безбашинные достижения в путешествии</h3>
                 <div class="form__list form__list--achievement">
                   <div class="form__option-group">
                     <div class="form__option">
@@ -118,17 +118,18 @@
                     <div class="form__option">
                       <input class="visually-hidden form__check" type="checkbox" name="achievement-item-5" id="achievement-item-field-5" checked>
                       <label class="form__label-in-list form__checkbox" for="achievement-item-field-5" >Удержал башню</label>
+                    </div>
                     <div class="form__option">
                       <input class="visually-hidden form__check" type="checkbox" name="achievement-item-6" id="achievement-item-field-6">
                       <label class="form__label-in-list form__checkbox" for="achievement-item-field-6">Разгромил отель</label>
                     </div>
                   </div>
                 </div>
-              </fieldset>
+              </div>
             </div>
 
-            <fieldset class="contest__contact">
-              <legend class="form__legend form__legend--mobile-hide">Контактная информация</legend>
+            <div class="contest__contact">
+              <h3 class="form__legend form__legend--contact">Контактная информация</h3>
               <div class="contest__contact-layout">
                 <div class="form__field-contact form__field-contact--phone">
                   <label class="form__label form__label--contact" for="phone-number-field">Номер телефона</label>
@@ -139,11 +140,11 @@
                   <input class="form__text-field form__text-field--contact" type="email" id="email-field" name="email" placeholder="Введите почту *" required>
                 </div>
               </div>
-            </fieldset>
+            </div>
 
             <div class="contest__background contest__apps-layout">
-              <fieldset class="contest__apps">
-                <legend class="form__legend form__legend--apps">С каким приложением путешествовали?</legend>
+              <div class="contest__apps">
+                <h3 class="form__legend form__legend--apps">С каким приложением путешествовали?</h3>
                 <ul class="form__list form__list--apps">
                   <li class="form__option">
                     <input class="visually-hidden form__check" type="radio" name="apps" id="apps-item-field-1" checked>
@@ -158,14 +159,14 @@
                     <label class="form__label-in-list form__radio" for="apps-item-field-3">Windows Phone</label>
                   </li>
                 </ul>
-              </fieldset>
+              </div>
             </div>
 
-            <fieldset class="contest__comment">
-              <legend class="form__legend">Опишите свои эмоции</legend>
+            <div class="contest__comment">
+              <h3 class="form__legend form__legend--comment">Опишите свои эмоции</h3>
               <textarea class="form__textarea" name="comment" rows="3" placeholder="Можно прям в красках, не стесняясь в выражениях" id="comment-field"></textarea>
               </div>
-            </fieldset>
+            </div>
 
             <div class="contest__send-form">
               <button class="button form__submit" type="submit">Отправить форму</button>

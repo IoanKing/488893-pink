@@ -2,7 +2,7 @@
   position: relative;
 
   width: calc(@mobile-width - 50px);
-  padding: 20px 10px;
+  padding: 16px 10px 22px 10px;
 
   font-size: 18px;
   line-height: 30px;
@@ -68,7 +68,7 @@
 .rate__cell {
   width: calc(@mobile-width - 50px);
   position: relative;
-  padding: 15px 23px 16px 23px;
+  padding: 14px 23px 16px 23px;
 
   letter-spacing: 0.3px;
 
@@ -82,18 +82,20 @@
 .rate__option {
   position: absolute;
   display: block;
-  top: 18px;
-  right: 20px;
 
   .background(100%, 100%);
 
   &--yes {
+    top: 18px;
+    right: 18px;
     background-image: url("../img/icon-yes.svg");
     width: 31px;
     height: 22px;
   }
 
   &--no {
+    top: 14px;
+    right: 20px;
     background-image: url("../img/icon-no.svg");
     width: 27px;
     height: 27px;
@@ -181,14 +183,14 @@
 
   .rate__cell {
     width: 25%;
-    padding: 15px 0 16px 0;
+    padding: 15px 0 14px 0;
 
     font-size: 18px;
     line-height: 30px;
 
     &--first {
       display: table-cell;
-      padding: 15px 0 16px 20px;
+      padding: 15px 0 14px 20px;
 
       letter-spacing: 0.7px;
     }

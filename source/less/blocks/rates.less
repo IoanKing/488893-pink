@@ -1,9 +1,24 @@
 .rates {
+  position: relative;
   overflow: hidden;
 
   background-color: @bg-gray;
-  background-image: url("../img/bg-triangle-white.svg");
-  .background(50%, 0%, contain);
+  // background-image: url("../img/bg-triangle-white.svg");
+  // .background(50%, 0%, contain);
+
+  &::before {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    display: block;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    border-top: 8vw solid @white;
+	  border-right: 100vw solid transparent;
+  }
 }
 
 .rates__wrapper {
@@ -21,10 +36,56 @@
 
   border-collapse: separate;
   border-spacing: 1px;
+
+  transition: left 0.5s ease-in-out;
 }
 
 .rates__toggles {
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  margin: 10px auto 0 auto;
+}
+
+.rates__toggle {
+  position: relative;
+  display: block;
+
+  width: 12px;
+  height: 12px;
+  margin: 0 7px;
+
+  background-color: fade(@bg-darkblue, 30);
+  border: 3px solid @bg-gray;
+  border-radius: 50%;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    background-color: fade(@bg-darkblue, 60);
+  }
+
+  &:active {
+    background-color: fade(@bg-darkblue, 10);
+  }
+}
+
+.rates__tab-1:checked ~ .rates__toggles > .rates__toggle[for="rates-tab-1"],
+.rates__tab-2:checked ~ .rates__toggles > .rates__toggle[for="rates-tab-2"],
+.rates__tab-3:checked ~ .rates__toggles > .rates__toggle[for="rates-tab-3"] {
+  background-color: transparent;
+  border-color: @bg-darkblue;
+}
+
+.rates__tab-1:checked ~ .rates__table {
+  left: 0%;
+}
+
+.rates__tab-2:checked ~ .rates__table {
+  left: calc(50% - @desktop-width/2 + 60px);
+}
+
+.rates__tab-3:checked ~ .rates__table {
+  left: calc(100% - @desktop-width + 120px);
 }
 
 @media (min-width: @tablet-width) {

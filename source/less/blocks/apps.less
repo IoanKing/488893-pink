@@ -33,10 +33,22 @@
 .apps__button {
   width: 100%;
   color: @white;
-  padding: 12px 20px;
+  padding: 11px 20px 14px 20px;
   font-weight: bold;
   border-color: @white;
   display: block;
+  outline: none;
+
+  &:hover,
+  &:focus {
+    background-color: @white;
+    color: @text-blood;
+  }
+
+  &:active {
+    background-color: @white;
+    color: fade(@text-blood, 30);
+  }
 }
 
 @media (min-width: @tablet-width) {

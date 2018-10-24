@@ -67,6 +67,7 @@
   font-size: 14px;
   margin: 10px 0 10px 0;
   padding-right: 10px;
+  letter-spacing: 0.3px;
 }
 
 .effect__description {
@@ -76,6 +77,15 @@
 .effect__link {
   color: @text-blood;
   text-decoration: underline;
+
+  &:hover,
+  &:focus {
+    color: @bg-darkblue;
+  }
+
+  &:active {
+    color: fade(@bg-darkblue, 30);
+  }
 }
 
 @media (min-width: @tablet-width) {
@@ -137,7 +147,7 @@
 
   .effect__title {
     width: 100%;
-    margin-bottom: 25px;
+    margin-bottom: 20px;
   }
 
   .effect__description,
@@ -147,6 +157,6 @@
 
     font-size: 18px;
     line-height: 30px;
-    letter-spacing: @letter-spacing;
+    letter-spacing: 0.4px;
   }
 }

@@ -8,6 +8,7 @@
 
 .reviews-slider__list {
   display: flex;
+  transition: transform 0.5s ease-out;
 }
 
 .reviews-slider__item {
@@ -48,17 +49,26 @@
   height: 12px;
   margin: 0 7px;
 
-  background-color: @bg-gray-dark;
+  background-color: fade(@bg-darkblue, 30);
   border: 3px solid @white;
   border-radius: 50%;
   cursor: pointer;
+
+  &:hover,
+  &:focus {
+    background-color: fade(@bg-darkblue, 60);
+  }
+
+  &:active {
+    background-color: fade(@bg-darkblue, 10);
+  }
 }
 
 .reviews-slider__tab-1:checked ~ .reviews-slider__toggles > .reviews-slider__toggle[for="review-tab-1"],
 .reviews-slider__tab-2:checked ~ .reviews-slider__toggles > .reviews-slider__toggle[for="review-tab-2"],
 .reviews-slider__tab-3:checked ~ .reviews-slider__toggles > .reviews-slider__toggle[for="review-tab-3"] {
-  background-color: @white;
-  border-color: @black;
+  background-color: transparent;
+  border-color: @bg-darkblue;
 }
 
 .reviews-slider__back,

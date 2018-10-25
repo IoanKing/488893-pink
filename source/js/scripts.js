@@ -2,6 +2,10 @@ var button_hamburger = document.querySelector('.page-header__hamburger');
 var mobile_menu = document.querySelector('.page-header__navigation');
 var header_top = document.querySelector('.page-header__top');
 
+button_hamburger.classList.remove('page-header__hamburger--open');
+header_top.classList.remove('page-header__top--open');
+mobile_menu.classList.remove('page-header__navigation--open');
+
 if ( button_hamburger ) {
   button_hamburger.addEventListener('click', function (evt) {
     evt.preventDefault();
@@ -25,4 +29,30 @@ if ( button_hamburger ) {
     }
 
   });
+}
+
+var filters__toggle = document.querySelectorAll('.filters__toggle');
+
+if ( filters__toggle ) {
+  for (var i = 0; i < filters__toggle.length; i++) {
+    filters__toggle[i].addEventListener('click', function (evt) {
+      evt.preventDefault();
+
+      for (var j = 0; j < filters__toggle.length; j++) {
+        filters__toggle[j].classList.remove('filters__toggle--active');
+        var parent = filters__toggle[j].parentElement;
+        console.log(parent);
+        parent.classList.remove('filters__item--active');
+        parent.querySelector('.range').classList.remove('range--active');
+        console.log(parent);
+      }
+
+      this.classList.add('filters__toggle--active');
+      var parent = this.parentElement;
+      console.log(parent);
+      parent.classList.add('filters__item--active');
+      parent.querySelector('.range').classList.add('range--active');
+      console.log(parent);
+    });
+  }
 }

@@ -109,32 +109,36 @@
     display: none;
   }
 
-  .reviews-slider__back {
+  .reviews-slider__back,
+  .reviews-slider__next {
     position: absolute;
     top: 0;
-    left: 0;
 
     display: block;
     width: 50px;
     height: 100%;
 
     .button-reset();
+    opacity: 0.3;
 
+    &:hover,
+    &:focus {
+      opacity: 1;
+    }
+
+    &:active {
+      opacity: 0.1;
+    }
+  }
+
+  .reviews-slider__back {
+    left: 0;
     background-image: url("../img/icon-review-arrow-left.svg");
     .background(35%, calc(50% + 15px), auto);
   }
 
   .reviews-slider__next {
-    position: absolute;
-    top: 0;
     right: 0;
-
-    display: block;
-    width: 50px;
-    height: 100%;
-
-    .button-reset();
-
     background-image: url("../img/icon-review-arrow-right.svg");
     .background(65%, calc(50% + 15px), auto);
   }

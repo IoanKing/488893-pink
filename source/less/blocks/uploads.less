@@ -3,7 +3,7 @@
 }
 
 .uploads__header {
-  padding: 12px 5px 30px 5px;
+  padding: 0 5px 31px 5px;
 
   letter-spacing: 0.4px;
 }
@@ -14,6 +14,7 @@
   line-height: 30px;
   color: @bg-darkblue;
   text-align: center;
+  letter-spacing: 0.3px;
 
   background-color: @white;
 }
@@ -38,6 +39,7 @@
 }
 
 .uploads__downloaded {
+  display: block;
   width: auto;
   height: 100%;
   min-height: 280px;
@@ -47,39 +49,64 @@
 .uploads__filters {
   position: relative;
   border: none;
-}
-
-.uploads__post {
-  width: 100%;
-  margin-bottom: 12px;
-  font-weight: bold;
-  color: @text-blood;
-  border-color: @text-blood;
-}
-
-.uploads__undo {
-  width: 100%;
-  margin-bottom: 12px;
-  font-weight: bold;
-  color: fade(@bg-darkblue, 10%);
-  border-color: fade(@bg-darkblue, 10%);
+  padding-top: 40px;
 }
 
 .uploads__send-post {
-  padding-top: 35px;
-  padding-bottom: 8px;
+  padding-top: 38px;
+  padding-bottom: 5px;
+}
+
+.uploads__button {
+  width: 100%;
+  padding: 13px 12px 15px 12px;
+  font-weight: bold;
+
+  &--post {
+    margin-bottom: 12px;
+    color: @text-blood;
+    border-color: @text-blood;
+
+    &:hover,
+    &:focus {
+      color: @white;
+      background-color: @text-blood;
+    }
+
+    &:active {
+      color: fade(@white, 30);
+      background-color: @text-blood;
+    }
+  }
+
+  &--undo {
+    margin-bottom: 12px;
+    color: fade(@bg-darkblue, 10);
+    border-color: fade(@bg-darkblue, 10);
+
+    &:hover,
+    &:focus {
+      color: fade(@bg-darkblue, 30);
+      border-color: fade(@bg-darkblue, 30);
+    }
+
+    &:active {
+      color: fade(@white, 30);
+      border-color: fade(@bg-darkblue, 0);
+      background-color: fade(@bg-darkblue, 30);
+    }
+  }
 }
 
 @media (min-width: @tablet-width) {
   .uploads__form {
-    padding-top: 28px;
+    padding-top: 55px;
     padding-bottom: 0;
   }
 
   .uploads__wrapper {
     .wrapper(@tablet-width);
-    padding-top: 30px;
-    padding-bottom: 56px;
+    padding-bottom: 55px;
 
     letter-spacing: 0.4px;
   }
@@ -101,18 +128,18 @@
 
   .uploads__send-post {
     padding-top: 50px;
-    padding-bottom: 3px;
+    padding-bottom: 0;
   }
 
-  .uploads__send-post .button {
+  .uploads__button {
     width: 260px;
   }
 
-  .uploads__post {
+  .uploads__button--post {
     margin-bottom: 28px;
   }
 
-  .uploads__undo {
+  .uploads__button--undo {
     margin-bottom: 0;
   }
 }
@@ -143,6 +170,11 @@
     min-height: 400px;
   }
 
+  .uploads__downloaded {
+    width: 100%;
+    height: auto;
+  }
+
   .uploads__filters {
     flex-basis: 410px;
 
@@ -156,6 +188,10 @@
     margin-top: auto;
     flex-grow: 0;
     padding: 0;
+  }
+
+  .uploads__button--post {
+    margin-bottom: 0;
   }
 
   .uploads__post {

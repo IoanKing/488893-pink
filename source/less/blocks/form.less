@@ -4,7 +4,7 @@
 
 .form__list {
   .list-reset();
-  padding-top: 18px;
+  padding-top: 15px;
 }
 
 .form__legend {
@@ -38,7 +38,7 @@
   position: relative;
 
   display: inline-block;
-  padding: 10px 0 10px 10px;
+  padding: 11px 0 9px 10px;
 
   font-size: 18px;
   font-weight: 400;
@@ -61,6 +61,15 @@
 
     border: 2px solid @bg-gray-dark;
     background-color: @white;
+  }
+
+  &:hover::before,
+  &:focus::before {
+    border-color: @bg-darkblue;
+  }
+
+  &:active::before {
+    border-color: @text-blood;
   }
 }
 
@@ -97,6 +106,15 @@
 
     border-radius: 50%;
   }
+
+  &:hover::before,
+  &:focus::before {
+    border-color: @bg-darkblue;
+  }
+
+  &:active::before {
+    border-color: @text-blood;
+  }
 }
 
 .form__check:checked + .form__radio::after {
@@ -115,7 +133,7 @@
 .form__text-field {
   display: block;
   width: 100%;
-  padding: 15px 20px;
+  padding: 14px 20px 15px 20px;
   margin-bottom: 8px;
 
   font-size: 18px;
@@ -123,14 +141,23 @@
   letter-spacing: 0.4px;
   color: @bg-darkblue;
 
-  border: 1px solid @bg-gray-dark;
+  border: 2px solid @bg-gray-dark;
+
+  &:hover,
+  &:focus {
+    border-color: @bg-darkblue;
+  }
+
+  &:active {
+    border-color: @text-blood;
+  }
 }
 
 .form__textarea {
   display: inline-block;
   width: 100%;
   min-height: 200px;
-  margin-bottom: 45px;
+  margin-bottom: 48px;
   padding: 15px 20px 35px 20px;
 
   font-size: 18px;
@@ -139,6 +166,15 @@
   color: @bg-darkblue;
 
   border: 2px solid @bg-gray-dark;
+
+  &:hover,
+  &:focus {
+    border-color: @bg-darkblue;
+  }
+
+  &:active {
+    border-color: @text-blood;
+  }
 }
 
 .form__submit {
@@ -155,6 +191,22 @@
   border-width: 2px;
   border-color: @wood-green;
   background-color: @wood-green;
+
+  &:hover:not(:disabled),
+  &:focus:not(:disabled),
+  &:active:not(:disabled) {
+    border-color: @wood-green-hover;
+    background-color: @wood-green-hover;
+  }
+
+  &:active:not(:disabled) {
+    color: fade(@white, 30);
+  }
+
+  &:disabled {
+    border-color: @bg-gray-dark;
+    background-color: @bg-gray-dark;
+  }
 }
 
 .form__submit-note {
@@ -358,6 +410,7 @@
 
   .form__textarea {
     min-height: 130px;
+    margin-bottom: 42px;
   }
 
   .form__submit-note--desktop {
@@ -375,7 +428,7 @@
 
     &--apps {
       margin-top: -30px;
-      margin-bottom: 20px;
+      margin-bottom: 25px;
     }
 
     &--contact {
@@ -385,7 +438,7 @@
     &--achievement {
       margin-top: -30px;
       margin-bottom: 20px;
-      margin-left: 190px;
+      margin-left: 203px;
 
       letter-spacing: 0.3px;
     }
@@ -394,5 +447,10 @@
       margin-top: -45px;
       margin-bottom: 35px;
     }
+  }
+
+  .form__radio {
+    padding-left: 57px;
+    margin-bottom: 24px;
   }
 }

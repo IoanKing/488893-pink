@@ -33,7 +33,7 @@
   cursor: pointer;
   border: none;
 
-  &:before {
+  &::before {
     content: "";
     position: absolute;
     top: 14px;
@@ -44,19 +44,19 @@
     box-shadow: 0 10px 0 0 @white, 0 20px 0 0 @white;
   }
 
-  &:hover:before,
-  &:focus:before {
+  &:hover::before,
+  &:focus::before {
     background-color: @text-blood;
     box-shadow: 0 10px 0 0 @text-blood, 0 20px 0 0 @text-blood;
   }
 
-  &:active:before {
+  &:active::before {
     background-color: fade(@text-blood, 30);
     box-shadow: 0 10px 0 0 fade(@text-blood, 30), 0 20px 0 0 fade(@text-blood, 30);
   }
 
   &--open {
-    &:before {
+    &::before {
       top: 25px;
       left: 40px;
       width: 30px;
@@ -65,7 +65,7 @@
       box-shadow: none;
     }
 
-    &:after {
+    &::after {
       content: "";
       position: absolute;
       top: 25px;
@@ -76,16 +76,16 @@
       background-color: @white;
     }
 
-    &:hover:before,
-    &:hover:after,
-    &:focus:before,
-    &:focus:after {
+    &:hover::before,
+    &:hover::after,
+    &:focus::before,
+    &:focus::after {
       background-color: @text-blood;
       box-shadow: none;
     }
 
-    &:active:before,
-    &:active:after {
+    &:active::before,
+    &:active::after {
       background-color: fade(@text-blood, 30);
       box-shadow: none;
     }

@@ -56,3 +56,41 @@ if ( filters__toggle ) {
     });
   }
 }
+
+var form = document.querySelector('.form');
+var inputs_required = form.querySelectorAll('.form input[required]');
+var popup_overlay = document.querySelector('.popup__overlay');
+var popup_send_request = document.querySelector('.popup__send-request');
+var popup_failure = document.querySelector('.popup__failure');
+var popup_close = document.querySelectorAll('.popup__close');
+
+for (var i; i < inputs_required.length; i++) {
+  inputs_required[i].oninvalid = function(evt) {
+    evt.preventDefault();
+    popup_overlay.classList.add('popup__overlay--active');
+    popup_failure.classList.add('popup--active');
+  }
+}
+
+if ( form ) {
+  form.addEventListener("submit", function (evt) {
+    evt.preventDefault();
+
+    popup_overlay.classList.add('popup__overlay--active');
+    popup_send_request.classList.add('popup--active');
+  });
+}
+
+console.log(popup_close);
+
+if (popup_close) {
+  for (var i = 0; i < popup_close.length; i++) {
+    popup_close[i].addEventListener("click", function (evt) {
+      evt.preventDefault();
+
+      popup_send_request.classList.remove('popup--active');
+      popup_failure.classList.remove('popup--active');
+      popup_overlay.classList.remove('popup__overlay--active');
+    });
+  }
+}

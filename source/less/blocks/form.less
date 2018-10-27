@@ -213,8 +213,6 @@
   }
 }
 
-
-
 .form__submit-note {
   margin-top: 35px;
 
@@ -391,16 +389,22 @@
 }
 
 @media (min-width: @desktop-width) {
-  .form__list--apps {
-    width: 280px;
-    margin: 0 auto;
-    padding-top: 16px;
-  }
+  .form__list {
+    padding-top: 15px;
 
-  .form__list--achievement {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-start;
+    &--apps {
+      width: 280px;
+      margin: 0 auto;
+      padding-top: 16px;
+    }
+
+    &--achievement {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+
+      padding-top: 20px;
+    }
   }
 
   .form__option-group {
@@ -433,6 +437,7 @@
   .form__textarea {
     min-height: 130px;
     margin-bottom: 42px;
+    margin-top: 35px;
   }
 
   .form__submit-note--desktop {
@@ -474,24 +479,8 @@
     order: 1;
   }
 
-  .form__list {
-    padding-top: 15px;
-
-    &--apps {
-      padding-top: 16px;
-    }
-
-    &--achievement {
-      padding-top: 20px;
-    }
-  }
-
   .form__radio {
     padding-left: 57px;
     margin-bottom: 24px;
-  }
-
-  .form__textarea {
-    margin-top: 35px;
   }
 }

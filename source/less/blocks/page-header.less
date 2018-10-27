@@ -7,7 +7,6 @@
 }
 
 .page-header__top {
-  min-height: 66px;
   background-color: fade(@black, 30%);
 
   &--open {
@@ -18,12 +17,18 @@
 
 .page-header__wrapper {
   .wrapper(@mobile-width);
-  border-bottom: 1px solid @black;
+}
+
+.page-header__logo {
+  display: block;
+  margin: 0;
+  padding: 21px 20px 15px 0;
+  .link-reset();
 }
 
 .page-header__hamburger {
   position: absolute;
-  top: calc(50% - 30px);
+  top: 6px;
   right: 17px;
   z-index: 2;
   display: block;
@@ -32,6 +37,7 @@
   background: none;
   cursor: pointer;
   border: none;
+  outline: none;
 
   &::before {
     content: "";
@@ -71,7 +77,7 @@
       top: 25px;
       left: 40px;
       width: 30px;
-      height: 4px;
+      height: 5px;
       transform: rotate(45deg);
       background-color: @white;
     }
@@ -92,33 +98,13 @@
   }
 }
 
-.page-header__logo {
-  padding: 20px 20px 20px 0;
-  .link-reset();
-}
-
-.logo-pink {
-  fill: @white;
-  margin: -15px 0 0 -70px;
-}
-
-.logo-pink-desktop {
+.page-header__logo:hover .logo-icon,
+.page-header__logo:focus .logo-icon {
   fill: @text-blood;
 }
 
-.page-header__logo:hover .logo-pink,
-.page-header__logo:focus .logo-pink {
-  fill: @text-blood;
-}
-
-.page-header__logo:active .logo-pink {
+.page-header__logo:active .logo-icon {
   fill: fade(@white, 30);
-}
-
-.logo-pink-desktop-glass,
-.logo-pink-desktop,
-.logo-pink-tablet {
-  display: none;
 }
 
 .page-header__navigation {
@@ -126,20 +112,14 @@
 
   &--open {
     display: block;
+    margin-top: 5px;
+    margin-bottom: -2px;
   }
 }
 
 @media (min-width: @tablet-width) {
-  .logo-pink {
-    fill: @white;
-    margin: 0;
-  }
-
-  .logo-pink-tablet {
-    display: block;
-  }
-
   .page-header {
+    .background(50%, 100%, 100% cover);
     background-image: url("../img/bg-back-tablet@1x.jpg");
   }
 
@@ -148,24 +128,15 @@
   }
 
   .page-header__logo {
-    padding: 28px 20px 38px 0;
+    padding: 22px 20px 38px 0;
   }
 
   .page-header__hamburger {
-    top: calc(50% - 25px);
+    top: 25px;
   }
 }
 
 @media (min-width: @desktop-width) {
-  .logo-pink-tablet {
-    display: none;
-  }
-
-  .logo-pink-desktop,
-  .logo-pink-desktop-glass {
-    display: block;
-  }
-
   .page-header {
     background-image: url("../img/bg-back-desktop@1x.jpg");
   }
@@ -198,5 +169,9 @@
   .page-header__navigation {
     display: block;
     width: auto;
+
+    &--open {
+      margin: 0;
+    }
   }
 }

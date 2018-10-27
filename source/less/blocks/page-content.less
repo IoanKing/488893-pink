@@ -1,15 +1,11 @@
 .page-content__reviews {
   background-color: @white;
-  padding-top: 25px;
+  padding-top: 22px;
   padding-bottom: 18px;
 }
 
 .page-content__effect {
   display: none;
-
-  padding: 60px 0 60px 0;
-
-  background-color: @white;
 }
 
 .page-content__features {
@@ -25,13 +21,19 @@
 }
 
 @media (min-width: @tablet-width) {
+  .page-content__reviews {
+    padding-top: 38px;
+  }
+
   .page-content__effect {
     display: flex;
+    padding: 58px 0 60px 0;
+    background-color: @white;
   }
 
   .page-content__rates {
     padding-top: 68px;
-    padding-bottom: 40px;
+    padding-bottom: 42px;
   }
 
   .page-content__photos {
@@ -40,15 +42,19 @@
 }
 
 @media (min-width: @desktop-width) {
+  .page-content__reviews {
+    padding-top: 18px;
+  }
+
   .page-content__effect {
     background-color: @bg-gray;
-    padding-top: 10px;
-    padding-bottom: 70px;
+
+    padding: 40px 0 74px 0;
   }
 
   .page-content__rates {
     padding-top: 132px;
-    padding-bottom: 70px;
+    padding-bottom: 68px;
   }
 
   .page-content__photos {

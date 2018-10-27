@@ -2,7 +2,7 @@
   position: relative;
 
   width: calc(@mobile-width - 50px);
-  padding: 16px 10px 22px 10px;
+  padding: 16px 10px 20px 10px;
 
   font-size: 18px;
   line-height: 30px;
@@ -23,6 +23,7 @@
   font-weight: 300;
   font-size: 24px;
   line-height: 30px;
+  padding-top: 2px;
 }
 
 .rate__hit {
@@ -35,6 +36,8 @@
   height: 73px;
 
   font-weight: 400;
+  font-size: 14px;
+  line-height: 30px;
   text-transform: uppercase;
 
   transform: rotate(-45deg);
@@ -57,7 +60,7 @@
     content: "Хит";
     position: absolute;
     top: 6px;
-    left: 0;
+    left: -1px;
 
     display: inline-block;
     width: 74px;
@@ -68,9 +71,7 @@
 .rate__cell {
   width: calc(@mobile-width - 50px);
   position: relative;
-  padding: 14px 23px 16px 23px;
-
-  letter-spacing: 0.3px;
+  padding: 14px 23px 17px 23px;
 
   background-color: @white;
 
@@ -123,6 +124,7 @@
 
   .rate__price {
     font-size: 18px;
+    padding-top: 0;
   }
 
   .rate__cell {
@@ -135,8 +137,6 @@
     &--first {
       display: table-cell;
       padding: 8px 0 8px 15px;
-
-      letter-spacing: 0.4px;
     }
   }
 
@@ -183,16 +183,14 @@
 
   .rate__cell {
     width: 25%;
-    padding: 15px 0 14px 0;
+    padding: 15px 0 15px 0;
 
     font-size: 18px;
     line-height: 30px;
 
     &--first {
       display: table-cell;
-      padding: 15px 0 14px 20px;
-
-      letter-spacing: 0.7px;
+      padding: 15px 0 16px 20px;
     }
   }
 

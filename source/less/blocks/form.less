@@ -1,15 +1,15 @@
-.form {
-  letter-spacing: 0.4px;
-}
-
 .form__list {
   .list-reset();
   padding-top: 15px;
+
+  &--apps {
+    padding-top: 14px;
+  }
 }
 
 .form__legend {
   margin: 0;
-  padding: 38px 20px 15px 20px;
+  padding: 15px 20px 18px 20px;
 
   font-size: 14px;
   font-weight: 400;
@@ -76,10 +76,10 @@
 .form__check:checked + .form__checkbox::after {
   content: "";
   position: absolute;
-  top: 20px;
+  top: 18px;
   left: 8px;
 
-  width: 20px;
+  width: 22px;
   height: 10px;
 
   border-left: 2px solid @text-blood;
@@ -138,7 +138,7 @@
 
   font-size: 18px;
   line-height: 30px;
-  letter-spacing: 0.4px;
+
   color: @bg-darkblue;
 
   border: 2px solid @bg-gray-dark;
@@ -157,12 +157,11 @@
   display: inline-block;
   width: 100%;
   min-height: 200px;
-  margin-bottom: 48px;
-  padding: 15px 20px 35px 20px;
+  margin-bottom: 42px;
+  padding: 14px 18px 14px 18px;
 
   font-size: 18px;
   line-height: 30px;
-  letter-spacing: 0.3px;
   color: @bg-darkblue;
 
   border: 2px solid @bg-gray-dark;
@@ -235,7 +234,7 @@
   .form__field-contestant {
     display: flex;
     justify-content: flex-start;
-    margin-top: 45px;
+    margin-top: 44px;
   }
 
   .form__field-contact {
@@ -254,11 +253,11 @@
     &--email::after {
       content: "";
       position: absolute;
-      top: 0;
-      right: 0;
+      top: 2px;
+      right: 2px;
 
-      width: 61px;
-      height: 61px;
+      width: 60px;
+      height: 58px;
 
       background-color: @bg-gray-dark;
       .background(50%, 50%, auto);
@@ -273,22 +272,42 @@
     }
   }
 
+  .form__list {
+    padding-top: 15px;
+
+    &--apps {
+      padding-top: 40px;
+    }
+
+    &--achievement {
+      padding-top: 40px;
+    }
+  }
+
   .form__label {
-    padding: 16px 20px 16px 0;
+    padding: 16px 20px 0  0;
 
     &--contact {
       padding: 3px 20px 16px 20px;
       order: 1;
-      letter-spacing: 0.3px;
     }
   }
 
-  .form__text-field {
-    min-height: 61px;
+  .form__label-in-list {
+    position: relative;
 
-    &--contact {
-      letter-spacing: 0.7px;
-    }
+    display: block;
+    padding: 10px 10px 10px 10px;
+
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 30px;
+    color: @bg-darkblue;
+  }
+
+  .form__text-field {
+    padding: 14px 18px 15px 18px;
+    min-height: 61px;
   }
 
   .form__legend {
@@ -300,7 +319,6 @@
 
     &--apps {
       margin-top: -30px;
-      margin-bottom: 20px;
     }
 
     &--contact {
@@ -309,12 +327,10 @@
 
     &--achievement {
       margin-top: -30px;
-      margin-bottom: 20px;
     }
 
     &--comment {
       margin-top: -50px;
-      margin-bottom: 40px;
     }
   }
 
@@ -334,7 +350,7 @@
   }
 
   .form__checkbox {
-    padding-left: 60px;
+    padding-left: 59px;
     margin-bottom: 32px;
 
     &::before {
@@ -346,17 +362,16 @@
   }
 
   .form__check:checked + .form__checkbox::after {
-    top: 18px;
-    left: 10px;
+    top: 16px;
+    left: 9px;
   }
 
   .form__textarea {
-    padding: 15px 0 0 15px;
+    padding: 13px 18px 13px 18px;
+    margin-top: 40px;
     margin-bottom: 35px;
 
     min-height: 192px;
-
-    letter-spacing: 0.4px;
   }
 
   .form__submit {
@@ -372,6 +387,7 @@
   .form__list--apps {
     width: 280px;
     margin: 0 auto;
+    padding-top: 16px;
   }
 
   .form__list--achievement {
@@ -394,8 +410,7 @@
   }
 
   .form__field-contestant {
-    margin-top: 13px;
-    margin-bottom: 34px;
+    margin-top: 45px;
 
     &:last-of-type {
       margin-bottom: 0;
@@ -439,18 +454,37 @@
       margin-top: -30px;
       margin-bottom: 20px;
       margin-left: 203px;
-
-      letter-spacing: 0.3px;
     }
 
     &--comment {
       margin-top: -45px;
-      margin-bottom: 35px;
+      margin-bottom: 0;
+    }
+  }
+
+  .form__label--contact {
+    padding: 0 20px 16px 20px;
+    order: 1;
+  }
+
+  .form__list {
+    padding-top: 15px;
+
+    &--apps {
+      padding-top: 16px;
+    }
+
+    &--achievement {
+      padding-top: 20px;
     }
   }
 
   .form__radio {
     padding-left: 57px;
     margin-bottom: 24px;
+  }
+
+  .form__textarea {
+    margin-top: 35px;
   }
 }

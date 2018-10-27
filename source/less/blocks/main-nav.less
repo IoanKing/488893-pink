@@ -18,14 +18,17 @@
 .main-nav__item {
   text-align: center;
 
+  box-shadow: inset 0 1px 0 0 fade(@white, 15%);
   border-bottom: 1px solid @black;
 
-  box-shadow: inset 0 1px 0 0 fade(@white, 15%);
+  &:first-child {
+    border-top: 1px solid @black;
+  }
 }
 
 .main-nav__link {
   display: block;
-  padding: 16px 16px 15px 15px;
+  padding: 15px 15px 16px 15px;
 
   color: @white;
 }
@@ -40,6 +43,10 @@
 }
 
 @media (min-width: @tablet-width) {
+  .main-nav {
+    padding-top: 0px;
+  }
+
   .main-nav__wrapper {
     .wrapper(@tablet-width);
   }
@@ -71,7 +78,7 @@
 
   .main-nav__item {
     display: block;
-    padding-left: 82px;
+    padding-left: 80px;
 
     border-bottom: 1px solid transparent;
     box-shadow: inset 0 1px 0 0 transparent;
@@ -79,7 +86,6 @@
 
   .main-nav__link {
     position: relative;
-    letter-spacing: 0.3px;
 
     &--active::before {
       content: "";

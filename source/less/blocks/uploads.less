@@ -3,18 +3,18 @@
 }
 
 .uploads__header {
-  padding: 0 5px 31px 5px;
-
-  letter-spacing: 0.4px;
+  padding-bottom: 44px;
 }
 
 .uploads__title {
+  margin: 0;
+  padding: 0;
+
   font-size: 14px;
   font-weight: 400;
   line-height: 30px;
   color: @bg-darkblue;
   text-align: center;
-  letter-spacing: 0.3px;
 
   background-color: @white;
 }
@@ -101,14 +101,15 @@
 @media (min-width: @tablet-width) {
   .uploads__form {
     padding-top: 55px;
-    padding-bottom: 0;
+    padding-bottom: 53px;
   }
 
   .uploads__wrapper {
     .wrapper(@tablet-width);
-    padding-bottom: 55px;
+  }
 
-    letter-spacing: 0.4px;
+  .uploads__header {
+    padding-bottom: 70px;
   }
 
   .uploads__title {
@@ -147,12 +148,11 @@
 @media (min-width: @desktop-width) {
   .uploads__wrapper {
     .wrapper(@desktop-width);
-    letter-spacing: 0.4px;
   }
 
   .uploads__header {
-    padding-top: 10px;
-    padding-bottom: 52px;
+    padding-top: 25px;
+    padding-bottom: 65px;
   }
 
   .uploads__form {

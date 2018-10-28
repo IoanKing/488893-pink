@@ -53,8 +53,21 @@
 }
 
 .uploads__send-post {
+  position: relative;
   padding-top: 38px;
   padding-bottom: 5px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    max-width: @desktop-width;
+
+    border-bottom: 1px solid @uploads-border;
+  }
 }
 
 .uploads__button {
@@ -130,6 +143,10 @@
   .uploads__send-post {
     padding-top: 50px;
     padding-bottom: 0;
+
+    &::before {
+      border-bottom: 1px solid transparent;
+    }
   }
 
   .uploads__button {

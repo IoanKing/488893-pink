@@ -46,17 +46,17 @@
 .filters__item {
   padding-bottom: 70px;
 
-  &::after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: calc(50% - 50vw);
+  // &::after {
+  //   content: "";
+  //   position: absolute;
+  //   bottom: 0;
+  //   left: calc(50% - 50vw);
 
-    width: 100vw;
-    max-width: @desktop-width;
+  //   width: 100vw;
+  //   max-width: @desktop-width;
 
-    border-bottom: 1px solid @uploads-border;
-  }
+  //   border-bottom: 1px solid @uploads-border;
+  // }
 }
 
 .filters__item--active .filters__range {
@@ -74,8 +74,15 @@
   }
 
   .filters__item::after {
+    content: "";
+    position: absolute;
     left: 0;
+    bottom: 0;
+
     width: 100%;
+    max-width: @desktop-width;
+
+    border-bottom: 1px solid @uploads-border;
   }
 
   .filters__toggles {

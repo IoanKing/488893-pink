@@ -154,6 +154,11 @@
   &:active {
     border-color: @text-blood;
   }
+
+  &:invalid {
+    background-color: fade(@text-blood, 10);
+    border-color: fade(@text-blood, 20);
+  }
 }
 
 .form__textarea {

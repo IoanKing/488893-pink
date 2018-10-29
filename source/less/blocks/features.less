@@ -20,6 +20,10 @@
 
     background-image: url("../img/iphone-screen-mobile@1x.png");
     .background(50%, calc(100% + 42px), auto);
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("../img/iphone-screen-mobile@2x.png");
+    }
   }
 }
 
@@ -101,6 +105,10 @@
 
       background-image: url("../img/iphone-screen-3-tablet@1x.png");
       .background(20px, 15px, 268px auto);
+
+      @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+        background-image: url("../img/iphone-screen-3-tablet@2x.png");
+      }
     }
   }
 

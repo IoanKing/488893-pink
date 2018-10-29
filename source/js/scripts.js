@@ -41,24 +41,20 @@ if ( filters__toggle ) {
       for (var j = 0; j < filters__toggle.length; j++) {
         filters__toggle[j].classList.remove('filters__toggle--active');
         var parent = filters__toggle[j].parentElement;
-        console.log(parent);
         parent.classList.remove('filters__item--active');
         parent.querySelector('.range').classList.remove('range--active');
-        console.log(parent);
       }
 
       this.classList.add('filters__toggle--active');
       var parent = this.parentElement;
-      console.log(parent);
       parent.classList.add('filters__item--active');
       parent.querySelector('.range').classList.add('range--active');
-      console.log(parent);
     });
   }
 }
 
 var form = document.querySelector('.form');
-var inputs_required = form.querySelectorAll('.form input[required]');
+var inputs_required = document.querySelectorAll('.form input[required]');
 var popup_overlay = document.querySelector('.popup__overlay');
 var popup_send_request = document.querySelector('.popup__send-request');
 var popup_failure = document.querySelector('.popup__failure');

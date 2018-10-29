@@ -2,11 +2,11 @@
   position: relative;
 
   width: calc(@mobile-width - 50px);
-  padding: 20px 10px;
+  padding: 16px 10px 20px 10px;
 
   font-size: 18px;
   line-height: 30px;
-  font-weight: bold;
+  font-weight: 700;
   text-transform: uppercase;
   color: @white;
 
@@ -20,9 +20,10 @@
 
 .rate__price {
   display: block;
-  font-weight: lighter;
+  font-weight: 300;
   font-size: 24px;
   line-height: 30px;
+  padding-top: 2px;
 }
 
 .rate__hit {
@@ -34,7 +35,9 @@
   width: 74px;
   height: 73px;
 
-  font-weight: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 30px;
   text-transform: uppercase;
 
   transform: rotate(-45deg);
@@ -57,7 +60,7 @@
     content: "Хит";
     position: absolute;
     top: 6px;
-    left: 0;
+    left: -1px;
 
     display: inline-block;
     width: 74px;
@@ -68,9 +71,7 @@
 .rate__cell {
   width: calc(@mobile-width - 50px);
   position: relative;
-  padding: 15px 23px 16px 23px;
-
-  letter-spacing: 0.3px;
+  padding: 14px 23px 17px 23px;
 
   background-color: @white;
 
@@ -82,18 +83,20 @@
 .rate__option {
   position: absolute;
   display: block;
-  top: 18px;
-  right: 20px;
 
   .background(100%, 100%);
 
   &--yes {
+    top: 18px;
+    right: 18px;
     background-image: url("../img/icon-yes.svg");
     width: 31px;
     height: 22px;
   }
 
   &--no {
+    top: 14px;
+    right: 20px;
     background-image: url("../img/icon-no.svg");
     width: 27px;
     height: 27px;
@@ -121,20 +124,19 @@
 
   .rate__price {
     font-size: 18px;
+    padding-top: 0;
   }
 
   .rate__cell {
     width: 25%;
-    padding: 8px 0 8px 0;
+    padding: 5px 0 11px 0;
 
     font-size: 14px;
     line-height: 30px;
 
     &--first {
       display: table-cell;
-      padding: 8px 0 8px 15px;
-
-      letter-spacing: 0.4px;
+      padding: 5px 0 11px 15px;
     }
   }
 
@@ -170,7 +172,7 @@
 @media (min-width: @desktop-width) {
   .rate__header {
     width: 25%;
-    padding: 16px 0 24px 0;
+    padding: 16px 0 22px 0;
 
     font-size: 18px;
   }
@@ -181,16 +183,14 @@
 
   .rate__cell {
     width: 25%;
-    padding: 15px 0 16px 0;
+    padding: 15px 0 15px 0;
 
     font-size: 18px;
     line-height: 30px;
 
     &--first {
       display: table-cell;
-      padding: 15px 0 16px 20px;
-
-      letter-spacing: 0.7px;
+      padding: 13px 0 17px 21px;
     }
   }
 

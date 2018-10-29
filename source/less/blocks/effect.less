@@ -40,7 +40,7 @@
   margin-left: 18px;
   padding: 10px;
 
-  font-weight: bold;
+  font-weight: 700;
   font-size: 96px;
   line-height: 144px;
   color: @text-blood;
@@ -55,8 +55,8 @@
 
 .effect__title {
   width: 200px;
-  margin: 35px 0 0 0;
-  font-weight: bold;
+  margin: 36px 0 0 0;
+  font-weight: 700;
   font-size: 30px;
   line-height: 36px;
   color: @black;
@@ -76,12 +76,26 @@
 .effect__link {
   color: @text-blood;
   text-decoration: underline;
+
+  &:hover,
+  &:focus {
+    color: @bg-darkblue;
+  }
+
+  &:active {
+    color: fade(@bg-darkblue, 30);
+  }
 }
 
 @media (min-width: @tablet-width) {
   .effect {
     .wrapper(@tablet-width);
     min-height: 276px;
+  }
+
+  .effect__description,
+  .effect__link {
+    margin-bottom: 8px;
   }
 }
 
@@ -120,7 +134,7 @@
     margin-left: 23px;
     padding: 10px;
 
-    font-weight: bold;
+    font-weight: 700;
     font-size: 120px;
     line-height: 186px;
     color: @text-blood;
@@ -132,12 +146,12 @@
   .effect__content {
     flex-basis: 61.5%;
 
-    margin-top: 62px;
+    margin-top: 60px;
   }
 
   .effect__title {
     width: 100%;
-    margin-bottom: 25px;
+    margin-bottom: 23px;
   }
 
   .effect__description,
@@ -147,6 +161,5 @@
 
     font-size: 18px;
     line-height: 30px;
-    letter-spacing: @letter-spacing;
   }
 }

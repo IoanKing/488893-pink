@@ -2,6 +2,10 @@ var button_hamburger = document.querySelector('.page-header__hamburger');
 var mobile_menu = document.querySelector('.page-header__navigation');
 var header_top = document.querySelector('.page-header__top');
 
+button_hamburger.classList.remove('page-header__hamburger--open');
+header_top.classList.remove('page-header__top--open');
+mobile_menu.classList.remove('page-header__navigation--open');
+
 if ( button_hamburger ) {
   button_hamburger.addEventListener('click', function (evt) {
     evt.preventDefault();
@@ -25,4 +29,64 @@ if ( button_hamburger ) {
     }
 
   });
+}
+
+var filters__toggle = document.querySelectorAll('.filters__toggle');
+
+if ( filters__toggle ) {
+  for (var i = 0; i < filters__toggle.length; i++) {
+    filters__toggle[i].addEventListener('click', function (evt) {
+      evt.preventDefault();
+
+      for (var j = 0; j < filters__toggle.length; j++) {
+        filters__toggle[j].classList.remove('filters__toggle--active');
+        var parent = filters__toggle[j].parentElement;
+        parent.classList.remove('filters__item--active');
+        parent.querySelector('.range').classList.remove('range--active');
+      }
+
+      this.classList.add('filters__toggle--active');
+      var parent = this.parentElement;
+      parent.classList.add('filters__item--active');
+      parent.querySelector('.range').classList.add('range--active');
+    });
+  }
+}
+
+var form = document.querySelector('.form');
+var inputs_required = document.querySelectorAll('.form input[required]');
+var popup_overlay = document.querySelector('.popup__overlay');
+var popup_send_request = document.querySelector('.popup__send-request');
+var popup_failure = document.querySelector('.popup__failure');
+var popup_close = document.querySelectorAll('.popup__close');
+
+for (var i; i < inputs_required.length; i++) {
+  inputs_required[i].oninvalid = function(evt) {
+    evt.preventDefault();
+    popup_overlay.classList.add('popup__overlay--active');
+    popup_failure.classList.add('popup--active');
+  }
+}
+
+if ( form ) {
+  form.addEventListener("submit", function (evt) {
+    evt.preventDefault();
+
+    popup_overlay.classList.add('popup__overlay--active');
+    popup_send_request.classList.add('popup--active');
+  });
+}
+
+console.log(popup_close);
+
+if (popup_close) {
+  for (var i = 0; i < popup_close.length; i++) {
+    popup_close[i].addEventListener("click", function (evt) {
+      evt.preventDefault();
+
+      popup_send_request.classList.remove('popup--active');
+      popup_failure.classList.remove('popup--active');
+      popup_overlay.classList.remove('popup__overlay--active');
+    });
+  }
 }

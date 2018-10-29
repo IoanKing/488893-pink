@@ -8,27 +8,27 @@
 .intro__wrapper {
   .wrapper(@mobile-width);
 
-  min-height: 172px;
+  min-height: 171px;
 
   &--front-page {
-    padding-top: 394px;
+    padding-top: 395px;
 
     &::before {
       content: "";
       position: absolute;
-      top: 108px;
+      top: 110px;
       left: 0;
       width: 258px;
       height: 286px;
       background-image: url("../img/iphone-hand-mobile@1x.png");
-      .background(100%, 0%, 258px 286px);
+      .background(90%, 0%, 258px 286px);
     }
   }
 }
 
 .intro__apps {
   background-color: @bg-darkestblue;
-  padding: 27px 0 16px 0;
+  padding: 30px 0 16px 0;
 }
 
 .intro__title {
@@ -37,7 +37,7 @@
   padding: 30px 0 0 0;
 
   font-size: 24px;
-  font-weight: lighter;
+  font-weight: 300;
   line-height: 30px;
   color: @white;
   text-align: center;
@@ -51,18 +51,18 @@
   .intro {
     display: flex;
     flex-direction: column;
-    min-height: 327px;
+    min-height: 328px;
   }
 
   .front-page .intro {
-    min-height: calc(72px + 545px);
+    min-height: 618px;
   }
 
   .intro__wrapper {
     .wrapper(@tablet-width);
 
     &--front-page {
-      padding-top: 85px;
+      padding-top: 25px;
       margin-top: 0;
 
       &::before {
@@ -82,7 +82,7 @@
     position: relative;
     z-index: 2;
 
-    padding-top: 68px;
+    padding-top: 70px;
 
     font-size: 50px;
     line-height: 60px;
@@ -94,13 +94,14 @@
       padding-left: 30px;
       padding-right: 30px;
       font-size: 40px;
-      font-weight: lighter;
+      font-weight: 300;
       line-height: 48px;
     }
   }
 
   .intro__apps {
     z-index: 2;
+    padding-top: 30px;
     background-color: transparent;
   }
 }
@@ -109,7 +110,7 @@
   .intro {
     display: flex;
     flex-direction: column;
-    min-height: 287px;
+    min-height: 286px;
   }
 
   .front-page .intro {
@@ -120,7 +121,7 @@
     .wrapper(@desktop-width, 10px);
 
     &--front-page {
-      padding-top: 106px;
+      padding-top: 45px;
 
       &::before {
         top: 100px;
@@ -135,17 +136,25 @@
     }
   }
 
-  .intro__title:not(.intro__title--front-page) {
-    width: 800px;
+  .intro__title {
     margin: 0 auto;
+    padding-top: 65px;
+
+    &--photo {
+      width: 600px;
+    }
   }
 
   .intro__title--front-page {
     font-size: 50px;
     line-height: 60px;
+    width: 300px;
+    margin: 0 auto 0 0;
+    padding-left: 30px;
+    padding-right: 30px;
   }
 
   .intro__apps {
-    padding: 50px 0 16px 0;
+    padding-top: 52px;
   }
 }

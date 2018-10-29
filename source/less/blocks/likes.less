@@ -1,6 +1,10 @@
 .likes {
   position: relative;
 
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+
   font-size: 12px;
   font-weight: 400;
   text-transform: uppercase;
@@ -9,29 +13,34 @@
 
 .likes__button {
   position: absolute;
-  top: calc(50% - 1.5em / 2);
+  top: calc(50% - 8px);
   left: 0;
 
-  width: 1.5em;
-  height: 1.5em;
-  .button-reset();
+  padding: 0;
+  margin: 0;
 
-  background-image: url("../img/icon-heart.svg");
-  .background(50%, 50%, 1.2em);
+  width: 15px;
+  height: 20px;
+  .button-reset();
 }
 
 .likes__counts {
   margin: 0;
-  padding: 10px 0 3px 30px;
+  padding-left: 32px;
+}
+
+.likes__icon {
+  fill: @text-blood;
 }
 
 @media (min-width: @tablet-width) {
   .likes__counts {
-    padding: 0 35px 0 0;
+    padding: 0 33px 0 0;
   }
 
   .likes__button {
+    top: 3px;
     left: auto;
-    right: 0;
+    right: 5px;
   }
 }

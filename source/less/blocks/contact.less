@@ -1,13 +1,18 @@
 .contact {
-  margin-bottom: 18px;
+  padding-bottom: 20px;
+
+  &--email {
+    padding-left: 5px;
+    padding-bottom: 24px;
+  }
 }
 
 .contact__title {
   margin: 0;
 
   font-size: 18px;
-  font-weight: bold;
-  line-height: 30px;
+  font-weight: 700;
+  line-height: 28px;
   text-align: center;
   color: @bg-darkblue;
 }
@@ -17,16 +22,37 @@
   margin: 0;
 
   font-size: 24px;
-  font-weight: lighter;
-  line-height: 30px;
+  font-weight: 300;
+  line-height: 28px;
   text-align: center;
   color: @text-blood;
+
+  &--email:hover,
+  &--email:focus {
+    text-decoration: underline;
+    color: @bg-darkblue;
+  }
+
+  &--email:active {
+    text-decoration: underline;
+    color: fade(@bg-darkblue, 30);
+  }
 }
 
 @media (min-width: @tablet-width) {
   .contact {
-    width: 240px;
+    width: 280px;
     margin: 5px 0 40px 0;
+    padding-bottom: 0;
+
+    &--email {
+      padding-left: 0;
+      padding-bottom: 0;
+    }
+  }
+
+  .contact__title {
+    padding: 0 10px 2px 10px;
   }
 }
 

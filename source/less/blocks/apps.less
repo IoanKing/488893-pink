@@ -12,7 +12,7 @@
 }
 
 .apps__info {
-  font-weight: lighter;
+  font-weight: 300;
   text-align: center;
   color: @white;
   font-size: 14px;
@@ -33,10 +33,22 @@
 .apps__button {
   width: 100%;
   color: @white;
-  padding: 12px 20px;
-  font-weight: bold;
+  padding: 11px 20px 14px 20px;
+  font-weight: 700;
   border-color: @white;
   display: block;
+  outline: none;
+
+  &:hover,
+  &:focus {
+    background-color: @white;
+    color: @text-blood;
+  }
+
+  &:active {
+    background-color: @white;
+    color: fade(@text-blood, 30);
+  }
 }
 
 @media (min-width: @tablet-width) {

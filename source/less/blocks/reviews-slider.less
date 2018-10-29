@@ -8,6 +8,7 @@
 
 .reviews-slider__list {
   display: flex;
+  transition: transform 0.5s ease-out;
 }
 
 .reviews-slider__item {
@@ -15,7 +16,7 @@
   flex-shrink: 0;
 
   max-width: 100%;
-  margin-bottom: 20px;
+  margin-bottom: 16px;
 }
 
 .reviews-slider__radio {
@@ -48,17 +49,26 @@
   height: 12px;
   margin: 0 7px;
 
-  background-color: @bg-gray-dark;
+  background-color: fade(@bg-darkblue, 30);
   border: 3px solid @white;
   border-radius: 50%;
   cursor: pointer;
+
+  &:hover,
+  &:focus {
+    background-color: fade(@bg-darkblue, 60);
+  }
+
+  &:active {
+    background-color: fade(@bg-darkblue, 10);
+  }
 }
 
 .reviews-slider__tab-1:checked ~ .reviews-slider__toggles > .reviews-slider__toggle[for="review-tab-1"],
 .reviews-slider__tab-2:checked ~ .reviews-slider__toggles > .reviews-slider__toggle[for="review-tab-2"],
 .reviews-slider__tab-3:checked ~ .reviews-slider__toggles > .reviews-slider__toggle[for="review-tab-3"] {
-  background-color: @white;
-  border-color: @black;
+  background-color: transparent;
+  border-color: @bg-darkblue;
 }
 
 .reviews-slider__back,
@@ -68,7 +78,7 @@
 
 @media (min-width: @tablet-width) {
   .reviews-slider__item {
-    margin-bottom: 32px;
+    margin-bottom: 18px;
   }
 }
 
@@ -92,39 +102,47 @@
   }
 
   .reviews-slider__list {
-    padding-top: 150px;
+    padding-top: 166px;
+  }
+
+  .reviews-slider__item {
+    margin-bottom: 35px;
   }
 
   .reviews-slider__toggles {
     display: none;
   }
 
-  .reviews-slider__back {
+  .reviews-slider__back,
+  .reviews-slider__next {
     position: absolute;
     top: 0;
-    left: 0;
 
     display: block;
     width: 50px;
     height: 100%;
 
     .button-reset();
+    opacity: 0.3;
 
+    &:hover,
+    &:focus {
+      opacity: 1;
+    }
+
+    &:active {
+      opacity: 0.1;
+    }
+  }
+
+  .reviews-slider__back {
+    left: 0;
     background-image: url("../img/icon-review-arrow-left.svg");
     .background(35%, calc(50% + 15px), auto);
   }
 
   .reviews-slider__next {
-    position: absolute;
-    top: 0;
     right: 0;
-
-    display: block;
-    width: 50px;
-    height: 100%;
-
-    .button-reset();
-
     background-image: url("../img/icon-review-arrow-right.svg");
     .background(65%, calc(50% + 15px), auto);
   }

@@ -1,15 +1,15 @@
-.form {
-  letter-spacing: 0.4px;
-}
-
 .form__list {
   .list-reset();
-  padding-top: 18px;
+  padding-top: 15px;
+
+  &--apps {
+    padding-top: 12px;
+  }
 }
 
 .form__legend {
   margin: 0;
-  padding: 38px 20px 15px 20px;
+  padding: 15px 20px 18px 20px;
 
   font-size: 14px;
   font-weight: 400;
@@ -38,7 +38,7 @@
   position: relative;
 
   display: inline-block;
-  padding: 10px 0 10px 10px;
+  padding: 11px 0 9px 10px;
 
   font-size: 18px;
   font-weight: 400;
@@ -49,6 +49,7 @@
 .form__checkbox {
   padding-left: 70px;
   margin-bottom: 32px;
+  outline: none;
 
   &::before {
     content: "";
@@ -62,15 +63,24 @@
     border: 2px solid @bg-gray-dark;
     background-color: @white;
   }
+
+  &:hover::before,
+  &:focus::before {
+    border-color: @bg-darkblue;
+  }
+
+  &:active::before {
+    border-color: @text-blood;
+  }
 }
 
 .form__check:checked + .form__checkbox::after {
   content: "";
   position: absolute;
-  top: 20px;
+  top: 18px;
   left: 8px;
 
-  width: 20px;
+  width: 22px;
   height: 10px;
 
   border-left: 2px solid @text-blood;
@@ -82,6 +92,7 @@
 .form__radio {
   padding-left: 70px;
   margin-bottom: 25px;
+  outline: none;
 
   &::before {
     content: "";
@@ -96,6 +107,15 @@
     background-color: @white;
 
     border-radius: 50%;
+  }
+
+  &:hover::before,
+  &:focus::before {
+    border-color: @bg-darkblue;
+  }
+
+  &:active::before {
+    border-color: @text-blood;
   }
 }
 
@@ -115,37 +135,61 @@
 .form__text-field {
   display: block;
   width: 100%;
-  padding: 15px 20px;
-  margin-bottom: 8px;
+  padding: 14px 20px 15px 20px;
+  margin-bottom: 6px;
 
   font-size: 18px;
   line-height: 30px;
-  letter-spacing: 0.4px;
+
   color: @bg-darkblue;
 
-  border: 1px solid @bg-gray-dark;
+  border: 2px solid @bg-gray-dark;
+  outline: none;
+
+  &:hover,
+  &:focus {
+    border-color: @bg-darkblue;
+  }
+
+  &:active {
+    border-color: @text-blood;
+  }
+
+  // &:invalid {
+  //   background-color: fade(@text-blood, 10);
+  //   border-color: fade(@text-blood, 20);
+  // }
 }
 
 .form__textarea {
   display: inline-block;
   width: 100%;
   min-height: 200px;
-  margin-bottom: 45px;
-  padding: 15px 20px 35px 20px;
+  margin-bottom: 42px;
+  padding: 14px 18px 14px 18px;
 
   font-size: 18px;
   line-height: 30px;
-  letter-spacing: 0.3px;
   color: @bg-darkblue;
 
   border: 2px solid @bg-gray-dark;
+  outline: none;
+
+  &:hover,
+  &:focus {
+    border-color: @bg-darkblue;
+  }
+
+  &:active {
+    border-color: @text-blood;
+  }
 }
 
 .form__submit {
   width: 100%;
   padding: 20px;
 
-  font-weight: bold;
+  font-weight: 700;
   text-align: center;
   text-transform: uppercase;
   color: @white;
@@ -155,6 +199,23 @@
   border-width: 2px;
   border-color: @wood-green;
   background-color: @wood-green;
+  outline: none;
+
+  &:hover:not(:disabled),
+  &:focus:not(:disabled),
+  &:active:not(:disabled) {
+    border-color: @wood-green-hover;
+    background-color: @wood-green-hover;
+  }
+
+  &:active:not(:disabled) {
+    color: fade(@white, 30);
+  }
+
+  &:disabled {
+    border-color: @bg-gray-dark;
+    background-color: @bg-gray-dark;
+  }
 }
 
 .form__submit-note {
@@ -202,11 +263,11 @@
     &--email::after {
       content: "";
       position: absolute;
-      top: 0;
-      right: 0;
+      top: 2px;
+      right: 2px;
 
-      width: 61px;
-      height: 61px;
+      width: 60px;
+      height: 58px;
 
       background-color: @bg-gray-dark;
       .background(50%, 50%, auto);
@@ -221,22 +282,42 @@
     }
   }
 
+  .form__list {
+    padding-top: 15px;
+
+    &--apps {
+      padding-top: 40px;
+    }
+
+    &--achievement {
+      padding-top: 40px;
+    }
+  }
+
   .form__label {
-    padding: 16px 20px 16px 0;
+    padding: 16px 20px 0  0;
 
     &--contact {
       padding: 3px 20px 16px 20px;
       order: 1;
-      letter-spacing: 0.3px;
     }
   }
 
-  .form__text-field {
-    min-height: 61px;
+  .form__label-in-list {
+    position: relative;
 
-    &--contact {
-      letter-spacing: 0.7px;
-    }
+    display: block;
+    padding: 10px 10px 10px 10px;
+
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 30px;
+    color: @bg-darkblue;
+  }
+
+  .form__text-field {
+    padding: 14px 18px 15px 18px;
+    min-height: 61px;
   }
 
   .form__legend {
@@ -248,7 +329,6 @@
 
     &--apps {
       margin-top: -30px;
-      margin-bottom: 20px;
     }
 
     &--contact {
@@ -257,12 +337,10 @@
 
     &--achievement {
       margin-top: -30px;
-      margin-bottom: 20px;
     }
 
     &--comment {
       margin-top: -50px;
-      margin-bottom: 40px;
     }
   }
 
@@ -282,7 +360,7 @@
   }
 
   .form__checkbox {
-    padding-left: 60px;
+    padding-left: 59px;
     margin-bottom: 32px;
 
     &::before {
@@ -294,17 +372,16 @@
   }
 
   .form__check:checked + .form__checkbox::after {
-    top: 18px;
-    left: 10px;
+    top: 16px;
+    left: 9px;
   }
 
   .form__textarea {
-    padding: 15px 0 0 15px;
+    padding: 13px 18px 13px 18px;
+    margin-top: 40px;
     margin-bottom: 35px;
 
     min-height: 192px;
-
-    letter-spacing: 0.4px;
   }
 
   .form__submit {
@@ -317,15 +394,22 @@
 }
 
 @media (min-width: @desktop-width) {
-  .form__list--apps {
-    width: 280px;
-    margin: 0 auto;
-  }
+  .form__list {
+    padding-top: 15px;
 
-  .form__list--achievement {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-start;
+    &--apps {
+      width: 280px;
+      margin: 0 auto;
+      padding-top: 16px;
+    }
+
+    &--achievement {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+
+      padding-top: 20px;
+    }
   }
 
   .form__option-group {
@@ -342,8 +426,7 @@
   }
 
   .form__field-contestant {
-    margin-top: 13px;
-    margin-bottom: 34px;
+    margin-top: 46px;
 
     &:last-of-type {
       margin-bottom: 0;
@@ -358,6 +441,8 @@
 
   .form__textarea {
     min-height: 130px;
+    margin-bottom: 42px;
+    margin-top: 35px;
   }
 
   .form__submit-note--desktop {
@@ -375,24 +460,32 @@
 
     &--apps {
       margin-top: -30px;
-      margin-bottom: 20px;
+      margin-bottom: 25px;
     }
 
     &--contact {
-      margin-top: -12px;
+      margin-top: -10px;
     }
 
     &--achievement {
       margin-top: -30px;
-      margin-bottom: 20px;
-      margin-left: 190px;
-
-      letter-spacing: 0.3px;
+      margin-bottom: 18px;
+      margin-left: 203px;
     }
 
     &--comment {
       margin-top: -45px;
-      margin-bottom: 35px;
+      margin-bottom: 0;
     }
+  }
+
+  .form__label--contact {
+    padding: 3px 20px 14px 20px;
+    order: 1;
+  }
+
+  .form__radio {
+    padding-left: 57px;
+    margin-bottom: 24px;
   }
 }

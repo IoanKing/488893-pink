@@ -19,10 +19,11 @@
     height: 100%;
 
     background-image: url("../img/iphone-screen-mobile@1x.png");
-    .background(50%, calc(100% + 42px), auto);
+    .background(50%, calc(100% + 42px), 160px 320px);
 
     @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
       background-image: url("../img/iphone-screen-mobile@2x.png");
+      .background(50%, calc(100% + 42px), 160px 320px);
     }
   }
 }

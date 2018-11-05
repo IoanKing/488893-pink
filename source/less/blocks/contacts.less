@@ -38,20 +38,26 @@
     border-bottom-style: none;
   }
 
-  &::after {
-    content: "";
-    position: absolute;
-    left: calc(50% - 17px);
-    bottom: 71px;
+  // &::after {
+  //   content: "";
+  //   position: absolute;
+  //   left: calc(50% - 17px);
+  //   bottom: 71px;
 
-    display: block;
-    width: 33px;
-    height: 33px;
+  //   display: block;
+  //   width: 33px;
+  //   height: 33px;
 
-    background-color: @text-blood;
-    border: 8px solid @white;
-    border-radius: 50%;
-  }
+  //   background-color: @text-blood;
+  //   border: 8px solid @white;
+  //   border-radius: 50%;
+  // }
+}
+
+.contacts__google-map {
+  width: 100%;
+  height: 200px;
+  border: none;
 }
 
 .contacts__map-picture {
@@ -110,24 +116,28 @@
       border-top: 60px solid @white;
     }
 
-    &::after {
-      content: "";
-      position: absolute;
-      left: calc(50% - 17px);
-      bottom: 145px;
+    // &::after {
+    //   content: "";
+    //   position: absolute;
+    //   left: calc(50% - 17px);
+    //   bottom: 145px;
 
-      display: block;
-      width: 33px;
-      height: 33px;
+    //   display: block;
+    //   width: 33px;
+    //   height: 33px;
 
-      background-color: @text-blood;
-      border: 8px solid @white;
-      border-radius: 50%;
-    }
+    //   background-color: @text-blood;
+    //   border: 8px solid @white;
+    //   border-radius: 50%;
+    // }
 
     @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
       background-image: url("../img/bg-map-tablet@2x.jpg");
     }
+  }
+
+  .contacts__google-map {
+    height: 365px;
   }
 }
 
@@ -156,12 +166,16 @@
       border-top: 90px solid @white;
     }
 
-    &::after {
-      bottom: 205px;
-    }
+    // &::after {
+    //   bottom: 205px;
+    // }
 
     @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
       background-image: url("../img/bg-map-desktop@2x.jpg");
     }
+  }
+
+  .contacts__google-map {
+    height: 484px;
   }
 }

@@ -5,7 +5,11 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>HTML Academy: Пинк</title>
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i&amp;subset=cyrillic,cyrillic-ext" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="preload" href="fonts/opensans.woff2" as="font">
+    <link rel="preload" href="fonts/opensansbold.woff2" as="font">
+    <link rel="preload" href="fonts/opensanslight.woff2" as="font">
+    <link rel="preload" href="css/style.min.css" as="style">
+    <link rel="stylesheet" href="css/style.min.css">
   </head>
   <body class="front-page">
 
@@ -294,7 +298,9 @@
             <p class="contact__link">ул. Большая Конюшенная, 19/8</p>
           </div>
         </div>
-        <div class="contacts__map"></div>
+        <div class="contacts__map">
+          <iframe class="contacts__google-map" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1998.6180397169198!2d30.3221247!3d59.93848!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1541435271930" width="320" height="600" style="border:0" allowfullscreen></iframe>
+        </div>
       </section>
 
     </main>
@@ -368,6 +374,7 @@
       </div>
     </footer>
 
-    <script src="js/scripts.js"></script>
+    <script src="js/scripts.min.js"></script>
+    <script src="js/lib/picturefill.min.js"></script>
   </body>
 </html>

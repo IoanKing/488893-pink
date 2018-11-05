@@ -5,7 +5,11 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>HTML Academy: Пинк</title>
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i&amp;subset=cyrillic,cyrillic-ext" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="preload" href="fonts/opensans.woff" as="font">
+    <link rel="preload" href="fonts/opensansbold.woff" as="font">
+    <link rel="preload" href="fonts/opensanslight.woff" as="font">
+    <link rel="preload" href="css/style.min.css" as="style">
+    <link rel="stylesheet" href="css/style.min.css">
   </head>
 
   <body class="inner-page">
@@ -89,215 +93,216 @@
 
         <div class="photos__list">
 
-        <article class="photo-blog photo-blog--special">
-          <a class="photo-blog__link" href="#">
-            <div class="photo-blog__of-day">Панорама дня</div>
-            <picture>
-              <source type="image/webp" media="(min-width: 960px)" srcset="img/panorama-desktop@1x.webp 1x, img/panorama-desktop@2x.webp 2x">
-              <source type="image/webp" media="(min-width: 660px)" srcset="img/panorama-tablet@1x.webp 1x, img/panorama-tablet@2x.webp 2x">
-              <source type="image/webp" srcset="img/panorama-mobile@1x.webp 1x, img/panorama-mobile@2x.webp 2x">
-              <source media="(min-width: 960px)" srcset="img/panorama-desktop@1x.jpg 1x, img/panorama-desktop@2x.jpg 2x">
-              <source media="(min-width: 660px)" srcset="img/panorama-tablet@1x.jpg 1x, img/panorama-desktop@2x.jpg 2x">
-              <img class="photo-blog__image" src="img/panorama-mobile@1x.jpg" srcset="img/panorama-mobile@2x.jpg 2x" alt="Фото дня">
-            </picture>
-          </a>
-          <div class="photo-blog__wrapper">
-            <div class="photo-blog__content">
-              <header class="photo-blog__info">
-                <p class="photo-blog__author">Анна <time class="photo-blog__date" datetime="2018-09-29 20:55:00">(5 минут назад)</time></p>
-              </header>
-              <p class="photo-blog__comment">Прыгать или нет? Напишите в коментарии свой совет и смотрите прямую трансляцию в перископе, задавайте свои вопросы!</p>
-              <footer class="photo-blog__likes likes">
-                <button class="likes__button" id="photos-id-1" type="button">
-                  <svg class="likes__icon" width="12" height="12">
-                    <use xlink:href="#icon-heart" x="0" y="0"></use>
-                  </svg>
-                  <span class="visually-hidden">Лайк</span>
-                </button>
-                <p class="likes__counts">Нравится: <span class="js-likes-count" id="js-likes-1">215</span>
-                </p>
-              </footer>
+          <article class="photo-blog photo-blog--special">
+            <a class="photo-blog__link" href="#">
+              <div class="photo-blog__of-day">Панорама дня</div>
+              <picture>
+                <source type="image/webp" media="(min-width: 960px)" srcset="img/panorama-desktop@1x.webp 1x, img/panorama-desktop@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 660px)" srcset="img/panorama-tablet@1x.webp 1x, img/panorama-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="img/panorama-mobile@1x.webp 1x, img/panorama-mobile@2x.webp 2x">
+                <source media="(min-width: 960px)" srcset="img/panorama-desktop@1x.jpg 1x, img/panorama-desktop@2x.jpg 2x">
+                <source media="(min-width: 660px)" srcset="img/panorama-tablet@1x.jpg 1x, img/panorama-desktop@2x.jpg 2x">
+                <img class="photo-blog__image" src="img/panorama-mobile@1x.jpg" srcset="img/panorama-mobile@2x.jpg 2x" alt="Фото дня">
+              </picture>
+            </a>
+            <div class="photo-blog__wrapper">
+              <div class="photo-blog__content">
+                <header class="photo-blog__info">
+                  <p class="photo-blog__author">Анна <time class="photo-blog__date" datetime="2018-09-29 20:55:00">(5 минут назад)</time></p>
+                </header>
+                <p class="photo-blog__comment">Прыгать или нет? Напишите в коментарии свой совет и смотрите прямую трансляцию в перископе, задавайте свои вопросы!</p>
+                <footer class="photo-blog__likes likes">
+                  <button class="likes__button" id="photos-id-1" type="button">
+                    <svg class="likes__icon" width="12" height="12">
+                      <use xlink:href="#icon-heart" x="0" y="0"></use>
+                    </svg>
+                    <span class="visually-hidden">Лайк</span>
+                  </button>
+                  <p class="likes__counts">Нравится: <span class="js-likes-count" id="js-likes-1">215</span>
+                  </p>
+                </footer>
+              </div>
             </div>
+          </article>
+
+          <div class="photos__wrapper">
+            <article class="photo-blog">
+              <a class="photo-blog__link" href="#">
+                <picture>
+                  <source type="image/webp" media="(min-width: 960px)" srcset="img/photo-car-desktop@1x.webp 1x, img/photo-car-desktop@2x.webp 2x">
+                  <source type="image/webp" media="(min-width: 660px)" srcset="img/photo-car-tablet@1x.webp 1x, img/photo-car-tablet@2x.webp 2x">
+                  <source type="image/webp" srcset="img/photo-car-mobile@1x.webp 1x, img/photo-car-mobile@2x.webp 2x">
+                  <source media="(min-width: 960px)" srcset="img/photo-car-desktop@1x.jpg 1x, img/photo-car-desktop@2x.jpg 2x">
+                  <source media="(min-width: 660px)" srcset="img/photo-car-tablet@1x.jpg 1x, img/photo-car-tablet@2x.jpg 2x">
+                  <img class="photo-blog__image" src="img/photo-car-mobile@1x.jpg" srcset="img/photo-car-mobile@2x.jpg 2x" alt="Фото дня">
+                </picture>
+              </a>
+              <div class="photo-blog__content">
+                <header class="photo-blog__info">
+                  <p class="photo-blog__author">Левон <time class="photo-blog__date" datetime="2018-09-29 15:55:00">(5 часов назад)</time></p>
+                </header>
+                <p class="photo-blog__comment">Вчера он на луну летал, сегодня в руки к нам попал.</p>
+                <footer class="photo-blog__likes likes">
+                  <button class="likes__button" id="photos-id-2" type="button">
+                    <svg class="likes__icon" width="12" height="12">
+                      <use xlink:href="#icon-heart" x="0" y="0"></use>
+                    </svg>
+                    <span class="visually-hidden">Лайк</span>
+                  </button>
+                  <p class="likes__counts">Нравится: <span class="js-likes-count" id="js-likes-2">356</span>
+                  </p>
+                </footer>
+              </div>
+            </article>
+
+            <article class="photo-blog">
+              <a class="photo-blog__link" href="#">
+                <picture>
+                  <source type="image/webp" media="(min-width: 960px)" srcset="img/photo-drumset-desktop@1x.webp 1x, img/photo-drumset-desktop@2x.webp 2x">
+                  <source type="image/webp" media="(min-width: 660px)" srcset="img/photo-drumset-tablet@1x.webp 1x, img/photo-drumset-tablet@2x.webp 2x">
+                  <source type="image/webp" srcset="img/photo-drumset-mobile@1x.webp 1x, img/photo-drumset-mobile@2x.webp 2x">
+                  <source media="(min-width: 960px)" srcset="img/photo-drumset-desktop@1x.jpg 1x, img/photo-drumset-desktop@2x.jpg 2x">
+                  <source media="(min-width: 660px)" srcset="img/photo-drumset-tablet@1x.jpg 1x, img/photo-drumset-tablet@2x.jpg 2x">
+                  <img class="photo-blog__image" src="img/photo-drumset-mobile@1x.jpg" srcset="img/photo-drumset-mobile@2x.jpg 2x" alt="Фото дня" width="280" height="180">
+                </picture>
+              </a>
+              <div class="photo-blog__content">
+                <header class="photo-blog__info">
+                  <p class="photo-blog__author">Антон <time class="photo-blog__date" datetime="2018-09-29 08:55:00">(12 часов назад)</time></p>
+                </header>
+                <p class="photo-blog__comment">Соседи будут рады!</p>
+                <footer class="photo-blog__likes likes">
+                  <button class="likes__button" id="photos-id-3" type="button">
+                    <svg class="likes__icon" width="12" height="12">
+                      <use xlink:href="#icon-heart" x="0" y="0"></use>
+                    </svg>
+                    <span class="visually-hidden">Лайк</span>
+                  </button>
+                  <p class="likes__counts">Нравится: <span class="js-likes-count" id="js-likes-3">666</span>
+                  </p>
+                </footer>
+              </div>
+            </article>
+
+            <article class="photo-blog">
+              <a class="photo-blog__link" href="#">
+                <picture>
+                  <source type="image/webp" media="(min-width: 960px)" srcset="img/photo-window-desktop@1x.webp 1x, img/photo-window-desktop@2x.webp 2x">
+                  <source type="image/webp" media="(min-width: 660px)" srcset="img/photo-window-tablet@1x.webp 1x, img/photo-window-tablet@2x.webp 2x">
+                  <source type="image/webp" srcset="img/photo-window-mobile@1x.webp 1x, img/photo-window-mobile@2x.webp 2x">
+                  <source media="(min-width: 960px)" srcset="img/photo-window-desktop@1x.jpg 1x, img/photo-window-desktop@2x.jpg 2x">
+                  <source media="(min-width: 660px)" srcset="img/photo-window-tablet@1x.jpg 1x, img/photo-window-tablet@2x.jpg 2x">
+                  <img class="photo-blog__image" src="img/photo-window-mobile@1x.jpg" srcset="img/photo-window-mobile@2x.jpg 2x" alt="Фото дня">
+                </picture>
+              </a>
+              <div class="photo-blog__content">
+                <header class="photo-blog__info">
+                  <p class="photo-blog__author">Борис <time class="photo-blog__date" datetime="2018-09-29 00:55:00">(20 часов назад)</time></p>
+                </header>
+                <p class="photo-blog__comment">Здесь могла быть ваша цитата о высоком и вечном.</p>
+                <footer class="photo-blog__likes likes">
+                  <button class="likes__button" id="photos-id-4" type="button">
+                    <svg class="likes__icon" width="12" height="12">
+                      <use xlink:href="#icon-heart" x="0" y="0"></use>
+                    </svg>
+                    <span class="visually-hidden">Лайк</span>
+                  </button>
+                  <p class="likes__counts">Нравится: <span class="js-likes-count" id="js-likes-4">215</span>
+                  </p>
+                </footer>
+              </div>
+            </article>
+
+            <article class="photo-blog">
+              <a class="photo-blog__link" href="#">
+                <picture>
+                  <source type="image/webp" media="(min-width: 960px)" srcset="img/photo-fair-desktop@1x.webp 1x, img/photo-fair-desktop@2x.webp 2x">
+                  <source type="image/webp" media="(min-width: 660px)" srcset="img/photo-fair-tablet@1x.webp 1x, img/photo-fair-tablet@2x.webp 2x">
+                  <source type="image/webp" srcset="img/photo-fair-mobile@1x.webp 1x, img/photo-fair-mobile@2x.webp 2x">
+                  <source media="(min-width: 960px)" srcset="img/photo-fair-desktop@1x.jpg 1x, img/photo-fair-desktop@2x.jpg 2x">
+                  <source media="(min-width: 660px)" srcset="img/photo-fair-tablet@1x.jpg 1x, img/photo-fair-tablet@2x.jpg 2x">
+                  <img class="photo-blog__image" src="img/photo-fair-mobile@1x.jpg" srcset="img/photo-fair-mobile@2x.jpg 2x" alt="Фото дня">
+                </picture>
+              </a>
+              <div class="photo-blog__content">
+                <header class="photo-blog__info">
+                  <p class="photo-blog__author">Сергей <time class="photo-blog__date" datetime="2018-09-28 19:55:00">(25 часов назад)</time></p>
+                </header>
+                <p class="photo-blog__comment">Самая кубанская в мире!</p>
+                <footer class="photo-blog__likes likes">
+                  <button class="likes__button" id="photos-id-5" type="button">
+                    <svg class="likes__icon" width="12" height="12">
+                      <use xlink:href="#icon-heart" x="0" y="0"></use>
+                    </svg>
+                    <span class="visually-hidden">Лайк</span>
+                  </button>
+                  <p class="likes__counts">Нравится: <span class="js-likes-count" id="js-likes-5">4</span>
+                  </p>
+                </footer>
+              </div>
+            </article>
+
+            <article class="photo-blog">
+              <a class="photo-blog__link" href="#">
+                <picture>
+                  <source type="image/webp" media="(min-width: 960px)" srcset="img/photo-pov-desktop@1x.webp 1x, img/photo-pov-desktop@2x.webp 2x">
+                  <source type="image/webp" media="(min-width: 660px)" srcset="img/photo-pov-tablet@1x.webp 1x, img/photo-pov-tablet@2x.webp 2x">
+                  <source type="image/webp" srcset="img/photo-pov-mobile@1x.webp 1x, img/photo-pov-mobile@2x.webp 2x">
+                  <source media="(min-width: 960px)" srcset="img/photo-pov-desktop@1x.jpg 1x, img/photo-pov-desktop@2x.jpg 2x">
+                  <source media="(min-width: 660px)" srcset="img/photo-pov-tablet@1x.jpg 1x, img/photo-pov-tablet@2x.jpg 2x">
+                  <img class="photo-blog__image" src="img/photo-pov-mobile@1x.jpg" srcset="img/photo-pov-mobile@2x.jpg 2x" alt="Фото дня">
+                </picture>
+              </a>
+              <div class="photo-blog__content">
+                <header class="photo-blog__info">
+                  <p class="photo-blog__author">Максим <time class="photo-blog__date" datetime="2018-09-28 08:55:00">(40 часов назад)</time></p>
+                </header>
+                <p class="photo-blog__comment">Где снег-то?</p>
+                <footer class="photo-blog__likes likes">
+                  <button class="likes__button" id="photos-id-6" type="button">
+                    <svg class="likes__icon" width="12" height="12">
+                      <use xlink:href="#icon-heart" x="0" y="0"></use>
+                    </svg>
+                    <span class="visually-hidden">Лайк</span>
+                  </button>
+                  <p class="likes__counts">Нравится: <span class="js-likes-count" id="js-likes-6">150</span>
+                  </p>
+                </footer>
+              </div>
+            </article>
+
+            <article class="photo-blog">
+              <a class="photo-blog__link" href="#">
+                <picture>
+                  <source type="image/webp" media="(min-width: 960px)" srcset="img/photo-wing-desktop@1x.webp 1x, img/photo-wing-desktop@2x.webp 2x">
+                  <source type="image/webp" media="(min-width: 660px)" srcset="img/photo-wing-tablet@1x.webp 1x, img/photo-wing-tablet@2x.webp 2x">
+                  <source type="image/webp" srcset="img/photo-wing-mobile@1x.webp 1x, img/photo-wing-mobile@2x.webp 2x">
+                  <source media="(min-width: 960px)" srcset="img/photo-wing-desktop@1x.jpg 1x, img/photo-wing-desktop@2x.jpg 2x">
+                  <source media="(min-width: 660px)" srcset="img/photo-wing-tablet@1x.jpg 1x, img/photo-wing-tablet@2x.jpg 2x">
+                  <img class="photo-blog__image" src="img/photo-wing-mobile@1x.jpg" srcset="img/photo-wing-mobile@2x.jpg 2x" alt="Фото дня">
+                </picture>
+              </a>
+              <div class="photo-blog__content">
+                <header class="photo-blog__info">
+                  <p class="photo-blog__author">Надежда <time class="photo-blog__date" datetime="2018-09-28 03:55:00">(45 часов назад)</time></p>
+                </header>
+                <p class="photo-blog__comment">Всем GM и взаимные лайки!</p>
+                <footer class="photo-blog__likes likes">
+                  <button class="likes__button" id="photos-id-7" type="button">
+                    <svg class="likes__icon" width="12" height="12">
+                      <use xlink:href="#icon-heart" x="0" y="0"></use>
+                    </svg>
+                    <span class="visually-hidden">Лайк</span>
+                  </button>
+                  <p class="likes__counts">Нравится: <span class="js-likes-count" id="js-likes-7">2560</span>
+                  </p>
+                </footer>
+              </div>
+            </article>
+
           </div>
-        </article>
-
-        <div class="photos__wrapper">
-          <article class="photo-blog">
-            <a class="photo-blog__link" href="#">
-              <picture>
-                <source type="image/webp" media="(min-width: 960px)" srcset="img/photo-car-desktop@1x.webp 1x, img/photo-car-desktop@2x.webp 2x">
-                <source type="image/webp" media="(min-width: 660px)" srcset="img/photo-car-tablet@1x.webp 1x, img/photo-car-tablet@2x.webp 2x">
-                <source type="image/webp" srcset="img/photo-car-mobile@1x.webp 1x, img/photo-car-mobile@2x.webp 2x">
-                <source media="(min-width: 960px)" srcset="img/photo-car-desktop@1x.jpg 1x, img/photo-car-desktop@2x.jpg 2x">
-                <source media="(min-width: 660px)" srcset="img/photo-car-tablet@1x.jpg 1x, img/photo-car-tablet@2x.jpg 2x">
-                <img class="photo-blog__image" src="img/photo-car-mobile@1x.jpg" srcset="img/photo-car-mobile@2x.jpg 2x" alt="Фото дня">
-              </picture>
-            </a>
-            <div class="photo-blog__content">
-              <header class="photo-blog__info">
-                <p class="photo-blog__author">Левон <time class="photo-blog__date" datetime="2018-09-29 15:55:00">(5 часов назад)</time></p>
-              </header>
-              <p class="photo-blog__comment">Вчера он на луну летал, сегодня в руки к нам попал.</p>
-              <footer class="photo-blog__likes likes">
-                <button class="likes__button" id="photos-id-2" type="button">
-                  <svg class="likes__icon" width="12" height="12">
-                    <use xlink:href="#icon-heart" x="0" y="0"></use>
-                  </svg>
-                  <span class="visually-hidden">Лайк</span>
-                </button>
-                <p class="likes__counts">Нравится: <span class="js-likes-count" id="js-likes-2">356</span>
-                </p>
-              </footer>
-            </div>
-          </article>
-
-          <article class="photo-blog">
-            <a class="photo-blog__link" href="#">
-              <picture>
-                <source type="image/webp" media="(min-width: 960px)" srcset="img/photo-drumset-desktop@1x.webp 1x, img/photo-drumset-desktop@2x.webp 2x">
-                <source type="image/webp" media="(min-width: 660px)" srcset="img/photo-drumset-tablet@1x.webp 1x, img/photo-drumset-tablet@2x.webp 2x">
-                <source type="image/webp" srcset="img/photo-drumset-mobile@1x.webp 1x, img/photo-drumset-mobile@2x.webp 2x">
-                <source media="(min-width: 960px)" srcset="img/photo-drumset-desktop@1x.jpg 1x, img/photo-drumset-desktop@2x.jpg 2x">
-                <source media="(min-width: 660px)" srcset="img/photo-drumset-tablet@1x.jpg 1x, img/photo-drumset-tablet@2x.jpg 2x">
-                <img class="photo-blog__image" src="img/photo-drumset-mobile@1x.jpg" srcset="img/photo-drumset-mobile@2x.jpg 2x" alt="Фото дня" width="280" height="180">
-              </picture>
-            </a>
-            <div class="photo-blog__content">
-              <header class="photo-blog__info">
-                <p class="photo-blog__author">Антон <time class="photo-blog__date" datetime="2018-09-29 08:55:00">(12 часов назад)</time></p>
-              </header>
-              <p class="photo-blog__comment">Соседи будут рады!</p>
-              <footer class="photo-blog__likes likes">
-                <button class="likes__button" id="photos-id-3" type="button">
-                  <svg class="likes__icon" width="12" height="12">
-                    <use xlink:href="#icon-heart" x="0" y="0"></use>
-                  </svg>
-                  <span class="visually-hidden">Лайк</span>
-                </button>
-                <p class="likes__counts">Нравится: <span class="js-likes-count" id="js-likes-3">666</span>
-                </p>
-              </footer>
-            </div>
-          </article>
-
-          <article class="photo-blog">
-            <a class="photo-blog__link" href="#">
-              <picture>
-                <source type="image/webp" media="(min-width: 960px)" srcset="img/photo-window-desktop@1x.webp 1x, img/photo-window-desktop@2x.webp 2x">
-                <source type="image/webp" media="(min-width: 660px)" srcset="img/photo-window-tablet@1x.webp 1x, img/photo-window-tablet@2x.webp 2x">
-                <source type="image/webp" srcset="img/photo-window-mobile@1x.webp 1x, img/photo-window-mobile@2x.webp 2x">
-                <source media="(min-width: 960px)" srcset="img/photo-window-desktop@1x.jpg 1x, img/photo-window-desktop@2x.jpg 2x">
-                <source media="(min-width: 660px)" srcset="img/photo-window-tablet@1x.jpg 1x, img/photo-window-tablet@2x.jpg 2x">
-                <img class="photo-blog__image" src="img/photo-window-mobile@1x.jpg" srcset="img/photo-window-mobile@2x.jpg 2x" alt="Фото дня">
-              </picture>
-            </a>
-            <div class="photo-blog__content">
-              <header class="photo-blog__info">
-                <p class="photo-blog__author">Борис <time class="photo-blog__date" datetime="2018-09-29 00:55:00">(20 часов назад)</time></p>
-              </header>
-              <p class="photo-blog__comment">Здесь могла быть ваша цитата о высоком и вечном.</p>
-              <footer class="photo-blog__likes likes">
-                <button class="likes__button" id="photos-id-4" type="button">
-                  <svg class="likes__icon" width="12" height="12">
-                    <use xlink:href="#icon-heart" x="0" y="0"></use>
-                  </svg>
-                  <span class="visually-hidden">Лайк</span>
-                </button>
-                <p class="likes__counts">Нравится: <span class="js-likes-count" id="js-likes-4">215</span>
-                </p>
-              </footer>
-            </div>
-          </article>
-
-          <article class="photo-blog">
-            <a class="photo-blog__link" href="#">
-              <picture>
-                <source type="image/webp" media="(min-width: 960px)" srcset="img/photo-fair-desktop@1x.webp 1x, img/photo-fair-desktop@2x.webp 2x">
-                <source type="image/webp" media="(min-width: 660px)" srcset="img/photo-fair-tablet@1x.webp 1x, img/photo-fair-tablet@2x.webp 2x">
-                <source type="image/webp" srcset="img/photo-fair-mobile@1x.webp 1x, img/photo-fair-mobile@2x.webp 2x">
-                <source media="(min-width: 960px)" srcset="img/photo-fair-desktop@1x.jpg 1x, img/photo-fair-desktop@2x.jpg 2x">
-                <source media="(min-width: 660px)" srcset="img/photo-fair-tablet@1x.jpg 1x, img/photo-fair-tablet@2x.jpg 2x">
-                <img class="photo-blog__image" src="img/photo-fair-mobile@1x.jpg" srcset="img/photo-fair-mobile@2x.jpg 2x" alt="Фото дня">
-              </picture>
-            </a>
-            <div class="photo-blog__content">
-              <header class="photo-blog__info">
-                <p class="photo-blog__author">Сергей <time class="photo-blog__date" datetime="2018-09-28 19:55:00">(25 часов назад)</time></p>
-              </header>
-              <p class="photo-blog__comment">Самая кубанская в мире!</p>
-              <footer class="photo-blog__likes likes">
-                <button class="likes__button" id="photos-id-5" type="button">
-                  <svg class="likes__icon" width="12" height="12">
-                    <use xlink:href="#icon-heart" x="0" y="0"></use>
-                  </svg>
-                  <span class="visually-hidden">Лайк</span>
-                </button>
-                <p class="likes__counts">Нравится: <span class="js-likes-count" id="js-likes-5">4</span>
-                </p>
-              </footer>
-            </div>
-          </article>
-
-          <article class="photo-blog">
-            <a class="photo-blog__link" href="#">
-              <picture>
-                <source type="image/webp" media="(min-width: 960px)" srcset="img/photo-pov-desktop@1x.webp 1x, img/photo-pov-desktop@2x.webp 2x">
-                <source type="image/webp" media="(min-width: 660px)" srcset="img/photo-pov-tablet@1x.webp 1x, img/photo-pov-tablet@2x.webp 2x">
-                <source type="image/webp" srcset="img/photo-pov-mobile@1x.webp 1x, img/photo-pov-mobile@2x.webp 2x">
-                <source media="(min-width: 960px)" srcset="img/photo-pov-desktop@1x.jpg 1x, img/photo-pov-desktop@2x.jpg 2x">
-                <source media="(min-width: 660px)" srcset="img/photo-pov-tablet@1x.jpg 1x, img/photo-pov-tablet@2x.jpg 2x">
-                <img class="photo-blog__image" src="img/photo-pov-mobile@1x.jpg" srcset="img/photo-pov-mobile@2x.jpg 2x" alt="Фото дня">
-              </picture>
-            </a>
-            <div class="photo-blog__content">
-              <header class="photo-blog__info">
-                <p class="photo-blog__author">Максим <time class="photo-blog__date" datetime="2018-09-28 08:55:00">(40 часов назад)</time></p>
-              </header>
-              <p class="photo-blog__comment">Где снег-то?</p>
-              <footer class="photo-blog__likes likes">
-                <button class="likes__button" id="photos-id-6" type="button">
-                  <svg class="likes__icon" width="12" height="12">
-                    <use xlink:href="#icon-heart" x="0" y="0"></use>
-                  </svg>
-                  <span class="visually-hidden">Лайк</span>
-                </button>
-                <p class="likes__counts">Нравится: <span class="js-likes-count" id="js-likes-6">150</span>
-                </p>
-              </footer>
-            </div>
-          </article>
-
-          <article class="photo-blog">
-            <a class="photo-blog__link" href="#">
-              <picture>
-                <source type="image/webp" media="(min-width: 960px)" srcset="img/photo-wing-desktop@1x.webp 1x, img/photo-wing-desktop@2x.webp 2x">
-                <source type="image/webp" media="(min-width: 660px)" srcset="img/photo-wing-tablet@1x.webp 1x, img/photo-wing-tablet@2x.webp 2x">
-                <source type="image/webp" srcset="img/photo-wing-mobile@1x.webp 1x, img/photo-wing-mobile@2x.webp 2x">
-                <source media="(min-width: 960px)" srcset="img/photo-wing-desktop@1x.jpg 1x, img/photo-wing-desktop@2x.jpg 2x">
-                <source media="(min-width: 660px)" srcset="img/photo-wing-tablet@1x.jpg 1x, img/photo-wing-tablet@2x.jpg 2x">
-                <img class="photo-blog__image" src="img/photo-wing-mobile@1x.jpg" srcset="img/photo-wing-mobile@2x.jpg 2x" alt="Фото дня">
-              </picture>
-            </a>
-            <div class="photo-blog__content">
-              <header class="photo-blog__info">
-                <p class="photo-blog__author">Надежда <time class="photo-blog__date" datetime="2018-09-28 03:55:00">(45 часов назад)</time></p>
-              </header>
-              <p class="photo-blog__comment">Всем GM и взаимные лайки!</p>
-              <footer class="photo-blog__likes likes">
-                <button class="likes__button" id="photos-id-7" type="button">
-                  <svg class="likes__icon" width="12" height="12">
-                    <use xlink:href="#icon-heart" x="0" y="0"></use>
-                  </svg>
-                  <span class="visually-hidden">Лайк</span>
-                </button>
-                <p class="likes__counts">Нравится: <span class="js-likes-count" id="js-likes-7">2560</span>
-                </p>
-              </footer>
-            </div>
-          </article>
-
         </div>
-      </div></section>
+      </section>
 
       <section class="page-content__photo-uploads uploads">
 
@@ -447,5 +452,6 @@
     </footer>
 
     <script src="js/scripts.js"></script>
+    <script src="js/lib/picturefill.min.js"></script>
   </body>
 </html>

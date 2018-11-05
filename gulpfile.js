@@ -84,10 +84,10 @@ gulp.task("html", function() {
 });
 
 gulp.task("jsmin", function() {
-  return gulp.src("source/**/*.js")
+  return gulp.src("source/js/*.js")
     .pipe(jsmin())
     .pipe(rename({suffix: '.min'}))
-    .pipe(gulp.dest('build'));
+    .pipe(gulp.dest('build/js'));
 });
 
 gulp.task("server", function () {

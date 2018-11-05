@@ -135,7 +135,7 @@
     margin-bottom: 8px;
     padding: 20px 58px 20px 58px;
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
     border: 2px solid @bg-gray-dark;
   }
 
@@ -145,7 +145,7 @@
 
   .contest__achievement {
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
     margin-top: 65px;
     padding: 20px 58px 12px 58px;
     border: 2px solid @bg-gray-dark;
@@ -153,7 +153,7 @@
 
   .contest__contact {
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
     margin-top: 60px;
     padding: 0 58px 10px 58px;
     order: 2;
@@ -162,7 +162,7 @@
 
   .contest__comment {
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
     margin-top: 63px;
     padding: 40px 58px 15px 58px;
     order: 4;
@@ -224,6 +224,7 @@
   .contest__contact-layout {
     justify-content: space-between;
     flex-direction: row;
+    flex-basis: 100%;
   }
 
   .contest__apps {

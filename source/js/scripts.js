@@ -53,6 +53,32 @@ if ( filters__toggle ) {
   }
 }
 
+var reviews_back = document.querySelector('.reviews-slider__back');
+var reviews_next = document.querySelector('.reviews-slider__next');
+
+if (reviews_next && reviews_back) {
+
+  reviews_next.addEventListener('click', function() {
+    var reviews_next = document.querySelector('input[id^="review-tab-"]:checked');
+    if (reviews_next) {
+      var next_elem = reviews_next.nextElementSibling;
+      if (next_elem) {
+        next_elem.checked = true;
+      }
+    }
+  });
+
+  reviews_back.addEventListener('click', function() {
+    var reviews_next = document.querySelector('input[id^="review-tab-"]:checked');
+    if (reviews_next) {
+      var revious_elem = reviews_next.previousElementSibling;
+      if (revious_elem) {
+        revious_elem.checked = true;
+      }
+    }
+  });
+}
+
 var form = document.querySelector('.form');
 var inputs_required = document.querySelectorAll('.form input[required]');
 var popup_overlay = document.querySelector('.popup__overlay');

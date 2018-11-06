@@ -17,6 +17,11 @@
   display: none;
 }
 
+.contest__wrapper-tablet {
+  display: flex;
+  flex-direction: column;
+}
+
 .contest__contestant,
 .contest__achievement,
 .contest__contact,
@@ -29,6 +34,8 @@
 }
 
 .contest__contestant {
+  order: 1;
+
   display: flex;
   flex-direction: column;
   .wrapper(@mobile-width);
@@ -44,6 +51,10 @@
   background-color: @bg-gray;
 }
 
+.contest__achievement-layout {
+  order: 2;
+}
+
 .contest__achievement {
   display: block;
   .wrapper(@mobile-width);
@@ -54,6 +65,7 @@
 }
 
 .contest__contact {
+  order: 3;
   .wrapper(@mobile-width);
 
   padding-top: 20px;
@@ -70,6 +82,10 @@
   flex-direction: column;
 }
 
+.contest__apps-layout {
+  order: 4;
+}
+
 .contest__apps {
   display: block;
   .wrapper(@mobile-width);
@@ -80,6 +96,8 @@
 }
 
 .contest__comment {
+  order: 5;
+
   display: block;
   .wrapper(@mobile-width);
   padding-top: 22px;
@@ -94,14 +112,20 @@
 @media (min-width: @tablet-width) {
   .contest__wrapper-tablet {
     .wrapper(@tablet-width);
-    display: flex;
-    flex-direction: column;
   }
 
   .contest__header {
     .wrapper(@tablet-width);
 
     padding: 80px 50px 12px 50px;
+  }
+
+  .contest__contestant,
+  .contest__achievement-layout,
+  .contest__contact,
+  .contest__apps-layout,
+  .contest__comment {
+    order: 0;
   }
 
   .contest__contestant,
@@ -122,13 +146,8 @@
   .contest__contestant {
     margin: 0;
     padding: 0 0 58px 0;
-    order: 0;
 
     display: flex;
-  }
-
-  .contest__apps-layout {
-    order: 1;
   }
 
   .contest__apps {
@@ -137,10 +156,6 @@
     display: flex;
     flex-wrap: wrap;
     border: 2px solid @bg-gray-dark;
-  }
-
-  .contest__achievement-layout {
-    order: 3;
   }
 
   .contest__achievement {
@@ -156,7 +171,6 @@
     flex-wrap: wrap;
     margin-top: 60px;
     padding: 0 58px 10px 58px;
-    order: 2;
     border: 2px solid @bg-gray-dark;
   }
 
@@ -169,7 +183,6 @@
     flex-wrap: wrap;
     margin-top: 63px;
     padding: 40px 58px 15px 58px;
-    order: 4;
 
     border: 2px solid @bg-gray-dark;
   }
@@ -177,7 +190,6 @@
   .contest__send-form {
     .wrapper(@tablet-width);
     padding: 67px 20px 48px 20px;
-    order: 10;
 
     display: flex;
     align-items: center;
@@ -255,7 +267,6 @@
   .contest__send-form {
     .wrapper(@desktop-width);
     padding: 64px 10px 0 10px;
-    order: 10;
 
     display: flex;
     align-items: center;

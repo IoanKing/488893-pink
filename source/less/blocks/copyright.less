@@ -16,19 +16,20 @@
 
 .copyright__link {
   padding-top: 8px;
+  outline: none;
 }
 
 .copyright__icon {
   fill: @text-blood;
+}
 
-  &:hover,
-  &:focus {
-    fill: @bg-darkblue;
-  }
+.copyright__link:hover .copyright__icon,
+.copyright__link:focus .copyright__icon {
+  fill: @bg-darkblue;
+}
 
-  &:active {
-    fill: fade(@bg-darkblue, 30);
-  }
+.copyright__link:active .copyright__icon {
+  fill: fade(@bg-darkblue, 30);
 }
 
 @media (min-width: @desktop-width) {

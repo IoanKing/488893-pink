@@ -64,6 +64,18 @@
   }
 }
 
+.reviews-slider__tab-1:focus ~ .reviews-slider__toggles > .reviews-slider__toggle[for="review-tab-1"],
+.reviews-slider__tab-2:focus ~ .reviews-slider__toggles > .reviews-slider__toggle[for="review-tab-2"],
+.reviews-slider__tab-3:focus ~ .reviews-slider__toggles > .reviews-slider__toggle[for="review-tab-3"] {
+  background-color: fade(@bg-darkblue, 60);
+}
+
+.reviews-slider__tab-1:active ~ .reviews-slider__toggles > .reviews-slider__toggle[for="review-tab-1"],
+.reviews-slider__tab-2:active ~ .reviews-slider__toggles > .reviews-slider__toggle[for="review-tab-2"],
+.reviews-slider__tab-3:active ~ .reviews-slider__toggles > .reviews-slider__toggle[for="review-tab-3"] {
+  background-color: fade(@bg-darkblue, 10);
+}
+
 .reviews-slider__tab-1:checked ~ .reviews-slider__toggles > .reviews-slider__toggle[for="review-tab-1"],
 .reviews-slider__tab-2:checked ~ .reviews-slider__toggles > .reviews-slider__toggle[for="review-tab-2"],
 .reviews-slider__tab-3:checked ~ .reviews-slider__toggles > .reviews-slider__toggle[for="review-tab-3"] {

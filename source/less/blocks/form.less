@@ -79,6 +79,14 @@
   }
 }
 
+.form__check:focus + .form__checkbox::before {
+  border-color: @bg-darkblue;
+}
+
+.form__check:active + .form__checkbox::before  {
+  border-color: @text-blood;
+}
+
 .form__check:checked + .form__checkbox::after {
   content: "";
   position: absolute;
@@ -122,6 +130,10 @@
   &:active::before {
     border-color: @text-blood;
   }
+}
+
+.form__check:focus + .form__radio::before {
+  border-color: @bg-darkblue;
 }
 
 .form__check:checked + .form__radio::after {

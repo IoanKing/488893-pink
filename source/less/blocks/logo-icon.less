@@ -7,9 +7,9 @@
   fill: @text-blood;
 }
 
-.logo-icon--desktop-glass,
-.logo-icon--desktop,
-.logo-icon--tablet {
+.logo-icon__desktop-glass,
+.logo-icon__desktop,
+.logo-icon__tablet {
   display: none;
 }
 
@@ -19,18 +19,18 @@
     margin: 0;
   }
 
-  .logo-icon--tablet {
+  .logo-icon__tablet {
     display: block;
   }
 }
 
 @media (min-width: @desktop-width) {
-  .logo-icon--tablet {
+  .logo-icon__tablet {
     display: none;
   }
 
-  .logo-icon--desktop,
-  .logo-icon--desktop-glass {
+  .logo-icon__desktop,
+  .logo-icon__desktop-glass {
     display: block;
   }
 }
